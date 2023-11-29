@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Gold
+  m_Name: M_MetalGeometric1
   m_Shader: {fileID: -6465566751694194690, guid: e66446214ca0aea4c89c34f75248ccd8, type: 3}
-  m_Parent: {fileID: 0}
+  m_Parent: {fileID: 2100000, guid: 7f8d7049cfe9357498a72a06f5f62548, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -32,47 +32,19 @@ Material:
         m_Texture: {fileID: 2800000, guid: cfbd42a3d8a79244aab651321ab2f03d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Metallic_Texture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 28e59e1749cf31444805b4a559ec28f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_caf79e9810f2442fbeda69b870663748_Out_0_Texture2D:
-        m_Texture: {fileID: 2800000, guid: cfbd42a3d8a79244aab651321ab2f03d, type: 3}
+        m_Texture: {fileID: 2800000, guid: b430dc58f12fce44a8ebd2035634cb39, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Alpha_Clip_Threshold: 0.5
-    - _BUILTIN_AlphaClip: 0
-    - _BUILTIN_Blend: 0
-    - _BUILTIN_CullMode: 2
-    - _BUILTIN_DstBlend: 0
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _BUILTIN_SrcBlend: 1
-    - _BUILTIN_Surface: 0
-    - _BUILTIN_ZTest: 4
-    - _BUILTIN_ZWrite: 1
-    - _BUILTIN_ZWriteControl: 0
-    - _Emission_Strength: 0
-    - _Invert_Metallic_for_Roughness: 1
     - _Metallic: 1
-    - _Roughness: 0.5
-    - _Use_Secondary_Tint: 0
+    - _Use_Secondary_Tint: 1
     m_Colors:
-    - _Secondary_Tint: {r: 1, g: 1, b: 1, a: 0}
-    - _Specular_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Secondary_Tint: {r: 0, g: 0, b: 0, a: 0}
     - _Tint: {r: 0.81960785, g: 0.5058824, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7253679288761556852
+--- !u!114 &7443117421135159504
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
