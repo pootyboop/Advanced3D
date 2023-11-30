@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -17,11 +20,19 @@ public class PlayerMovement : MonoBehaviour
                                                     //probably could've done this with collision channels but whatever
     private CapsuleCollider clothCapsule;           //the actual collider
 
+    public enum playerState
+    {
+        MOVABLE, CUTSCENE, DIALOGUE, SEATED, LADDER
+    }
+
+    public playerState state = playerState.MOVABLE;    //what to do with movement input
+
     //public movement
-    public float moveSpeed = 5.0f;
     public float gravity = 9.81f;
-    public bool canJump = true;
-    public float jumpHeight = 1.0f;
+    public float moveSpeed = 5.0f;
+    public float ladderSpeed = 0.3f;
+    public bool jumpEnabled = true;
+    public float jumpHeight = 2.0f;
 
     //private movement
     private bool isMoving = false;
@@ -64,10 +75,7 @@ public class PlayerMovement : MonoBehaviour
         UpdateInteractions();
 
         UpdateGrounded();
-        Move();
-
-        //this will be used next Update() for calculating the new verticalVelocity
-        previousVerticalVelocity = verticalVelocity;
+        UpdateMovement();
     }
 
 
@@ -76,7 +84,9 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-
+            case "Ladder":
+                SetPlayerState(playerState.LADDER);
+                break;
         }
     }
 
@@ -86,7 +96,9 @@ public class PlayerMovement : MonoBehaviour
     {
         switch (other.gameObject.tag)
         {
-
+            case "Ladder":
+                SetPlayerState(playerState.MOVABLE);
+                break;
         }
     }
 
@@ -97,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
         //player trying to interact?
         if (Input.GetButtonDown("Interact"))
         {
-        
+
         }
     }
 
@@ -144,29 +156,66 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void Move()
+    void SetPlayerState(playerState newState)
     {
-        //credit for GetDesiredMvmt() and GetJumpHeight():
-        //https://youtu.be/7kGCrq1cJew
-        //https://forum.unity.com/threads/how-to-correctly-setup-3d-character-movement-in-unity.981939/#post-6379746
-
-        Vector3 move;
-
-        //X AND Z MOVEMENT
-        move = GetDesiredMvmt();
-
-        move = ApplySpeedModifiers(move);
-
-        //Y MOVEMENT
-        move.y = GetJumpHeight();
-
-        //and finally, actually move
-        charController.Move(move * Time.deltaTime);
+        state = newState;
     }
 
 
 
-    Vector3 GetDesiredMvmt()
+    void UpdateMovement()
+    {
+        Vector3 move = new Vector3(0.0f, 0.0f, 0.0f);
+
+        switch (state)
+        {
+            case playerState.MOVABLE:
+                move = Move();
+                break;
+
+            case playerState.LADDER:
+                move = Ladder();
+                break;
+        }
+
+        //if any movement has been made
+        if (move != Vector3.zero)
+        {
+            isMoving = true;
+            charController.Move(move * Time.deltaTime);
+        }
+
+        else
+        {
+            isMoving = false;
+        }
+
+        //used next update for calculating the new verticalVelocity
+        previousVerticalVelocity = verticalVelocity;
+    }
+
+
+
+    private Vector3 Move()
+    {
+        Vector3 move = new Vector3(0.0f, 0.0f, 0.0f);
+
+        //credit for GetDesiredMvmt() and GetJumpHeight():
+        //https://youtu.be/7kGCrq1cJew
+        //https://forum.unity.com/threads/how-to-correctly-setup-3d-character-movement-in-unity.981939/#post-6379746
+
+        //X AND Z MOVEMENT
+        move = ApplySpeedModifiers(GetDesiredMvmt());
+
+        //Y MOVEMENT
+        move.y = JumpGravity();
+
+        return move;
+    }
+
+
+
+    private Vector3 GetDesiredMvmt()
     {
         //get the forward and right vectors
         Vector3 forward = Camera.main.transform.forward;
@@ -183,8 +232,6 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
 
-        UpdateIsMoving(horizontal, vertical);
-
         //multiply normalized vectors by player movement input (meaning the character moves relative to its rotation)
         Vector3 forwardRelativeInput = forward * vertical;
         Vector3 rightRelativeInput = right * horizontal;
@@ -195,51 +242,76 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    //TLDR: lets the footstep manager know if we're moving
-    void UpdateIsMoving (float horizontal, float vertical)
+    private Vector3 Ladder()
     {
-        if (!isMoving && (vertical != 0.0f || horizontal != 0.0f))
+        Vector3 move = new Vector3(0.0f, 0.0f, 0.0f);
+
+        //jump to leave ladder, even if not grounded
+        if (Input.GetButtonDown("Jump"))
         {
-            isMoving = true;
+            move.y = JumpGravity();
+            SetPlayerState(playerState.MOVABLE);
+            return move;
         }
 
-        else if (isMoving && vertical == 0.0f && horizontal == 0.0f)
+        //W to go up
+        else if (Input.GetAxis("Vertical") > 0)
         {
-
-            isMoving = false;
+            move = Vector3.up / ladderSpeed;
+            return move;
         }
+
+        //S to go down
+        else if (Input.GetAxis("Vertical") < 0)
+        {
+            move = Vector3.down / ladderSpeed;
+        }
+
+        return move;
     }
 
 
 
     //fairly straightforward, just take the modifiers into account
-    Vector3 ApplySpeedModifiers(Vector3 move)
+    private Vector3 ApplySpeedModifiers(Vector3 move)
     {
         return move;
     }
 
 
 
-    float GetJumpHeight()
+    private float JumpGravity()
     {
-        //prevent bouncing
-        if (isGrounded && verticalVelocity < 0)
+        //gravity
+        switch (state)
         {
-            verticalVelocity = 0f;
+            //when to apply gravity
+            case playerState.MOVABLE:
+            case playerState.DIALOGUE:
+            case playerState.CUTSCENE:
+
+                //prevent bouncing
+                if (isGrounded && verticalVelocity < 0)
+                {
+                    verticalVelocity = 0f;
+                }
+
+                verticalVelocity -= gravity * Time.deltaTime;
+                break;
         }
 
-        //take gravity into account
-        verticalVelocity -= gravity * Time.deltaTime;
 
 
         //if player is allowed to jump
-        if (Input.GetButtonDown("Jump") && groundedTimer > 0 && canJump)
+        if (
+            Input.GetButtonDown("Jump") &&                          //pressing jump button?
+            jumpEnabled &&                                          //jumping enabled?
+            (groundedTimer > 0 || state == playerState.LADDER)      //grounded OR on ladder?
+            )
         {
-
-            groundedTimer = 0;
-
             //jump
-            verticalVelocity += Mathf.Sqrt(jumpHeight * 2 * gravity);
+            groundedTimer = 0;
+            verticalVelocity += Mathf.Sqrt(jumpHeight * gravity);
         }
 
         return verticalVelocity;
