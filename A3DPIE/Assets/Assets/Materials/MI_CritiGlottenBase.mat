@@ -24,14 +24,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Texture:
+    - _Emission_Map:
         m_Texture: {fileID: 2800000, guid: 3f997f6720703b5468b82aef51b05442, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: 28e59e1749cf31444805b4a559ec28f7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Emission_Sine_Strength: 0.4
+    - _Emission_Strength: 0
+    - _Use_Emission_Tint: 1
     - _Use_Secondary_Tint: 1
     m_Colors:
+    - _Emission_Tint: {r: 0.20591938, g: 0, b: 0.20754719, a: 0}
     - _Secondary_Tint: {r: 0.95, g: 0.43924728, b: 0.67419356, a: 0}
     - _Tint: {r: 0.09019608, g: 0.09019608, b: 0.09019608, a: 0}
   m_BuildTextureStacks: []

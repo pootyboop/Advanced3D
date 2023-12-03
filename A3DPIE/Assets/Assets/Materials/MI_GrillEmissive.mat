@@ -34,6 +34,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Emission_Sine_Strength: 0.6
     - _Emission_Strength: 0.68
     m_Colors:
     - _Secondary_Tint: {r: 0, g: 0.8032925, b: 1, a: 0}

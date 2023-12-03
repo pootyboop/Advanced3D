@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Cloth
+    second: {fileID: 2100000, guid: 9f7d627508926134788457eb4f97c58d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Emissive
     second: {fileID: 2100000, guid: 1de3649af3efa0440878eb9778c70ff5, type: 2}
   - first:

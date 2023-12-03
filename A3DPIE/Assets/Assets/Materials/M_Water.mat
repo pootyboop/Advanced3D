@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-276233335095184130
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639247ca83abc874e893eb93af2b5e44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 0
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Water
+  m_Shader: {fileID: -6465566751694194690, guid: b6ce8f9c2b312cd419538c9dabb3ea42, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _BUILTIN_QueueControl: 0
+    - _BUILTIN_QueueOffset: 0
+    - _Depth_Color_Influence: 0.2
+    - _Depth_Voronoi_Color_Lerp: 0.2
+    - _Foam_Shine_Sharpness: 1.7
+    - _Foam_Shine_Size: 0.75
+    - _Noise_Density: 7
+    - _Noise_Reshaping: 0.8
+    - _Voronoi_Angle: 0.8
+    - _Voronoi_Color_Influence: 0.2
+    - _Voronoi_Density: 7
+    - _Waterfall_Height: 0.1
+    - _Waterfall_Speed: 2
+    - _Wave_Frequency: 12
+    - _Wave_Height: 0.0005
+    - _Wave_Speed: 2
+    m_Colors:
+    - _Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
