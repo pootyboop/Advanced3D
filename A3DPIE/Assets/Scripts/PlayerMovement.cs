@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
                                                     //probably could've done this with collision channels but whatever
     private CapsuleCollider clothCapsule;           //the actual collider
 
-    public enum playerState
+    public enum EPlayerState
     {
         MOVABLE, CUTSCENE, DIALOGUE, SEATED, LADDER
     }
 
-    public playerState state = playerState.MOVABLE;    //what to do with movement input
+    public EPlayerState state = EPlayerState.MOVABLE;    //what to do with movement input
 
     //public movement
     public float gravity = 9.81f;
@@ -85,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Ladder":
-                SetPlayerState(playerState.LADDER);
+                SetPlayerState(EPlayerState.LADDER);
                 break;
         }
     }
@@ -97,7 +97,7 @@ public class PlayerMovement : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Ladder":
-                SetPlayerState(playerState.MOVABLE);
+                SetPlayerState(EPlayerState.MOVABLE);
                 break;
         }
     }
@@ -156,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void SetPlayerState(playerState newState)
+    void SetPlayerState(EPlayerState newState)
     {
         state = newState;
     }
@@ -169,11 +169,11 @@ public class PlayerMovement : MonoBehaviour
 
         switch (state)
         {
-            case playerState.MOVABLE:
+            case EPlayerState.MOVABLE:
                 move = Move();
                 break;
 
-            case playerState.LADDER:
+            case EPlayerState.LADDER:
                 move = Ladder();
                 break;
         }
@@ -250,7 +250,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             move.y = JumpGravity();
-            SetPlayerState(playerState.MOVABLE);
+            SetPlayerState(EPlayerState.MOVABLE);
             return move;
         }
 
@@ -286,9 +286,9 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             //when to apply gravity
-            case playerState.MOVABLE:
-            case playerState.DIALOGUE:
-            case playerState.CUTSCENE:
+            case EPlayerState.MOVABLE:
+            case EPlayerState.DIALOGUE:
+            case EPlayerState.CUTSCENE:
 
                 //prevent bouncing
                 if (isGrounded && verticalVelocity < 0)
@@ -306,7 +306,7 @@ public class PlayerMovement : MonoBehaviour
         if (
             Input.GetButtonDown("Jump") &&                          //pressing jump button?
             jumpEnabled &&                                          //jumping enabled?
-            (groundedTimer > 0 || state == playerState.LADDER)      //grounded OR on ladder?
+            (groundedTimer > 0 || state == EPlayerState.LADDER)      //grounded OR on ladder?
             )
         {
             //jump
