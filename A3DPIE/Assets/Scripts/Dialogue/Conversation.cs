@@ -6,7 +6,7 @@ using UnityEngine;
 public class Conversation
 {
     public string conversationID;   //used by complex characters to know what to say
-                                    //bought me a drink? "drink"
-                                    //you didn't? "nodrink"
+                                    //bought me a drink? ID "drink"
+                                    //you didn't? ID "nodrink"
     public Dialogue[] dialogues = new Dialogue[1];
 }

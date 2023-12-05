@@ -8,22 +8,32 @@ using UnityEngine;
 
 
 
+public enum EPlayerState
+{
+    MOVABLE,
+    CUTSCENE,
+    DIALOGUE,
+    SEATED,
+    LADDER
+}
+
+
+
 public class PlayerMovement : MonoBehaviour
 {
 
     //==================================================================VARIABLES==================================================================\\
+    
+    //singleton
+    public static PlayerMovement instance;
 
     //references
     CharacterController charController;
     public Camera cam;
+    private CameraController camController;
     public GameObject clothCollision;               //collides with cloths (e.g. cloths on doors) since CharacterController doesn't have a referenceable capsule collider
                                                     //probably could've done this with collision channels but whatever
     private CapsuleCollider clothCapsule;           //the actual collider
-
-    public enum EPlayerState
-    {
-        MOVABLE, CUTSCENE, DIALOGUE, SEATED, LADDER
-    }
 
     public EPlayerState state = EPlayerState.MOVABLE;    //what to do with movement input
 
@@ -47,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         SetupPlayer();
     }
 
@@ -62,7 +73,8 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = spawnPoint.rotation;
         */
 
-        cam.GetComponent<CameraController>().Setup();
+        camController = cam.GetComponent<CameraController>();
+        camController.Setup();
 
         charController = gameObject.GetComponent<CharacterController>();
     }
@@ -71,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        camController.SyncedUpdate();
+
         //check if the player tried to interact with a character
         UpdateInteractions();
 
@@ -109,7 +123,17 @@ public class PlayerMovement : MonoBehaviour
         //player trying to interact?
         if (Input.GetButtonDown("Interact"))
         {
-
+            switch (state)
+            {
+                case EPlayerState.MOVABLE:
+                case EPlayerState.LADDER:
+                case EPlayerState.SEATED:
+                    camController.TryInteract();
+                    break;
+                case EPlayerState.DIALOGUE:
+                    DialogueManager.instance.NextDialogue(true);
+                    break;
+            }
         }
     }
 
@@ -122,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!charController.isGrounded && isGrounded)
         {
-
+            OnLeftGround();
         }
 
         else if (charController.isGrounded && !isGrounded)
@@ -149,16 +173,39 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    private void OnLanded()
+    void OnLeftGround()
+    {
+        if (verticalVelocity < 0.0f)
+        {
+            verticalVelocity = 0.0f;
+        }
+    }
+
+
+
+    void OnLanded()
     {
 
     }
 
 
 
-    void SetPlayerState(EPlayerState newState)
+    public void SetPlayerState(EPlayerState newState)
     {
         state = newState;
+
+        switch (state)
+        {
+            case EPlayerState.CUTSCENE:
+            case EPlayerState.DIALOGUE:
+                camController.useMouseInput = false;
+                break;
+            case EPlayerState.MOVABLE:
+            case EPlayerState.LADDER:
+            case EPlayerState.SEATED:
+                camController.useMouseInput = true;
+                break;
+        }
     }
 
 
@@ -198,14 +245,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 Move()
     {
-        Vector3 move = new Vector3(0.0f, 0.0f, 0.0f);
+        Vector3 move = GetDesiredMvmt();
 
         //credit for GetDesiredMvmt() and GetJumpHeight():
         //https://youtu.be/7kGCrq1cJew
         //https://forum.unity.com/threads/how-to-correctly-setup-3d-character-movement-in-unity.981939/#post-6379746
 
         //X AND Z MOVEMENT
-        move = ApplySpeedModifiers(GetDesiredMvmt());
+        move = ApplySpeedModifiers(move);
 
         //Y MOVEMENT
         move.y = JumpGravity();
@@ -293,7 +340,7 @@ public class PlayerMovement : MonoBehaviour
                 //prevent bouncing
                 if (isGrounded && verticalVelocity < 0)
                 {
-                    verticalVelocity = 0f;
+                    verticalVelocity = -10f;
                 }
 
                 verticalVelocity -= gravity * Time.deltaTime;
@@ -306,12 +353,12 @@ public class PlayerMovement : MonoBehaviour
         if (
             Input.GetButtonDown("Jump") &&                          //pressing jump button?
             jumpEnabled &&                                          //jumping enabled?
-            (groundedTimer > 0 || state == EPlayerState.LADDER)      //grounded OR on ladder?
+            (groundedTimer > 0.0f || state == EPlayerState.LADDER)      //grounded OR on ladder?
             )
         {
             //jump
-            groundedTimer = 0;
-            verticalVelocity += Mathf.Sqrt(jumpHeight * gravity);
+            groundedTimer = 0.0f;
+            verticalVelocity = Mathf.Sqrt(jumpHeight * gravity);    //reset verticalVelocity
         }
 
         return verticalVelocity;

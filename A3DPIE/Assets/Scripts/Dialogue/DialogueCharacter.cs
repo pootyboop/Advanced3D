@@ -4,13 +4,44 @@ using UnityEngine;
 
 public class DialogueCharacter : MonoBehaviour, IInteractable
 {
+
+    public string interactionName
+    {
+        get
+        {
+            return name;
+        }
+    }
+
+    public EInteractionType interactionType
+    {
+        get
+        {
+            return EInteractionType.DIALOGUE;
+        }
+    }
+
     public string name;
     public ELanguage spokenLanguage = ELanguage.HIESCA;
     public Conversation[] conversations = new Conversation[1];
     private int conversationIndex = 0;
 
+
+
     public void Interact()
     {
+        DialogueManager.instance.StartConversation(this, conversations[conversationIndex]);
         //start dialogue
+    }
+
+
+
+    public void OnConversationEnded()
+    {
+        //increment the conversation index if this isn't the final conversation with this character
+        if (conversationIndex < conversations.Length - 1)
+        {
+            conversationIndex++;
+        }
     }
 }
