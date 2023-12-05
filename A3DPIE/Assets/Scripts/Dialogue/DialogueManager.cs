@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -7,6 +8,8 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
 
     public DialogueBox dialogueBox;
+
+    public bool inDialogue = false;
 
     DialogueCharacter character;
     string name;
@@ -27,6 +30,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueCharacter trigger, Conversation currentConversation)
     {
+        inDialogue = true;
+
         character = trigger;
         name = character.name;
         language = character.spokenLanguage;
@@ -38,7 +43,10 @@ public class DialogueManager : MonoBehaviour
 
         dialogueBox.gameObject.SetActive(true);
 
-        print("Started dialogue with " + name + ", who speaks " + language.ToString() + ".");
+        Translator.instance.gameObject.SetActive(true);
+
+        //default to common language for every new conversation
+        Translator.instance.SetTranslatorLanguage(ELanguage.HIESCA);
 
         NextDialogue(false);
     }
@@ -61,42 +69,51 @@ public class DialogueManager : MonoBehaviour
 
         Dialogue dialogue = conversation.dialogues[dialogueIndex];
 
-        string speaker = "";
+        string speaker;
         switch (dialogue.speaker)
         {
             case ESpeaker.CHARACTER:
                 speaker = name;
                 break;
             case ESpeaker.PLAYER:
-                speaker = "Me";
+                speaker = "You";
+                break;
+            default:
+                speaker = "";
                 break;
         }
 
-        dialogueBox.InitializeDialogueBox(dialogue, speaker, language);
 
+        print(Translator.instance.language.ToString());
 
-
-        //Phrase[] phrases = dialogue.phrases;
-        //print(speaker + " says:");
-
-        //for (int i = 0; i < phrases.Length; i++)
-        //{
-        //    print(phrases[i].phrase + " (" + phrases[i].translation + ")");
-        //}
+        dialogueBox.InitializeDialogueBox(dialogue, speaker, language, Translator.instance.language);
     }
 
 
 
     public void EndConversation()
     {
+        inDialogue = false;
+
         PlayerMovement.instance.SetPlayerState(previousPlayerState);
         character.OnConversationEnded();
-
-        print("Ended dialogue with " + name);
 
         dialogueBox.EndDialogue();
         dialogueBox.gameObject.SetActive(false);
 
+        Translator.instance.gameObject.SetActive(false);
+
         CameraController.instance.StopTargetInteractable();
+    }
+
+
+
+    public void OnTranslatorLanguageChanged(ELanguage translatedLanguage)
+    {
+        //make sure we're in dialogue before updating the dialogue box
+        if (inDialogue)
+        {
+            dialogueBox.InitializeDialogueBox(translatedLanguage);
+        }
     }
 }

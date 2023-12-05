@@ -197,13 +197,15 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case EPlayerState.CUTSCENE:
+                camController.SetMouseVisibility(false, false);
+                break;
             case EPlayerState.DIALOGUE:
-                camController.useMouseInput = false;
+                camController.SetMouseVisibility(true, false);
                 break;
             case EPlayerState.MOVABLE:
             case EPlayerState.LADDER:
             case EPlayerState.SEATED:
-                camController.useMouseInput = true;
+                camController.SetMouseVisibility(false, true);
                 break;
         }
     }

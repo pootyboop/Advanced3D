@@ -2,35 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//struct LangData
-//{
-//    Color color;
-//    Texture2D icon;
-
-//    LangData(Color color_, Texture2D icon_)
-//    {
-//        color = color_;
-//        icon = icon_;
-//    }
-//}
-
 [System.Serializable]
 public class LanguageDataMap : MonoBehaviour
 {
-    //can't serialize dictionaries. thanks unity.
-    //public Dictionary<ELanguage, LanguageData> languageDataMap = new Dictionary<ELanguage, LanguageData>()
-    //{
-    //    {ELanguage.HIESCA, new LangData()}
-    //};
-
     public static LanguageDataMap instance;
 
     public LanguageData[] languageDataList = new LanguageData[1];
+
+
 
     void Start()
     {
         instance = this;
     }
+
+
+
+    public Color GetLanguageColor(ELanguage language)
+    {
+        for (int i = 0; i < languageDataList.Length; i++)
+        {
+            if (language == languageDataList[i].language)
+            {
+                return languageDataList[i].color;
+            }
+        }
+
+        //worst case, just return white
+        return new Color(1, 1, 1);
+    }
+
+
 
     public string GetLanguageHexCode(ELanguage language)
     {
@@ -42,6 +44,37 @@ public class LanguageDataMap : MonoBehaviour
             }
         }
 
-        return "000000";
+        //worst case, just return white
+        return "FFFFFF";
+    }
+
+
+
+    public ELanguage GetLanguageByID(int ID)
+    {
+        for (int i = 0; i < languageDataList.Length; i++)
+        {
+            if (ID == i)
+            {
+                return languageDataList[i].language;
+            }
+        }
+
+        return ELanguage.UNSET;
+    }
+
+
+
+    public int GetIDByLanguage(ELanguage language)
+    {
+        for (int i = 0; i < languageDataList.Length; i++)
+        {
+            if (language == languageDataList[i].language)
+            {
+                return i;
+            }
+        }
+
+        return -1;
     }
 }

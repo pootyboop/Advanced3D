@@ -30,8 +30,8 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        DialogueManager.instance.StartConversation(this, conversations[conversationIndex]);
         //start dialogue
+        DialogueManager.instance.StartConversation(this, conversations[conversationIndex]);
     }
 
 

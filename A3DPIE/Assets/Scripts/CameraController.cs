@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraController : MonoBehaviour
 {
     public static CameraController instance;
 
+    public Image reticle;
+
     public float sensitivity = 300.0f;
     public Vector2 rot = new Vector2(0f, 0f);
-    public bool useMouseInput = true;
+    public bool canRotateView;
     float interactionRange = 4.0f;
 
     public IInteractable targetInteractable;
@@ -18,8 +21,7 @@ public class CameraController : MonoBehaviour
         instance = this;
 
         //hide mouse
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        SetMouseVisibility(false, true);
     }
 
 
@@ -28,6 +30,24 @@ public class CameraController : MonoBehaviour
 
         rot = new Vector2(0f, 0f);
         transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+
+    public void SetMouseVisibility(bool isVisible, bool canControlCharacterView)
+    {
+        Cursor.visible = isVisible;
+        if (isVisible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        canRotateView = canControlCharacterView;
+        reticle.gameObject.SetActive(canRotateView);
     }
 
 
@@ -42,7 +62,7 @@ public class CameraController : MonoBehaviour
 
     void Look()
     {
-        if (useMouseInput)
+        if (canRotateView)
         {
             //credit:
             //https://youtu.be/f473C43s8nE
@@ -60,6 +80,8 @@ public class CameraController : MonoBehaviour
             //transform.parent.gameObject.transform.Rotate(new Vector3(0f, rot.y, 0f));
         }
     }
+
+
 
     void CheckInteractable()
     {

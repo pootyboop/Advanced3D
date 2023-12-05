@@ -10,10 +10,17 @@ public class DialogueBox : MonoBehaviour
     public TMP_Text speakerName;
     private PhraseText[] spawnedPhraseTexts;
 
+    private Dialogue currentDialogue;
+    private string currentSpeaker;
+    private ELanguage currentLanguage;
 
 
-    public void InitializeDialogueBox(Dialogue dialogue, string speaker, ELanguage language)
+
+    public void InitializeDialogueBox(Dialogue dialogue, string speaker, ELanguage language, ELanguage translatedLanguage)
     {
+        currentDialogue = dialogue;
+        currentSpeaker = speaker;
+        currentLanguage = language;
 
         bool usePlainText;
         if (speaker == "")
@@ -28,12 +35,19 @@ public class DialogueBox : MonoBehaviour
             speakerName.text = "- " + speaker + " -";
         }
 
-        InitializePhrases(dialogue.phrases, usePlainText, language);
+        InitializePhrases(currentDialogue.phrases, usePlainText, currentLanguage, translatedLanguage);
     }
 
 
 
-    private void InitializePhrases(Phrase[] phrases, bool usePlainText, ELanguage language)
+    public void InitializeDialogueBox(ELanguage translatedLanguage)
+    {
+        InitializeDialogueBox(currentDialogue, currentSpeaker, currentLanguage, translatedLanguage);
+    }
+
+
+
+    private void InitializePhrases(Phrase[] phrases, bool usePlainText, ELanguage language, ELanguage translatedLanguage)
     {
         CleanupPhrases();
         spawnedPhraseTexts = new PhraseText[phrases.Length];
@@ -47,8 +61,9 @@ public class DialogueBox : MonoBehaviour
             //save a ref to delete it later
             spawnedPhraseTexts[i] = currentPhraseText;
             //make it a child of this dialogue box
-            currentPhraseText.transform.parent = transform;
-            currentPhraseText.UpdateText(phrases[i], language, usePlainText);
+            currentPhraseText.transform.SetParent(transform, false);
+            //set up its text
+            currentPhraseText.UpdateText(phrases[i], language, translatedLanguage, usePlainText);
         }
     }
 

@@ -10,7 +10,7 @@ public class PhraseText : MonoBehaviour
 
 
 
-    public void UpdateText(Phrase phrase, ELanguage speakerLanguage, bool usePlainText)
+    public void UpdateText(Phrase phrase, ELanguage speakerLanguage, ELanguage translatedLanguage, bool usePlainText)
     {
         text = gameObject.GetComponent<TMP_Text>();
 
@@ -37,32 +37,50 @@ public class PhraseText : MonoBehaviour
         //otherwise do the fancy translation stuff
         else
         {
-            text.text = CreateTMProText(phrase, trueLanguage);
+            text.text = CreateTMProText(phrase, trueLanguage, translatedLanguage);
         }
     }
 
 
 
-    private string CreateTMProText(Phrase phrase, ELanguage language)
+    private string CreateTMProText(Phrase phrase, ELanguage language, ELanguage translatedLanguage)
     {
         //phrase text and translation
         string TMProText =
             "<color=#" +
             LanguageDataMap.instance.GetLanguageHexCode(language) +
-            //GetLanguageHexColor(language) +
             ">" +
             phrase.phrase +
-            "\n<size=50%><color=#AAAAAA>|<size=100%><color=#FFFFFF>\n" +
-            phrase.translation +
-            "\n<size=40%>";
+            "\n<size=50%><color=#AAAAAA>|<size=100%>\n";
 
-        //context
-        if (phrase.context != null && phrase.context != "")
+        if (language == translatedLanguage)
         {
             TMProText +=
-                "<color=#666666>(" +
+                "<color=#FFFFFF>" +
+                phrase.translation;
+        }
+
+        else
+        {
+            TMProText += "<color=#666666>?";
+        }
+
+
+        TMProText += "\n<size=40%>\n<color=#666666>";
+
+        //context
+        if (language == translatedLanguage && phrase.context != null && phrase.context != "")
+        {
+            TMProText +=
+                "(" +
                 phrase.context +
                 ")";
+        }
+
+        else
+        {
+            //for formatting so that phrases with actual context fields aren't offset/smaller than the rest
+            TMProText += "-";
         }
 
         return TMProText;
@@ -70,8 +88,8 @@ public class PhraseText : MonoBehaviour
 
 
 
-    private string GetLanguageHexColor(ELanguage language)
+    public void SetTranslatorLanguageToMatch()
     {
-        return "FF0000";
+        Translator.instance.SetTranslatorLanguage(trueLanguage);
     }
 }
