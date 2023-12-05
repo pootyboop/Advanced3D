@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 
     public DialogueBox dialogueBox;
 
-    public bool inDialogue = false;
+    private bool inDialogue = false;
 
     DialogueCharacter character;
     string name;
@@ -45,10 +45,11 @@ public class DialogueManager : MonoBehaviour
 
         Translator.instance.gameObject.SetActive(true);
 
-        //default to common language for every new conversation
-        Translator.instance.SetTranslatorLanguage(ELanguage.HIESCA);
-
         NextDialogue(false);
+
+        //default to common language for every new conversation
+        //KEEP THIS AFTER NextDialogue()
+        Translator.instance.SetTranslatorLanguage(ELanguage.HIESCA);
     }
 
 
@@ -84,7 +85,7 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-        print(Translator.instance.language.ToString());
+        //print(Translator.instance.language.ToString());
 
         dialogueBox.InitializeDialogueBox(dialogue, speaker, language, Translator.instance.language);
     }

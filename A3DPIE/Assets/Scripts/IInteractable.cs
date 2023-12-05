@@ -5,7 +5,8 @@ using UnityEngine;
 public enum EInteractionType
 {
     GENERIC,
-    DIALOGUE
+    DIALOGUE,
+    READABLE
 }
 
 public interface IInteractable

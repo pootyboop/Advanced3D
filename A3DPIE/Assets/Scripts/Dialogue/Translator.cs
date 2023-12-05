@@ -18,6 +18,7 @@ public class Translator : MonoBehaviour
     void Start()
     {
         instance = this;
+        SetTranslatorLanguage(ELanguage.HIESCA);
         gameObject.SetActive(false);
     }
 
@@ -36,7 +37,6 @@ public class Translator : MonoBehaviour
     {
         language = newLanguage;
 
-        //update slider value
         languageSlider.value = LanguageDataMap.instance.GetIDByLanguage(language);
 
         TranslatorLanguageUpdated();
@@ -56,18 +56,16 @@ public class Translator : MonoBehaviour
     private void TranslatorLanguageUpdated()
     {
         languageText.text =
-            "<size=50%><color=#DDDDDD>Translator:\n<size=100%><color=#" +
+            "<size=50%><color=#DDDDDD>Translating:\n<size=100%><color=#" +
             LanguageDataMap.instance.GetLanguageHexCode(language) +
             ">" +
             language.ToString();
 
         sliderHandle.color = LanguageDataMap.instance.GetLanguageColor(language);
 
-        if (DialogueManager.instance == null)
+        if (DialogueManager.instance != null)
         {
-            return;
+            DialogueManager.instance.OnTranslatorLanguageChanged(language);
         }
-
-        DialogueManager.instance.OnTranslatorLanguageChanged(language);
     }
 }

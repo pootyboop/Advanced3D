@@ -17,9 +17,11 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     {
         get
         {
-            return EInteractionType.DIALOGUE;
+            return type;
         }
     }
+
+    public EInteractionType type = EInteractionType.DIALOGUE;
 
     public string name;
     public ELanguage spokenLanguage = ELanguage.HIESCA;
