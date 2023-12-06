@@ -31,15 +31,16 @@ public class BarConveyorBelt : MonoBehaviour
         newObj.spline = spline;
         newObj.splineLength = splineLength;
         newObj.distancePercentage = Random.Range(0f, 1f);
+        obj.GetComponent<Rigidbody>().isKinematic = true;
     }
 
 
 
     public void LeaveConveyorBelt(GameObject obj)
     {
-        if (obj.GetComponent<MoveAlongSpline>() != null)
-        {
-            Destroy(obj.GetComponent<MoveAlongSpline>());
-        }
+        MoveAlongSpline newObj = obj.GetComponent<MoveAlongSpline>();
+        obj.GetComponent<Rigidbody>().isKinematic = false;
+
+        Destroy(newObj);
     }
 }

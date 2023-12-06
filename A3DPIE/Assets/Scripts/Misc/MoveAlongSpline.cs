@@ -11,6 +11,8 @@ This script is based on a GitHub repository.
     Accessed: 6/12/2023
 */
 
+
+[RequireComponent(typeof(Rigidbody))]
 public class MoveAlongSpline : MonoBehaviour
 {
     public BarConveyorBelt barConveyorBelt;
@@ -19,6 +21,15 @@ public class MoveAlongSpline : MonoBehaviour
     public float distancePercentage = 0f;
 
     public float splineLength;
+
+    public Rigidbody rb;
+
+
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
 
 

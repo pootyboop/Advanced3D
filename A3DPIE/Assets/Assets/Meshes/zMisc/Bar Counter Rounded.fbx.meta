@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Conveyor
+    second: {fileID: 2100000, guid: ba622707990c0734e924e508261e0152, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Dark Metal
     second: {fileID: 2100000, guid: 7f8d7049cfe9357498a72a06f5f62548, type: 2}
   - first:

@@ -31,9 +31,10 @@ public class PlayerMovement : MonoBehaviour
     CharacterController charController;
     public Camera cam;
     private CameraController camController;
-    public GameObject clothCollision;               //collides with cloths (e.g. cloths on doors) since CharacterController doesn't have a referenceable capsule collider
-                                                    //probably could've done this with collision channels but whatever
-    private CapsuleCollider clothCapsule;           //the actual collider
+    //public GameObject clothCollision;               //collides with cloths since CharacterController doesn't have a referenceable capsule collider
+    //probably could've done this with collision channels but whatever
+    //private CapsuleCollider clothCapsule;           //the actual collider
+    private GrabbableObject grabbedObject;
 
     public EPlayerState state = EPlayerState.MOVABLE;    //what to do with movement input
 
@@ -134,6 +135,11 @@ public class PlayerMovement : MonoBehaviour
                     DialogueManager.instance.NextDialogue(true);
                     break;
             }
+        }
+
+        if (Input.GetButtonDown("Drop") && grabbedObject != null)
+        {
+            grabbedObject.Drop();
         }
     }
 
@@ -364,5 +370,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return verticalVelocity;
+    }
+
+
+
+    public void GrabObject(GrabbableObject grabbableObject)
+    {
+        grabbedObject = grabbableObject;
     }
 }
