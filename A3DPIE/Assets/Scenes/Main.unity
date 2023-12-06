@@ -4667,7 +4667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3603858723334733392, guid: e0eaf5f6dff7ea74984c38b133ac27e4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.956452
+      value: -13.702
       objectReference: {fileID: 0}
     - target: {fileID: 3603858723334733392, guid: e0eaf5f6dff7ea74984c38b133ac27e4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4705,6 +4705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ielsek Capsule
       objectReference: {fileID: 0}
+    - target: {fileID: 4127736828746753258, guid: e0eaf5f6dff7ea74984c38b133ac27e4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7498077193335612186, guid: e0eaf5f6dff7ea74984c38b133ac27e4, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4735,7 +4739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 853256928}
-  speed: 1
+  speed: 0.5
 --- !u!1001 &619576138
 PrefabInstance:
   m_ObjectHideFlags: 0
