@@ -37,6 +37,8 @@ public class UI : MonoBehaviour
                 return "Talk";
             case EInteractionType.READABLE:
                 return "Read";
+            case EInteractionType.GRABBABLE:
+                return "Grab";
         }
     }
 

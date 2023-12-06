@@ -13,15 +13,23 @@ This script is based on a GitHub repository.
 
 public class MoveAlongSpline : MonoBehaviour
 {
+    public BarConveyorBelt barConveyorBelt;
     public SplineContainer spline;
     public float speed = .5f;
-    float distancePercentage = 0f;
+    public float distancePercentage = 0f;
 
-    float splineLength;
+    public float splineLength;
 
 
 
     void Update()
+    {
+        Move();
+    }
+
+
+
+    void Move()
     {
         distancePercentage += speed * Time.deltaTime / splineLength;
 

@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     public static CameraController instance;
 
     public Image reticle;
+    public Transform grabPoint;
 
     public float sensitivity = 300.0f;
     public Vector2 rot = new Vector2(0f, 0f);

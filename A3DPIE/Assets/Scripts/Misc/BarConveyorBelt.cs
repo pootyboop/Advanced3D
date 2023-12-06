@@ -8,28 +8,38 @@ public class BarConveyorBelt : MonoBehaviour
     SplineContainer spline;
     float splineLength;
 
+    public GameObject[] conveyorObjects;
+
 
     void Start()
     {
         spline = gameObject.GetComponent<SplineContainer>();
         splineLength = spline.CalculateLength();
-    }
 
-
-
-    public void JoinConveyorBelt(GameObject object)
-    {
-        MoveAlongSpline newObj = object.AddComponent<MoveAlongSpline>();
-        object.splineLength = splineLength;
-    }
-
-
-
-    public void LeaveConveyorBelt(GameObject object)
-    {
-        if (object.GetComponent<MoveAlongSpline>() != null)
+        for (int i = 0; i < conveyorObjects.Length; i++)
         {
-            Destroy(object.GetComponent<MoveAlongSpline>());
+            JoinConveyorBelt(conveyorObjects[i]);
+        }
+    }
+
+
+
+    public void JoinConveyorBelt(GameObject obj)
+    {
+        MoveAlongSpline newObj = obj.AddComponent<MoveAlongSpline>();
+        newObj.barConveyorBelt = this;
+        newObj.spline = spline;
+        newObj.splineLength = splineLength;
+        newObj.distancePercentage = Random.Range(0f, 1f);
+    }
+
+
+
+    public void LeaveConveyorBelt(GameObject obj)
+    {
+        if (obj.GetComponent<MoveAlongSpline>() != null)
+        {
+            Destroy(obj.GetComponent<MoveAlongSpline>());
         }
     }
 }

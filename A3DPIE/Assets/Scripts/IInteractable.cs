@@ -6,7 +6,8 @@ public enum EInteractionType
 {
     GENERIC,
     DIALOGUE,
-    READABLE
+    READABLE,
+    GRABBABLE
 }
 
 public interface IInteractable
