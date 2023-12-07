@@ -2,13 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public enum EInteractionType
 {
     GENERIC,
     DIALOGUE,
     READABLE,
-    GRABBABLE
+    GRABBABLE,
+    SEAT
 }
+
+
 
 public interface IInteractable
 {
@@ -21,6 +26,13 @@ public interface IInteractable
     {
         get;
     }
+
+    bool targetable
+    {
+        get;
+    }
+
+
 
     void Interact();
 }

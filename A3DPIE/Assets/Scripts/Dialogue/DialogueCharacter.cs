@@ -21,6 +21,14 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         }
     }
 
+    public bool targetable
+    {
+        get
+        {
+            return (conversations.Length > 0);
+        }
+    }
+
     public EInteractionType type = EInteractionType.DIALOGUE;
 
     public string name;

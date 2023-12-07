@@ -52,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
     private float verticalVelocity;
     private float previousVerticalVelocity;
 
+    //misc
+    public Seat currentSeat;
+    private Vector3 preSeatedPosition;
+
     //=============================================================================================================================================\\
 
 
@@ -137,9 +141,24 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Drop") && grabbedObject != null)
+        //player trying to drop/cancel?
+        if (Input.GetButtonDown("Drop"))
         {
-            grabbedObject.Drop();
+            if (state == EPlayerState.SEATED)
+            {
+                currentSeat.Stand();
+                currentSeat = null;
+            }
+
+            else if (state == EPlayerState.LADDER)
+            {
+                SetPlayerState(EPlayerState.MOVABLE);
+            }
+
+            else if (grabbedObject != null)
+            {
+                grabbedObject.Drop();
+            }
         }
     }
 
@@ -198,8 +217,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetPlayerState(EPlayerState newState)
     {
+        //PREVIOUS STATE
+        switch (state)
+        {
+            case EPlayerState.SEATED:
+                transform.position = preSeatedPosition;
+                break;
+            default:
+                break;
+        }
+
         state = newState;
 
+        //NEW STATE
         switch (state)
         {
             case EPlayerState.CUTSCENE:
@@ -210,7 +240,10 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case EPlayerState.MOVABLE:
             case EPlayerState.LADDER:
+                camController.SetMouseVisibility(false, true);
+                break;
             case EPlayerState.SEATED:
+                preSeatedPosition = transform.position;
                 camController.SetMouseVisibility(false, true);
                 break;
         }

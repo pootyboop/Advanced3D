@@ -18,11 +18,18 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     {
         get
         {
-            return type;
+            return EInteractionType.GRABBABLE;
         }
     }
 
-    public EInteractionType type = EInteractionType.GRABBABLE;
+    public bool targetable
+    {
+        get
+        {
+            return !grabbed;
+        }
+    }
+
     public string name;
 
     bool grabbed = false;

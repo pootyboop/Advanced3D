@@ -97,11 +97,7 @@ public class CameraController : MonoBehaviour
         {
             if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable hitInteractableObject))
             {
-                if (hitInteractableObject != targetInteractable)
-                {
-                    StopTargetInteractable();
-                    StartTargetInteractable(hitInteractableObject);
-                }
+                TryTargetInteractable(hitInteractableObject);
             }
 
             else
@@ -113,6 +109,21 @@ public class CameraController : MonoBehaviour
         else
         {
             StopTargetInteractable();
+        }
+    }
+
+
+
+    void TryTargetInteractable(IInteractable interactable)
+    {
+        if (interactable != targetInteractable)
+        {
+            StopTargetInteractable();
+
+            if (interactable.targetable)
+            {
+                StartTargetInteractable(interactable);
+            }
         }
     }
 
