@@ -11,6 +11,7 @@ public class Translator : MonoBehaviour
     public TMP_Text languageText;
     public Image sliderHandle;
     public Slider languageSlider;
+    public Image languageIcon;
     public ELanguage language = ELanguage.HIESCA;
 
 
@@ -62,6 +63,8 @@ public class Translator : MonoBehaviour
             language.ToString();
 
         sliderHandle.color = LanguageDataMap.instance.GetLanguageColor(language);
+
+        languageIcon.sprite = LanguageDataMap.instance.GetLanguageIcon(language);
 
         if (DialogueManager.instance != null)
         {

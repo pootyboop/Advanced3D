@@ -6,7 +6,7 @@ public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionText;
+    public GameObject interactionBG, interactionText;
 
 
     void Start()
@@ -18,7 +18,7 @@ public class UI : MonoBehaviour
 
     public void ShowInteractionText(IInteractable interactable)
     {
-        interactionText.SetActive(true);
+        interactionBG.SetActive(true);
 
         //a little ugly but this keeps the interaction prompt all in one single TMPro. less public references
         string newInteractionText = "- " + interactable.interactionName + " -\n<size=70%><color=#FFC317>" + GetInteractionText(interactable.interactionType) + " (E)";
@@ -48,6 +48,6 @@ public class UI : MonoBehaviour
 
     public void HideInteractionText()
     {
-        interactionText.SetActive(false);
+        interactionBG.SetActive(false);
     }
 }

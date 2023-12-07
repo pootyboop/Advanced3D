@@ -50,6 +50,21 @@ public class LanguageDataMap : MonoBehaviour
 
 
 
+    public Sprite GetLanguageIcon(ELanguage language)
+    {
+        for (int i = 0; i < languageDataList.Length; i++)
+        {
+            if (language == languageDataList[i].language)
+            {
+                return languageDataList[i].icon;
+            }
+        }
+
+        return null;
+    }
+
+
+
     public ELanguage GetLanguageByID(int ID)
     {
         for (int i = 0; i < languageDataList.Length; i++)

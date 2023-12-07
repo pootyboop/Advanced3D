@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_BannerBase
-  m_Shader: {fileID: -6465566751694194690, guid: 3525c14328d35414a9f7a7956f203413, type: 3}
-  m_Parent: {fileID: 0}
+  m_Name: MI_Drink_LupBinet
+  m_Shader: {fileID: -6465566751694194690, guid: b6ce8f9c2b312cd419538c9dabb3ea42, type: 3}
+  m_Parent: {fileID: 2100000, guid: d7f3fba371e0eba42941e8b0de1ccec7, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,23 +22,16 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _Texture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _BUILTIN_QueueControl: 0
-    - _BUILTIN_QueueOffset: 0
-    - _WindEffectGradient: 16.5
-    - _WindFrequency: 2
-    - _WindSpeed: 2
-    - _WindStrength: 0.002
+    - _Depth: 2.5
     m_Colors:
-    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _DeepColor: {r: 1, g: 0.5115197, b: 0, a: 1}
+    - _Foam_Color: {r: 1, g: 0.53839076, b: 0, a: 1}
+    - _ShallowColor: {r: 0.6915238, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &810344520710549727
+--- !u!114 &1892265680112630389
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

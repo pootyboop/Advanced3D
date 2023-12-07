@@ -8,7 +8,10 @@ public class BarConveyorBelt : MonoBehaviour
     SplineContainer spline;
     float splineLength;
 
+    public Beverage glassOfDrinkPrefab;
     public GameObject[] conveyorObjects;
+
+    public int numberOfDrinks = 14;
 
 
     void Start()
@@ -16,9 +19,22 @@ public class BarConveyorBelt : MonoBehaviour
         spline = gameObject.GetComponent<SplineContainer>();
         splineLength = spline.CalculateLength();
 
-        for (int i = 0; i < conveyorObjects.Length; i++)
+        InstantiateDrinks(numberOfDrinks);
+
+        //for (int i = 0; i < conveyorObjects.Length; i++)
+        //{
+        //    JoinConveyorBelt(conveyorObjects[i]);
+        //}
+    }
+
+
+
+    void InstantiateDrinks(int drinkCount)
+    {
+        for (int i = 0; i < drinkCount; i++)
         {
-            JoinConveyorBelt(conveyorObjects[i]);
+            GameObject obj = Instantiate(glassOfDrinkPrefab).gameObject;
+            JoinConveyorBelt(obj);
         }
     }
 

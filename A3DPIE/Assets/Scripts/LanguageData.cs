@@ -24,5 +24,5 @@ public class LanguageData
     public ELanguage language;
 
     public Color color;
-    public Texture2D icon;
+    public Sprite icon;
 }

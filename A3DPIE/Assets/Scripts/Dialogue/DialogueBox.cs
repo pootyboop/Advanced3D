@@ -27,12 +27,16 @@ public class DialogueBox : MonoBehaviour
         {
             usePlainText = true;
             speakerName.gameObject.SetActive(false);
+
+            Translator.instance.gameObject.SetActive(false);
         }
         else
         {
             usePlainText = false;
             speakerName.gameObject.SetActive(true);
             speakerName.text = "- " + speaker + " -";
+
+            Translator.instance.gameObject.SetActive(true);
         }
 
         InitializePhrases(currentDialogue.phrases, usePlainText, currentLanguage, translatedLanguage);
