@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Gold
+  m_Name: M_Skin
   m_Shader: {fileID: -6465566751694194690, guid: e66446214ca0aea4c89c34f75248ccd8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -36,24 +36,12 @@ Material:
         m_Texture: {fileID: 2800000, guid: cfbd42a3d8a79244aab651321ab2f03d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _Metallic_Texture:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Normal_Map:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Roughness_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 28e59e1749cf31444805b4a559ec28f7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Texture2DAsset_caf79e9810f2442fbeda69b870663748_Out_0_Texture2D:
-        m_Texture: {fileID: 2800000, guid: cfbd42a3d8a79244aab651321ab2f03d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -73,9 +61,9 @@ Material:
     - _BUILTIN_ZWriteControl: 0
     - _Emission_Sine_Strength: 0
     - _Emission_Strength: 0
-    - _Invert_Metallic_for_Roughness: 1
-    - _Metallic: 0.898
-    - _Roughness: 0.5
+    - _Invert_Metallic_for_Roughness: 0
+    - _Metallic: 0
+    - _Roughness: 0.417
     - _Use_Emission_Tint: 0
     - _Use_Secondary_Tint: 0
     m_Colors:
@@ -83,9 +71,9 @@ Material:
     - _Pan_Speed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondary_Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Specular_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _Tint: {r: 0.81960785, g: 0.5058824, b: 0, a: 0}
+    - _Tint: {r: 0.8113208, g: 0.74401814, b: 0.5931827, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &7253679288761556852
+--- !u!114 &6045264389174904169
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
