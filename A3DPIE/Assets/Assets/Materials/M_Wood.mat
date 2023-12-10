@@ -28,11 +28,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emission_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metallic_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Metallic_Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Roughness_Map:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -46,6 +58,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Alpha: 1
     - _Alpha_Clip_Threshold: 0.5
     - _BUILTIN_AlphaClip: 0
     - _BUILTIN_Blend: 0
@@ -58,12 +71,19 @@ Material:
     - _BUILTIN_ZTest: 4
     - _BUILTIN_ZWrite: 1
     - _BUILTIN_ZWriteControl: 0
+    - _Emission_Sine_Strength: 0
     - _Emission_Strength: 0
     - _Invert_Metallic_for_Roughness: 0
     - _Metallic: 0
     - _Roughness: 0.417
+    - _Use_Emission_Tint: 0
+    - _Use_Secondary_Tint: 0
     m_Colors:
-    - _Tint: {r: 0.23529412, g: 0.17254902, b: 0.17254902, a: 0}
+    - _Emission_Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Pan_Speed: {r: 0, g: 0, b: 0, a: 0}
+    - _Secondary_Tint: {r: 1, g: 1, b: 1, a: 0}
+    - _Specular_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - _Tint: {r: 0.156, g: 0.11440001, b: 0.11440001, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7590624245963674342
 MonoBehaviour:
