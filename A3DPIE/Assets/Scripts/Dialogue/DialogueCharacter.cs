@@ -58,7 +58,7 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         {
             if (character.looksAtPlayerBeforeInteracting)
             {
-                character.LookAtPlayer(isTargeting);
+                character.lookingAtPlayer = isTargeting;
             }
         }
     }

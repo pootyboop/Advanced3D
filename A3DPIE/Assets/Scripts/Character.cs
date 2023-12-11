@@ -10,10 +10,19 @@ public class Character : MonoBehaviour
     private float lookAtPlayerWeight = 3.0f;
 
     public bool looksAtPlayerBeforeInteracting = true;
+    public bool lookingAtPlayer;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+    }
+
+
+
+    void OnAnimatorIK()
+    {
+        Debug.Log("LOOKING");
+        LookAtPlayer(lookingAtPlayer);
     }
 
 
@@ -23,10 +32,10 @@ public class Character : MonoBehaviour
         animator.SetBool("inDialogue", inDialogue);
 
         //only do this if we werent already looking at player
-        if (!looksAtPlayerBeforeInteracting)
-        {
-            LookAtPlayer(inDialogue);
-        }
+        //if (!looksAtPlayerBeforeInteracting)
+        //{
+            lookingAtPlayer = inDialogue;
+        //}
     }
 
 

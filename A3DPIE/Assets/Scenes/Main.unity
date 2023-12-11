@@ -21496,10 +21496,10 @@ PrefabInstance:
       addedObject: {fileID: 1734664900}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1734664901}
+      addedObject: {fileID: 1734664902}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1734664902}
+      addedObject: {fileID: 1734664901}
   m_SourcePrefab: {fileID: 100100000, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
 --- !u!1 &1734664897 stripped
 GameObject:
@@ -21515,7 +21515,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734664897}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
   m_Controller: {fileID: 9100000, guid: 88551b6812599954a894fb64c78bcb5d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -21587,6 +21587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looksAtPlayerBeforeInteracting: 1
+  lookingAtPlayer: 0
 --- !u!1001 &1736340456
 PrefabInstance:
   m_ObjectHideFlags: 0
