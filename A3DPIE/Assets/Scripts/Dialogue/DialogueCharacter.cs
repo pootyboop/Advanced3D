@@ -36,12 +36,44 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     public Conversation[] conversations = new Conversation[1];
     private int conversationIndex = 0;
 
+    private Character character;
+    private bool isCharacter = false;
+
+
+
+    void Start()
+    {
+        character = GetComponent<Character>();
+        if (character != null)
+        {
+            isCharacter = true;
+        }
+    }
+
+
+
+    public void OnTargetedChanged(bool isTargeting)
+    {
+        if (isCharacter)
+        {
+            if (character.looksAtPlayerBeforeInteracting)
+            {
+                character.LookAtPlayer(isTargeting);
+            }
+        }
+    }
+
 
 
     public void Interact()
     {
         //start dialogue
         DialogueManager.instance.StartConversation(this, conversations[conversationIndex]);
+
+        if (isCharacter)
+        {
+            character.SetInDialogue(true);
+        }
     }
 
 
@@ -52,6 +84,11 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         if (conversationIndex < conversations.Length - 1)
         {
             conversationIndex++;
+        }
+
+        if (isCharacter)
+        {
+            character.SetInDialogue(false);
         }
     }
 }

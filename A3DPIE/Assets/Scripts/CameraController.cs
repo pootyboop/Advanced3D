@@ -133,6 +133,8 @@ public class CameraController : MonoBehaviour
     {
         targetInteractable = newInteractable;
         UI.instance.ShowInteractionText(newInteractable);
+
+        targetInteractable.OnTargetedChanged(true);
     }
 
 
@@ -143,6 +145,8 @@ public class CameraController : MonoBehaviour
         {
             return;
         }
+
+        targetInteractable.OnTargetedChanged(false);
 
         targetInteractable = null;
         UI.instance.HideInteractionText();

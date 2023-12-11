@@ -52,6 +52,12 @@ public class Seat : MonoBehaviour, IInteractable
 
 
 
+    public void OnTargetedChanged(bool isTargeting)
+    {
+    }
+
+
+
     public void Sit()
     {
         //stand up from current seat

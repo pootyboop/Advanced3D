@@ -35,4 +35,6 @@ public interface IInteractable
 
 
     void Interact();
+
+    void OnTargetedChanged(bool isTargeting);
 }

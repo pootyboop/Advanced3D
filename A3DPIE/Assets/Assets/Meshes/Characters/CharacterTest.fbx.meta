@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Mouth
+    second: {fileID: 2100000, guid: 5d773e3623a7b584094d0886923e6693, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Skin
     second: {fileID: 2100000, guid: d5b07385f05184b4ca21eed6818953fb, type: 2}
   materials:

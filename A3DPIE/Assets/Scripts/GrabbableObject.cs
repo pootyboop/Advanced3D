@@ -62,6 +62,12 @@ public class GrabbableObject : MonoBehaviour, IInteractable
 
 
 
+    public void OnTargetedChanged(bool isTargeting)
+    {
+    }
+
+
+
     public void Grab()
     {
         grabbed = true;
