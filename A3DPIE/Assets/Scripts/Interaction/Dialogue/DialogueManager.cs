@@ -70,6 +70,8 @@ public class DialogueManager : MonoBehaviour
 
         Dialogue dialogue = conversation.dialogues[dialogueIndex];
 
+        character.SetDialogueState(dialogue.speaker);
+
         string speaker;
         switch (dialogue.speaker)
         {

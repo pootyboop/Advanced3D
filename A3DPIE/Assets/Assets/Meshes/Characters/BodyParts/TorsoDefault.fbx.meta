@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2dd2817771788df4fbc875cd610b1f4e
+guid: dc8a074f2cf5aae488cb0b7707571df3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -57,7 +57,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
+    optimizeBones: 0
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8

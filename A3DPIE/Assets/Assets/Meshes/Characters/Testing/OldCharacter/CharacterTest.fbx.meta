@@ -154,10 +154,10 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
@@ -234,7 +234,7 @@ ModelImporter:
     - name: arm1.L
       parentName: shoulder.L
       position: {x: 0.0000000012011196, y: 0.0023715943, z: -5.2965098e-12}
-      rotation: {x: -0.023957124, y: -0.21693668, z: -0.12181102, w: 0.9682596}
+      rotation: {x: -0.023957124, y: -0.2169367, z: -0.12181102, w: 0.96825963}
       scale: {x: 0.9999997, y: 0.99999994, z: 0.9999997}
     - name: arm2.L
       parentName: arm1.L
@@ -299,7 +299,7 @@ ModelImporter:
     - name: arm1.R
       parentName: shoulder.R
       position: {x: -0.0000000012011196, y: 0.0023715943, z: -5.2965098e-12}
-      rotation: {x: -0.030841548, y: 0.19436583, z: 0.1206591, w: 0.9729914}
+      rotation: {x: -0.030841596, y: 0.19436583, z: 0.12065914, w: 0.97299135}
       scale: {x: 0.9999996, y: 1, z: 0.99999976}
     - name: arm2.R
       parentName: arm1.R

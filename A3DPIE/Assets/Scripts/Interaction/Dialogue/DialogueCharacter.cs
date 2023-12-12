@@ -58,7 +58,7 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         {
             if (character.looksAtPlayerBeforeInteracting)
             {
-                character.lookingAtPlayer = isTargeting;
+                character.LookAtPlayer(isTargeting);
             }
         }
     }
@@ -69,10 +69,16 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     {
         //start dialogue
         DialogueManager.instance.StartConversation(this, conversations[conversationIndex]);
+    }
 
+
+
+    public void SetDialogueState(ESpeaker speaker)
+    {
         if (isCharacter)
         {
             character.SetInDialogue(true);
+            character.SetDialogueState(speaker);
         }
     }
 
@@ -89,6 +95,11 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         if (isCharacter)
         {
             character.SetInDialogue(false);
+
+            if (!character.looksAtPlayerBeforeInteracting)
+            {
+                character.LookAtPlayer(false);
+            }
         }
     }
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum ESpeaker
 {
-    CHARACTER,
-    PLAYER,
-    PLAYERTHINKTOSELF
+    CHARACTER = 0,
+    PLAYER = 1,
+    PLAYERTHINKTOSELF = 2
 }
 
 [System.Serializable]
