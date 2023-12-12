@@ -77,8 +77,8 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     {
         if (isCharacter)
         {
-            character.SetInDialogue(true);
             character.SetDialogueState(speaker);
+            character.SetInDialogue(true);
         }
     }
 

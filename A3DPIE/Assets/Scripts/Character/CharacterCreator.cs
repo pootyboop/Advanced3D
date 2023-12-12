@@ -18,17 +18,18 @@ public class CharacterCreator : MonoBehaviour
 
     void Start()
     {
-        if (randomlyGenerate)
-        {
-            GenerateCharacter();
-        }
+        GenerateCharacter();
     }
 
 
 
     public void GenerateCharacter()
     {
-        body = CharacterCreationManager.instance.GenerateCharacter(body);
+
+        if (randomlyGenerate)
+        {
+            body = CharacterCreationManager.instance.GenerateCharacter(body);
+        }
 
         transform.localScale = new Vector3(body.stature, body.stature, body.stature);
 
@@ -67,7 +68,18 @@ public class CharacterCreator : MonoBehaviour
 
         for (int i = 0; i < renderer.materials.Length; i++)
         {
-            renderer.materials[i].color = GetColorByPartMaterial(partName, bodyPart.materialTypes[i]);
+            switch (bodyPart.materialTypes[i])
+            {
+                case EMaterialType.EYES:
+                    renderer.materials[i].SetColor("_Eye_Color", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
+                    break;
+                case EMaterialType.METAL:
+                    renderer.materials[i].SetColor("_Tint", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
+                    break;
+                default:
+                    renderer.materials[i].color = GetColorByPartMaterial(partName, bodyPart.materialTypes[i]);
+                    break;
+            }
         }
 
         return newBodyPartObj;
@@ -104,7 +116,8 @@ public class CharacterCreator : MonoBehaviour
                 }
 
             default:
-                return new Color(1f, 1f, 1f);
+                //just return black since we're probably dealing with UNSET which is used for the black inside of characters' mouths
+                return new Color(0f, 0f, 0f);
         }
     }
 }
