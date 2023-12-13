@@ -117,3 +117,9 @@ MonoBehaviour:
         phrase: Pical Anlon
         translation: Little Evil
         context: upscale alcoholic drink
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: So overpriced. Why do people pay for this?
+        translation: 
+        context: 

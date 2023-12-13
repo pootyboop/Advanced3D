@@ -133,3 +133,9 @@ MonoBehaviour:
         phrase: Lup Binet
         translation: Late Fuel
         context: spirit/energy drink
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: Ugh. My mouth tastes bad just looking at this.
+        translation: 
+        context: 

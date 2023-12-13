@@ -10,7 +10,8 @@ public enum EInteractionType
     DIALOGUE,
     READABLE,
     GRABBABLE,
-    SEAT
+    SEAT,
+    DOOR
 }
 
 

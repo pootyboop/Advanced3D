@@ -121,3 +121,10 @@ MonoBehaviour:
         phrase: Voenni
         translation: Voenni
         context: aesthetic style from Voenn
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 4
+        phrase: Even though this is Voenn's signature drink, none of the locals can
+          afford it. It's supposed to be really good though.
+        translation: 
+        context: 

@@ -117,3 +117,10 @@ MonoBehaviour:
         phrase: Ecas Cisc Asca
         translation: Bottle of Joy
         context: cocktail
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: I love this stuff. Perfectly savory and sour at the same time. One
+          of the perks of living in Hiesor.
+        translation: 
+        context: 

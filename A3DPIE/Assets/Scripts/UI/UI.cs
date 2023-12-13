@@ -41,6 +41,8 @@ public class UI : MonoBehaviour
                 return "Grab";
             case EInteractionType.SEAT:
                 return "Sit";
+            case EInteractionType.DOOR:
+                return "Open";
         }
     }
 
