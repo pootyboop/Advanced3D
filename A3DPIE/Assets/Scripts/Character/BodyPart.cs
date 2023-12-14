@@ -13,7 +13,8 @@ public enum EMaterialType
     HAIR,
     CLOTH,
     METAL,
-    EMISSIVE
+    EMISSIVE,
+    LEATHER
 }
 
 

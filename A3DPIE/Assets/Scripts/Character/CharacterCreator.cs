@@ -103,6 +103,8 @@ public class CharacterCreator : MonoBehaviour
                 return body.metalColor;
             case EMaterialType.EMISSIVE:
                 return body.emissiveColor;
+            case EMaterialType.LEATHER:
+                return body.leatherColor;
 
             case EMaterialType.CLOTH:
                 switch (partName)

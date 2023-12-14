@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_BannerPriedenne
+  m_Name: MI_BannerHierre
   m_Shader: {fileID: -6465566751694194690, guid: 3525c14328d35414a9f7a7956f203413, type: 3}
   m_Parent: {fileID: 2100000, guid: 092d768aa1cccff47a65819a8e063032, type: 2}
   m_ModifiedSerializedProperties: 0
@@ -37,12 +37,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 0c800bf98a3ba124dafa222ca336a818, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb7d952d6735a3149bc28d9f7b60554b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Background_Color: {r: 0.70980394, g: 0.57254905, b: 0.44313726, a: 1}
-    - _Icon_Color: {r: 0.24528301, g: 0.13884746, b: 0.0127269495, a: 1}
+    - _Background_Color: {r: 1, g: 0.61960787, b: 0, a: 1}
+    - _Icon_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
   m_BuildTextureStacks: []

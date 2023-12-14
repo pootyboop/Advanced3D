@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterCreationManager : MonoBehaviour
 {
     public static CharacterCreationManager instance;
-    public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange;
+    public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange, leatherColorRange;
     public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs;
     public CharacterMaterial[] characterMaterials;
 
@@ -64,18 +64,6 @@ public class CharacterCreationManager : MonoBehaviour
 
     BodyPart GenerateBodyPart(BodyPart bodyPart, BodyPart[] partPool)
     {
-        /*
-        //check if we havent already set a body part to be used
-        if (bodyPart == null)
-        {
-            //if so just grab a random part
-            bodyPart = partPool[UnityEngine.Random.Range(0, partPool.Length)];
-        }
-
-        //otherwise use what we already got
-        return bodyPart;
-        */
-
         return partPool[UnityEngine.Random.Range(0, partPool.Length)];
     }
 
@@ -83,41 +71,13 @@ public class CharacterCreationManager : MonoBehaviour
 
     Body GenerateColors(Body body)
     {
-        /*
-        for (int i = 0; i < materialTypes.Length; i++)
-        {
-            switch (materialTypes[i])
-            {
-                case EMaterialType.SKIN:
-                    body.skinTone = skinToneRange.Evaluate(UnityEngine.Random.Range(0f,1f));
-                    break;
-                case EMaterialType.EYES:
-                    body.eyeColor = eyeColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
-                    break;
-                case EMaterialType.LIPS:
-                    body.lipColor = lipColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
-                    break;
-                case EMaterialType.HAIR:
-                    body.hairColor = hairColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
-                    break;
-                case EMaterialType.METAL:
-                    body.metalColor = metalColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
-                    break;
-                case EMaterialType.EMISSIVE:
-                    body.emissiveColor = emissiveColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
-                    break;
-                default:
-                    break;
-            }
-        }
-        */
-
         body.skinTone = skinToneRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.eyeColor = eyeColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.lipColor = lipColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.hairColor = hairColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.metalColor = metalColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.emissiveColor = emissiveColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
+        body.leatherColor = leatherColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
         body.clothColorHead = GenerateClothColor();
         body.clothColorTorso = GenerateClothColor();
         body.clothColorLegs = GenerateClothColor();
