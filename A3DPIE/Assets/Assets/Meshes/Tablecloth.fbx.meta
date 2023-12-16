@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RectDesign
-    second: {fileID: 2100000, guid: 649e9bbea283f074385ef26b46d84a65, type: 2}
+    second: {fileID: 2100000, guid: 0135a03a1ef1046ae9ea2fe2d0a015f7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
