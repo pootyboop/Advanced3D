@@ -7,6 +7,8 @@ public class CharacterCreationManager : MonoBehaviour
 {
     public static CharacterCreationManager instance;
     public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange, leatherColorRange;
+    public float minStature = .9f;
+    public float maxStature = 1.1f;
     public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs;
     public CharacterMaterial[] characterMaterials;
 
@@ -38,7 +40,7 @@ public class CharacterCreationManager : MonoBehaviour
             newBody = new Body();
         }
 
-        newBody.stature = UnityEngine.Random.Range(.9f, 1.1f);
+        newBody.stature = UnityEngine.Random.Range(minStature, maxStature);
         newBody = GenerateColors(newBody);
         newBody = GenerateBodyParts(newBody);
 
