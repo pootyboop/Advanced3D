@@ -1234,6 +1234,231 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2963485652899738102, guid: c9272fe5d5bbbd44eab2e597936e1d37, type: 3}
   m_PrefabInstance: {fileID: 56060343}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &56877003
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: name
+      value: Khitu Jokhiu
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: spokenLanguage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: No way. Is that...
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: 'Hioh tag! Tag gairduh gi '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].phrase
+      value: 'iel '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].phrase
+      value: 'nep '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[3].phrase
+      value: Ronetto!
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].phrase
+      value: Rak hokho.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].phrase
+      value: 'Rik '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].phrase
+      value: 'reh '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[3].phrase
+      value: 'rouk '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[4].phrase
+      value: holket.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[3].context
+      value: desert planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].context
+      value: '"calm down"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].context
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[3].context
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].translation
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].translation
+      value: 'It''s you! You stole my '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].translation
+      value: 'ielsek '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].translation
+      value: 'back on '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[3].translation
+      value: Ronetto!
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].translation
+      value: You're content.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].translation
+      value: 'I '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].translation
+      value: 'found '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[3].translation
+      value: 'it '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[4].translation
+      value: first.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[3].overrideLanguage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].overrideLanguage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].overrideLanguage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[3].overrideLanguage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[4].overrideLanguage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130971092933741654, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_Name
+      value: Character (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.055
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.30037266
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.95382196
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -145.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5709190704443590950, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: state
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
 --- !u!1001 &60860613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12185,6 +12410,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7268450874820287896, guid: 5486d05be283c284da6e22b3b3e36337, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1339218468}
+    - targetCorrespondingSourceObject: {fileID: 7268450874820287896, guid: 5486d05be283c284da6e22b3b3e36337, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1484100960}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5486d05be283c284da6e22b3b3e36337, type: 3}
 --- !u!1001 &396214211
@@ -40731,6 +40959,80 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: df4fe4dd5baa66e4d8f4db8e22a52c44, type: 3}
   m_PrefabInstance: {fileID: 1467282949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1484100959
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1951143288}
+    m_Modifications:
+    - target: {fileID: 7531748203287094857, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_Name
+      value: SeatHitbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.009999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.009999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.009999997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00253
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.00536
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.706973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.706973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.013756804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.013756804
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 87.771
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+--- !u!4 &1484100960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8987479516561339703, guid: 0330e731b24624523abf1ff3b8a0a281, type: 3}
+  m_PrefabInstance: {fileID: 1484100959}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1484710326
 AudioSource:
@@ -81912,3 +82214,4 @@ SceneRoots:
   - {fileID: 269895749}
   - {fileID: 1527463072}
   - {fileID: 676141896}
+  - {fileID: 56877003}
