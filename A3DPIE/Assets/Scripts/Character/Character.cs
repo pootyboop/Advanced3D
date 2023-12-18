@@ -5,6 +5,20 @@ using UnityEngine.Animations.Rigging;
 
 
 
+public enum ECharacterState
+{
+    STANDING = 0,
+    SITTING = 1,
+    LEANING = 2,
+    BOXING1 = 3,
+    BOXING2 = 4,
+    MUSIC1 = 5,
+    MUSIC2 = 6,
+    MUSIC3 = 7
+}
+
+
+
 [RequireComponent(typeof(Animator))]
 public class Character : MonoBehaviour
 {
@@ -17,21 +31,21 @@ public class Character : MonoBehaviour
     private Vector3 defaultLookAt;
     private float lookAtTime = 0.3f;
 
+    public ECharacterState state;
+
     public bool looksAtPlayerBeforeInteracting = true;
     public bool lookingAtPlayer = false;
 
-    public bool isSitting = false;
-    private float seatRadius = 1.0f;
+    private float seatRadius = 0.75f;
+
+
 
     void Start()
     {
         animator = GetComponent<Animator>();
         defaultLookAt = lookAtTransform.position;
 
-        if (isSitting)
-        {
-            TryFindSeat();
-        }
+        SetCharacterState(state);
     }
 
 
@@ -56,6 +70,24 @@ public class Character : MonoBehaviour
 
 
 
+    public void SetCharacterState(ECharacterState characterState)
+    {
+
+        state = characterState;
+        animator.SetInteger("characterStateEnum", (int)state);
+
+        switch (state)
+        {
+            case ECharacterState.SITTING:
+                TryFindSeat();
+                break;
+            default:
+                break;
+        }
+    }
+
+
+
     public void TryFindSeat()
     {
         Collider[] possibleSeats = Physics.OverlapSphere(transform.position, seatRadius);
@@ -74,13 +106,12 @@ public class Character : MonoBehaviour
 
 
 
-    public void Sit (Seat seat)
+    void Sit (Seat seat)
     {
-        isSitting = true;   //make sure we're sitting
-        animator.SetBool("isSitting", isSitting);
-
         transform.position = seat.transform.position;
-        //transform.rotation = seat.transform.rotation;
+        Vector3 eulerAngles = seat.transform.eulerAngles;
+        eulerAngles = new Vector3(eulerAngles.x, eulerAngles.y, eulerAngles.z);
+        transform.rotation = Quaternion.Euler(eulerAngles);
 
         seat.occupied = true;
     }

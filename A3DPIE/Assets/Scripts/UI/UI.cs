@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
     public static UI instance;
 
     public GameObject interactionBG, interactionText;
+    public Image fadeToBlackPanel;
+    private float fadeToBlackSpeed = 0.45f;
 
 
     void Start()
@@ -51,5 +54,51 @@ public class UI : MonoBehaviour
     public void HideInteractionText()
     {
         interactionBG.SetActive(false);
+    }
+
+
+
+    public void FadeToBlack(bool fadeIn)
+    {
+        StartCoroutine(FadeBlack(fadeIn));
+    }
+
+
+
+    IEnumerator FadeBlack(bool fadeIn)
+    {
+        if (fadeIn)
+        {
+            fadeToBlackPanel.color = MakeBlackWithAlpha(1.0f);
+        }
+
+        else
+        {
+            fadeToBlackPanel.color = MakeBlackWithAlpha(0.0f);
+        }
+
+        while (
+            (fadeToBlackPanel.color.a <= 1.0f && !fadeIn)
+            ||
+            (fadeToBlackPanel.color.a >= 0.0f && fadeIn)
+            )
+        {
+            float newAddTime = fadeToBlackSpeed * Time.deltaTime;
+
+            if (fadeIn)
+            {
+                newAddTime *= -1.0f;
+            }
+
+            fadeToBlackPanel.color = MakeBlackWithAlpha(fadeToBlackPanel.color.a + newAddTime);
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+
+
+    Color MakeBlackWithAlpha(float alpha)
+    {
+        return new Color(0.0f, 0.0f, 0.0f, alpha);
     }
 }

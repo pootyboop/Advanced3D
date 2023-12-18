@@ -53,8 +53,18 @@ public class CameraController : MonoBehaviour
 
 
 
+    //called from PlayerMovement.Update() rather than this script using its own Update() to avoid some weird camera movement issues
     public void SyncedUpdate()
     {
+        //don't do anything if we can't look around
+        //SyncedUpdate() should never return here but it's just in case i do something with the camera independently of the player
+        if (!canRotateView)
+        {
+            return;
+        }
+
+
+
         Look();
         CheckInteractable();
     }
@@ -63,35 +73,26 @@ public class CameraController : MonoBehaviour
 
     void Look()
     {
-        if (canRotateView)
-        {
-            //credit:
-            //https://youtu.be/f473C43s8nE
-            //http://gyanendushekhar.com/2020/02/06/first-person-movement-in-unity-3d/
+        //credit:
+        //https://youtu.be/f473C43s8nE
+        //http://gyanendushekhar.com/2020/02/06/first-person-movement-in-unity-3d/
 
-            Vector2 mousePos = new Vector2(0.0f, 0.0f);
+        Vector2 mousePos = new Vector2(0.0f, 0.0f);
 
-            mousePos.x = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
-            mousePos.y = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
+        mousePos.x = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
+        mousePos.y = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
 
-            rot.y += mousePos.x;
-            rot.x = Mathf.Clamp(rot.x - mousePos.y, -90f, 90f);
+        rot.y += mousePos.x;
+        rot.x = Mathf.Clamp(rot.x - mousePos.y, -90f, 90f);
 
-            transform.rotation = Quaternion.Euler(rot.x, rot.y, 0.0f);
-            //transform.parent.gameObject.transform.Rotate(new Vector3(0f, rot.y, 0f));
-        }
+        transform.rotation = Quaternion.Euler(rot.x, rot.y, 0.0f);
+        //transform.parent.gameObject.transform.Rotate(new Vector3(0f, rot.y, 0f));
     }
 
 
 
     void CheckInteractable()
     {
-        switch (PlayerMovement.instance.state)
-        {
-            case EPlayerState.DIALOGUE:
-                return;
-        }
-
         Ray ray = new Ray(transform.position, transform.forward);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionRange))
         {

@@ -37,8 +37,11 @@ public class DialogueManager : MonoBehaviour
         language = character.spokenLanguage;
         conversation = currentConversation;
 
-        previousPlayerState = PlayerMovement.instance.state;
-        PlayerMovement.instance.SetPlayerState(EPlayerState.DIALOGUE);
+        if (PlayerMovement.instance.state != EPlayerState.CUTSCENE)
+        {
+            previousPlayerState = PlayerMovement.instance.state;
+            PlayerMovement.instance.SetPlayerState(EPlayerState.DIALOGUE);
+        }
         dialogueIndex = 0;
 
         dialogueBox.gameObject.SetActive(true);
@@ -98,15 +101,17 @@ public class DialogueManager : MonoBehaviour
     {
         inDialogue = false;
 
-        PlayerMovement.instance.SetPlayerState(previousPlayerState);
+        if (PlayerMovement.instance.state != EPlayerState.CUTSCENE)
+        {
+            PlayerMovement.instance.SetPlayerState(previousPlayerState);
+            CameraController.instance.StopTargetInteractable();
+        }
         character.OnConversationEnded();
 
         dialogueBox.EndDialogue();
         dialogueBox.gameObject.SetActive(false);
 
         Translator.instance.gameObject.SetActive(false);
-
-        CameraController.instance.StopTargetInteractable();
     }
 
 

@@ -30,9 +30,6 @@ public class PlayerMovement : MonoBehaviour
     CharacterController charController;
     public Camera cam;
     private CameraController camController;
-    //public GameObject clothCollision;               //collides with cloths since CharacterController doesn't have a referenceable capsule collider
-    //probably could've done this with collision channels but whatever
-    //private CapsuleCollider clothCapsule;           //the actual collider
     private GrabbableObject grabbedObject;
 
     public EPlayerState state = EPlayerState.MOVABLE;    //what to do with movement input
@@ -81,13 +78,25 @@ public class PlayerMovement : MonoBehaviour
         camController.Setup();
 
         charController = gameObject.GetComponent<CharacterController>();
+
+        //make sure all the proper setup for the state selected in inspector is executed
+        SetPlayerState(state);
     }
 
 
 
     void Update()
     {
-        camController.SyncedUpdate();
+        switch (state)
+        {
+            //EPlayerStates that don't require updating the camera
+            case EPlayerState.DIALOGUE:
+            case EPlayerState.CUTSCENE:
+                break;
+            default:
+                camController.SyncedUpdate();
+                break;
+        }
 
         //check if the player tried to interact with a character
         UpdateInteractions();
@@ -136,6 +145,8 @@ public class PlayerMovement : MonoBehaviour
                     break;
                 case EPlayerState.DIALOGUE:
                     DialogueManager.instance.NextDialogue(true);
+                    break;
+                default:
                     break;
             }
         }
@@ -214,6 +225,22 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+    public void EnterCutscene()
+    {
+        SetPlayerState(EPlayerState.CUTSCENE);
+    }
+
+
+
+    public void ExitCutscene()
+    {
+        SetPlayerState(EPlayerState.MOVABLE);
+    }
+
+
+
+    //switch player state between stuff like normal movement, climbing ladder, sitting down, in dialogue...
+    //state should NOT be set outside of this function. this is the correct way to update state
     public void SetPlayerState(EPlayerState newState)
     {
         //PREVIOUS STATE
@@ -221,6 +248,9 @@ public class PlayerMovement : MonoBehaviour
         {
             case EPlayerState.SEATED:
                 transform.position = preSeatedPosition;
+                break;
+            case EPlayerState.CUTSCENE:
+                camController.gameObject.SetActive(true);
                 break;
             default:
                 break;
@@ -233,6 +263,8 @@ public class PlayerMovement : MonoBehaviour
         {
             case EPlayerState.CUTSCENE:
                 camController.SetMouseVisibility(false, false);
+                camController.gameObject.SetActive(false);
+                break;
                 break;
             case EPlayerState.DIALOGUE:
                 camController.SetMouseVisibility(true, false);
