@@ -20,10 +20,18 @@ public class Character : MonoBehaviour
     public bool looksAtPlayerBeforeInteracting = true;
     public bool lookingAtPlayer = false;
 
+    public bool isSitting = false;
+    private float seatRadius = 1.0f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         defaultLookAt = lookAtTransform.position;
+
+        if (isSitting)
+        {
+            TryFindSeat();
+        }
     }
 
 
@@ -43,7 +51,38 @@ public class Character : MonoBehaviour
 
     public void SetDialogueState(ESpeaker speaker)
     {
-        animator.SetInteger("speakerEnum", (int) speaker);
+        animator.SetInteger("speakerEnum", (int)speaker);
+    }
+
+
+
+    public void TryFindSeat()
+    {
+        Collider[] possibleSeats = Physics.OverlapSphere(transform.position, seatRadius);
+        for (int i = 0; i < possibleSeats.Length; i++)
+        {
+            //just grab the first one we find. assuming seats aren't too close together.
+            Seat seat = possibleSeats[i].gameObject.GetComponent<Seat>();
+
+            if (seat != null)
+            {
+                Sit(seat);
+                return;
+            }
+        }
+    }
+
+
+
+    public void Sit (Seat seat)
+    {
+        isSitting = true;   //make sure we're sitting
+        animator.SetBool("isSitting", isSitting);
+
+        transform.position = seat.transform.position;
+        //transform.rotation = seat.transform.rotation;
+
+        seat.occupied = true;
     }
 
 

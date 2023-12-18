@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Effectors:
   - m_Transform: {fileID: 3323795480643465724}
     m_Style:
-      shape: {fileID: 0}
-      color: {r: 1, g: 0, b: 0, a: 0.5}
+      shape: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      color: {r: 0, g: 1, b: 0.43028927, a: 0.79607844}
       size: 0.2
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -549,10 +549,10 @@ PrefabInstance:
       addedObject: {fileID: 4316840691683442110}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2903654727773753979}
+      addedObject: {fileID: 5709190704443590950}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5709190704443590950}
+      addedObject: {fileID: 2903654727773753979}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
       addedObject: {fileID: 232914465857594671}
@@ -785,7 +785,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5130971092933741654}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 35332c78ef0494849a1fce7d39bc51b7, type: 3}
   m_Controller: {fileID: 9100000, guid: 88551b6812599954a894fb64c78bcb5d, type: 2}
   m_CullingMode: 2
   m_UpdateMode: 0
@@ -797,6 +797,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5709190704443590950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130971092933741654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572bfa20370fc1e47a4b548a84791369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAtTransform: {fileID: 3323795480643465724}
+  lookAtTransformParent: {fileID: 2672701545814384817}
+  looksAtPlayerBeforeInteracting: 1
+  lookingAtPlayer: 0
+  isSitting: 0
 --- !u!136 &2903654727773753979
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -820,22 +837,6 @@ CapsuleCollider:
   m_Height: 2.0351639
   m_Direction: 1
   m_Center: {x: -0.026755651, y: 0.98342264, z: 0}
---- !u!114 &5709190704443590950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5130971092933741654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572bfa20370fc1e47a4b548a84791369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookAtTransform: {fileID: 3323795480643465724}
-  lookAtTransformParent: {fileID: 2672701545814384817}
-  looksAtPlayerBeforeInteracting: 1
-  lookingAtPlayer: 0
 --- !u!114 &232914465857594671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,6 +877,7 @@ MonoBehaviour:
   originalRenderer: {fileID: 3689394486974130081}
   randomlyGenerate: 1
   body:
+    stature: 1
     head:
       mesh: {fileID: 0}
       materialTypes: 
@@ -903,10 +905,10 @@ MonoBehaviour:
     hairColor: {r: 0, g: 0, b: 0, a: 0}
     metalColor: {r: 0, g: 0, b: 0, a: 0}
     emissiveColor: {r: 0, g: 0, b: 0, a: 0}
+    leatherColor: {r: 0, g: 0, b: 0, a: 0}
     clothColorHead: {r: 0, g: 0, b: 0, a: 0}
     clothColorTorso: {r: 0, g: 0, b: 0, a: 0}
     clothColorLegs: {r: 0, g: 0, b: 0, a: 0}
-  testmat: {fileID: 2100000, guid: c92d107b7a19aa9489a38d2cf577f01a, type: 2}
   head: {fileID: 0}
   torso: {fileID: 0}
   armL: {fileID: 0}
@@ -933,7 +935,7 @@ MonoBehaviour:
   - m_Transform: {fileID: 5512141694858778348}
     m_Style:
       shape: {fileID: 0}
-      color: {r: 1, g: 0, b: 0, a: 0.5}
+      color: {r: 0, g: 1, b: 0.1952455, a: 0.5}
       size: 0.1
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}

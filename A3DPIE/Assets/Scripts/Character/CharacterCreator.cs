@@ -31,7 +31,7 @@ public class CharacterCreator : MonoBehaviour
             body = CharacterCreationManager.instance.GenerateCharacter(body);
         }
 
-        transform.localScale = new Vector3(body.stature, body.stature, body.stature);
+        transform.localScale = transform.localScale * body.stature;
 
         head = AddBodyPart(body.head, "Head");
         torso = AddBodyPart(body.torso, "Torso");
