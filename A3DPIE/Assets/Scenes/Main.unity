@@ -6795,6 +6795,8 @@ MonoBehaviour:
     materialTypes: 0100000004000000030000000200000000000000
   - mesh: {fileID: -7825007956522436166, guid: 9d194627a6250d547b509a10a8d5d485, type: 3}
     materialTypes: 0100000004000000030000000200000000000000
+  - mesh: {fileID: -4637786392358740600, guid: 727ae08bf739cc042875d367421bd933, type: 3}
+    materialTypes: 0100000004000000030000000200000000000000
   torsos:
   - mesh: {fileID: -7217897083632068878, guid: 402919fe2c948394cb96e633304254bb, type: 3}
     materialTypes: 060000000100000005000000
@@ -6827,6 +6829,8 @@ MonoBehaviour:
     materialTypes: 050000000800000006000000
   - mesh: {fileID: 8860385711739406559, guid: 2b00a13615e9e9d4ca30abf16c93fd97, type: 3}
     materialTypes: 050000000800000006000000
+  - mesh: {fileID: 2931841583402734744, guid: f11885543c49cfa459a23e26e57c68f6, type: 3}
+    materialTypes: 050000000800000006000000
   hairs:
   - mesh: {fileID: 0}
     materialTypes: 
@@ -6846,6 +6850,8 @@ MonoBehaviour:
     materialTypes: 0400000005000000
   - mesh: {fileID: -2581174386479832238, guid: 77c955873182b974c99ee38ceac1ccc0, type: 3}
     materialTypes: 040000000500000006000000
+  - mesh: {fileID: 1258949532466485824, guid: 89cf71d6ad1b0de4591ab6d157cc981f, type: 3}
+    materialTypes: 0400000006000000
   characterMaterials:
   - materialType: 0
     material: {fileID: 2100000, guid: 5d773e3623a7b584094d0886923e6693, type: 2}
@@ -41420,7 +41426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introCutscene: {fileID: 1466778894}
   cutsceneCam: {fileID: 460455052}
-  playIntroCutscene: 1
+  playIntroCutscene: 0
 --- !u!1001 &1467282949
 PrefabInstance:
   m_ObjectHideFlags: 0
