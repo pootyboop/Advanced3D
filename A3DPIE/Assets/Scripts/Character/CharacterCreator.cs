@@ -12,7 +12,7 @@ public class CharacterCreator : MonoBehaviour
     public bool randomlyGenerate = true;
     public Body body;
 
-    public GameObject head, torso, armL, armR, handL, handR, legs;
+    public GameObject head, torso, armL, armR, handL, handR, legs, hair;
 
 
 
@@ -40,6 +40,7 @@ public class CharacterCreator : MonoBehaviour
         handL = AddBodyPart(body.handL, "Hand Left");
         handR = AddBodyPart(body.handR, "Hand Right");
         legs = AddBodyPart(body.legs, "Legs");
+        hair = AddBodyPart(body.hair, "Hair");
     }
 
 
@@ -61,7 +62,6 @@ public class CharacterCreator : MonoBehaviour
         for (int i = 0; i < materials.Length; i++)
         {
             materials[i] = CharacterCreationManager.instance.GetBaseMaterialByType(bodyPart.materialTypes[i]);
-            //materials[i].color = GetColorByPartMaterial(partName, bodyPart.materialTypes[i]);
         }
 
         renderer.materials = materials;
@@ -74,6 +74,7 @@ public class CharacterCreator : MonoBehaviour
                     renderer.materials[i].SetColor("_Eye_Color", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
                     break;
                 case EMaterialType.METAL:
+                case EMaterialType.EMISSIVE:
                     renderer.materials[i].SetColor("_Tint", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
                     break;
                 default:
@@ -118,7 +119,7 @@ public class CharacterCreator : MonoBehaviour
                 }
 
             default:
-                //just return black since we're probably dealing with UNSET which is used for the black inside of characters' mouths
+                //just return black since we're probably dealing with UNSET which is used for the solid black inside of characters' mouths
                 return new Color(0f, 0f, 0f);
         }
     }

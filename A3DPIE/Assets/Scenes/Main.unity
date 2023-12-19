@@ -1240,7 +1240,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 850079367}
     m_Modifications:
     - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: name
@@ -1408,7 +1408,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130971092933741654, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_Name
-      value: Character (12)
+      value: Khitu Jokhiu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8500001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8500001
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3512,8 +3520,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 170
+  m_fontSizeBase: 170
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3524,7 +3532,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -32.31
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -6636,17 +6644,17 @@ MonoBehaviour:
     key1: {r: 0.6921969, g: 0.8, b: 0.38039216, a: 1}
     key2: {r: 0.41960785, g: 0.62350756, b: 0.65882355, a: 0}
     key3: {r: 0.71883893, g: 0.43529412, b: 0.8, a: 0}
-    key4: {r: 0.8396226, g: 0.66454613, b: 0.43169275, a: 0}
+    key4: {r: 0.8867924, g: 0.79774314, b: 0.6809897, a: 0}
     key5: {r: 0.6415094, g: 0.4853607, b: 0.29352084, a: 0}
-    key6: {r: 0.2830189, g: 0.21378104, b: 0.16420436, a: 0}
+    key6: {r: 0.3679245, g: 0.2782342, b: 0.20964755, a: 0}
     key7: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0}
     ctime0: 0
-    ctime1: 6939
-    ctime2: 13878
-    ctime3: 21588
-    ctime4: 29491
-    ctime5: 40092
-    ctime6: 50308
+    ctime1: 4433
+    ctime2: 8288
+    ctime3: 11565
+    ctime4: 15420
+    ctime5: 32189
+    ctime6: 47609
     ctime7: 65535
     atime0: 0
     atime1: 65535
@@ -6662,19 +6670,19 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   clothColorRange:
     serializedVersion: 2
-    key0: {r: 0.7264151, g: 0.25013348, b: 0.25013348, a: 1}
+    key0: {r: 0.405, g: 0.14010811, b: 0.14010811, a: 1}
     key1: {r: 0.8, g: 0.63594526, b: 0.45490196, a: 1}
-    key2: {r: 0.61921114, g: 0.754717, b: 0.41651833, a: 0}
+    key2: {r: 0.33904168, g: 0.412, b: 0.22745834, a: 0}
     key3: {r: 0.31679422, g: 0.5943396, b: 0.52495486, a: 0}
-    key4: {r: 0.27256143, g: 0.34854674, b: 0.46226418, a: 0}
+    key4: {r: 0.27477, g: 0.33463183, b: 0.426, a: 0}
     key5: {r: 0.53099763, g: 0.29814878, b: 0.9433962, a: 0}
-    key6: {r: 0.6226415, g: 0.4258633, b: 0.57856387, a: 0}
-    key7: {r: 1, g: 1, b: 1, a: 0}
+    key6: {r: 0.348, g: 0.23856603, b: 0.32392448, a: 0}
+    key7: {r: 0.46226418, g: 0.28520828, b: 0.40129948, a: 0}
     ctime0: 0
-    ctime1: 17733
-    ctime2: 27563
-    ctime3: 35466
-    ctime4: 44718
+    ctime1: 17155
+    ctime2: 23708
+    ctime3: 33924
+    ctime4: 44525
     ctime5: 54356
     ctime6: 59753
     ctime7: 65535
@@ -6723,20 +6731,20 @@ MonoBehaviour:
   emissiveColorRange:
     serializedVersion: 2
     key0: {r: 1, g: 0, b: 0, a: 1}
-    key1: {r: 1, g: 0.9342736, b: 0, a: 1}
-    key2: {r: 0.26157403, g: 1, b: 0, a: 0}
+    key1: {r: 1, g: 0.4901845, b: 0, a: 1}
+    key2: {r: 1, g: 0.9342736, b: 0, a: 0}
     key3: {r: 0, g: 1, b: 0.72395825, a: 0}
     key4: {r: 0, g: 0.6774192, b: 1, a: 0}
     key5: {r: 0.4110613, g: 0, b: 1, a: 0}
     key6: {r: 1, g: 0, b: 0.9603958, a: 0}
     key7: {r: 1, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 10987
-    ctime2: 18504
-    ctime3: 25636
-    ctime4: 31611
-    ctime5: 39128
-    ctime6: 56861
+    ctime1: 4626
+    ctime2: 17155
+    ctime3: 29491
+    ctime4: 36623
+    ctime5: 49730
+    ctime6: 59560
     ctime7: 65535
     atime0: 0
     atime1: 65535
@@ -6785,6 +6793,8 @@ MonoBehaviour:
   heads:
   - mesh: {fileID: -7753659486976703271, guid: 398b4da696a670e469f3806e1e13a7e8, type: 3}
     materialTypes: 0100000004000000030000000200000000000000
+  - mesh: {fileID: -7825007956522436166, guid: 9d194627a6250d547b509a10a8d5d485, type: 3}
+    materialTypes: 0100000004000000030000000200000000000000
   torsos:
   - mesh: {fileID: -7217897083632068878, guid: 402919fe2c948394cb96e633304254bb, type: 3}
     materialTypes: 060000000100000005000000
@@ -6817,6 +6827,25 @@ MonoBehaviour:
     materialTypes: 050000000800000006000000
   - mesh: {fileID: 8860385711739406559, guid: 2b00a13615e9e9d4ca30abf16c93fd97, type: 3}
     materialTypes: 050000000800000006000000
+  hairs:
+  - mesh: {fileID: 0}
+    materialTypes: 
+  - mesh: {fileID: -3682837546091868179, guid: d550a8899269187479640a85c5d57681, type: 3}
+    materialTypes: 04000000
+  - mesh: {fileID: 2448782176906999177, guid: 7f8643a73b2dc52419ee464a985c30e7, type: 3}
+    materialTypes: 04000000
+  - mesh: {fileID: -5821584944243654353, guid: a40da6e8f49885d46b118a84bac5b219, type: 3}
+    materialTypes: 05000000
+  - mesh: {fileID: -690729376252331296, guid: 9bd5d96d80cb6a24abc81322ef76eda0, type: 3}
+    materialTypes: 0400000005000000
+  - mesh: {fileID: 4435581376419316965, guid: 31838fcf0daa2c14ca21732ec118664a, type: 3}
+    materialTypes: 04000000
+  - mesh: {fileID: -8673995682766258189, guid: 63003204468c3924cabdac7e8c32d936, type: 3}
+    materialTypes: 040000000600000007000000
+  - mesh: {fileID: 4299405752661267030, guid: fac379e5d3734cc4c9e199e5d59c118c, type: 3}
+    materialTypes: 0400000005000000
+  - mesh: {fileID: -2581174386479832238, guid: 77c955873182b974c99ee38ceac1ccc0, type: 3}
+    materialTypes: 040000000500000006000000
   characterMaterials:
   - materialType: 0
     material: {fileID: 2100000, guid: 5d773e3623a7b584094d0886923e6693, type: 2}
@@ -16223,6 +16252,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4df6b7b57c202948a3102274e35f90d, type: 3}
+--- !u!4 &538379101 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+  m_PrefabInstance: {fileID: 676141896}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &539623458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19365,7 +19399,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 850079367}
     m_Modifications:
     - target: {fileID: 138494626744121450, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19378,6 +19412,502 @@ PrefabInstance:
     - target: {fileID: 138494626744121450, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.z
       value: 8.62648e-11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: name
+      value: Viutol
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: spokenLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[0].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[1].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].speaker
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].speaker
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[7].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[0].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[1].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: 'Tag hioh rey '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].phrase
+      value: 'Guressi iel '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[2].phrase
+      value: tir?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: Ie, tag reh gi?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].phrase
+      value: tir?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].phrase
+      value: tir?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].phrase
+      value: Bala.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].phrase
+      value: Gi parih scah hot.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].phrase
+      value: 'Tag reh pa '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].phrase
+      value: Op Wessi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[0].phrase
+      value: 'Ie. Gi brieh '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[1].phrase
+      value: Guressen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[0].phrase
+      value: Tag parih bah gii, hioh tirren?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[1].phrase
+      value: Guressen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[7].phrases.Array.data[0].phrase
+      value: Tag lup hioh lietel, opah hiula crit tag parih.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[0].phrase
+      value: Filuta gii parih hioh tag juiluta
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[1].phrase
+      value: 'iel '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[2].phrase
+      value: tih.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[0].phrase
+      value: 'An, tag gata '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[1].phrase
+      value: Rillit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[2].phrase
+      value: tih.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: Gata tirren.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: Bala.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[0].phrase
+      value: Gi bah gii kitah taggi glotteni!
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[1].phrase
+      value: Rillit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[0].phrase
+      value: 'Anparih pa Hewet '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[1].phrase
+      value: pa tag.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[0].phrase
+      value: 'Bala. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[1].phrase
+      value: Vota.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].context
+      value: leading authority in Guressen
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[1].context
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[1].context
+      value: rat-like creature from Priedenne
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[1].context
+      value: rat-like creature from Priedenne
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[0].context
+      value: 'Hewet: god of neighborship'
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[1].context
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[0].context
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].translation
+      value: You the new
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].translation
+      value: 'Guressi ielsek '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[2].translation
+      value: merchant?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].translation
+      value: Yeah, have you heard of me?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].translation
+      value: merchant?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].translation
+      value: merchant?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].translation
+      value: Doesn't matter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].translation
+      value: I want to talk authority.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].translation
+      value: 'You''ve heard of '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].translation
+      value: Op Wessi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[0].translation
+      value: 'Of course. I live in '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[1].translation
+      value: Guressen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[0].translation
+      value: How would you like joining us as a slaver?
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[1].translation
+      value: Guressen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[7].phrases.Array.data[0].translation
+      value: You would be high class, own any ship you want.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[0].translation
+      value: All we ask is your exclusive
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[1].translation
+      value: 'ielsek '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[2].translation
+      value: trade.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[0].translation
+      value: 'No, you f***ing '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[1].translation
+      value: Rillit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[2].translation
+      value: trade.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[0].phrases.Array.data[0].translation
+      value: F***ing slaver.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[1].phrases.Array.data[0].translation
+      value: So be it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[0].translation
+      value: I thought we got rid of you animals!
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[1].translation
+      value: Rillit.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[0].translation
+      value: 'Hewet''s shame '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[1].translation
+      value: on you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[0].translation
+      value: 'So be it. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[1].translation
+      value: Goodbye.
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[2].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[5].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[6].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[7].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[1].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[8].phrases.Array.data[2].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[1].overrideLanguage
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[9].phrases.Array.data[2].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[0].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[1].dialogues.Array.data[1].phrases.Array.data[0].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[10].phrases.Array.data[1].overrideLanguage
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[0].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[11].phrases.Array.data[1].overrideLanguage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[0].overrideLanguage
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 232914465857594671, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[12].phrases.Array.data[1].overrideLanguage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 786569362554657387, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19573,7 +20103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130971092933741654, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_Name
-      value: Character (11)
+      value: Viutol
       objectReference: {fileID: 0}
     - target: {fileID: 5203882621386482392, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19589,7 +20119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000009536743
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19601,15 +20131,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -24593,6 +25123,8 @@ Transform:
   m_Children:
   - {fileID: 1346461990}
   - {fileID: 277877801}
+  - {fileID: 1288284934}
+  - {fileID: 538379101}
   - {fileID: 946390593}
   - {fileID: 777992000}
   - {fileID: 1707736159}
@@ -33498,13 +34030,19 @@ MonoBehaviour:
       phrases:
       - overrideLanguage: 0
         phrase: Ven, tir. Tag brieh gii lietel critidor.
-        translation: Hi, merchant. You can land in our high-class ship dock.
+        translation: Hello, merchant. You can land in our upper-class ship dock.
         context: 
     - speaker: 1
       phrases:
       - overrideLanguage: 0
         phrase: Kh, ie? Galar!
-        translation: Oh, really? Thanks!
+        translation: Oh, actually? Thank you!
+        context: 
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: He's definitely getting fired.
+        translation: 
         context: 
 --- !u!114 &1149789995
 MonoBehaviour:
@@ -37283,6 +37821,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2963485652899738102, guid: c9272fe5d5bbbd44eab2e597936e1d37, type: 3}
   m_PrefabInstance: {fileID: 1287807517}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1288284934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5512141694858778348, guid: 092e3e7e387b6ab4cb0cd5e53cde137c, type: 3}
+  m_PrefabInstance: {fileID: 56877003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1293892471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41046,7 +41589,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bd577aefd2dcb2f458bb30fde294225f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -60193,6 +60736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 281971259}
     m_Modifications:
+    - target: {fileID: 940253930671515397, guid: 2858d8a50454a3441a544d9bdb147d85, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[2].translation
+      value: 'Carrier, '
+      objectReference: {fileID: 0}
     - target: {fileID: 4904461425574710714, guid: 2858d8a50454a3441a544d9bdb147d85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.19
@@ -82213,5 +82760,3 @@ SceneRoots:
   - {fileID: 110821636}
   - {fileID: 269895749}
   - {fileID: 1527463072}
-  - {fileID: 676141896}
-  - {fileID: 56877003}

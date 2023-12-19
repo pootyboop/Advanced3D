@@ -14,6 +14,7 @@ public class KitOrel : MonoBehaviour
 
     public void StartTrailRenderers()
     {
+        engineRumble.volume = 1.0f;
         StartCoroutine(UpdateTrailRenderers());
     }
 

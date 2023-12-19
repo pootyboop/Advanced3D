@@ -9,7 +9,7 @@ public class CharacterCreationManager : MonoBehaviour
     public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange, leatherColorRange;
     public float minStature = .9f;
     public float maxStature = 1.1f;
-    public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs;
+    public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs, hairs;
     public CharacterMaterial[] characterMaterials;
 
     //TEMP VARIABLES -- used during character generation
@@ -58,6 +58,7 @@ public class CharacterCreationManager : MonoBehaviour
         body.handL = GenerateBodyPart(body.handL, handsL);
         body.handR = GenerateBodyPart(body.handR, handsR);
         body.legs = GenerateBodyPart(body.legs, legs);
+        body.hair = GenerateBodyPart(body.hair, hairs);
 
         return body;
     }
