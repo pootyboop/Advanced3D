@@ -33,6 +33,7 @@ public class KitOrel : MonoBehaviour
                 //low rumble as if still on
                 engineRumble.volume = 0.1f;
                 engineRumble.pitch = 0.3f;
+                engineRumble.maxDistance = 7f;
                 yield break;
             }
 
