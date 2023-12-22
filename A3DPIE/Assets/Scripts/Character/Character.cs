@@ -10,11 +10,11 @@ public enum ECharacterState
     STANDING = 0,
     SITTING = 1,
     LEANING = 2,
-    BOXING1 = 3,
-    BOXING2 = 4,
-    MUSIC1 = 5,
-    MUSIC2 = 6,
-    MUSIC3 = 7
+    PLAYINGHARP = 3,
+    PLAYINGDIDGERIDOO = 4,
+    PLAYINGDRUM = 5,
+    BOXING1 = 6,
+    BOXING2 = 7
 }
 
 
@@ -37,6 +37,10 @@ public class Character : MonoBehaviour
     public bool lookingAtPlayer = false;
 
     private float seatRadius = 0.75f;
+
+    public Transform heldObjectL, heldObjectR;
+    private Transform grabL, grabR;
+
 
 
 
@@ -79,6 +83,9 @@ public class Character : MonoBehaviour
         switch (state)
         {
             case ECharacterState.SITTING:
+            case ECharacterState.PLAYINGDIDGERIDOO:
+            case ECharacterState.PLAYINGDRUM:
+            case ECharacterState.PLAYINGHARP:
                 TryFindSeat();
                 break;
             default:
@@ -106,7 +113,7 @@ public class Character : MonoBehaviour
 
 
 
-    void Sit (Seat seat)
+    void Sit(Seat seat)
     {
         transform.position = seat.transform.position;
         Vector3 eulerAngles = seat.transform.eulerAngles;
@@ -114,6 +121,46 @@ public class Character : MonoBehaviour
         transform.rotation = Quaternion.Euler(eulerAngles);
 
         seat.occupied = true;
+    }
+
+
+
+    public void SetGrabTransforms(Transform leftGrab, Transform rightGrab)
+    {
+        grabL = leftGrab;
+        grabR = rightGrab;
+
+        //grab anything that wasn't ready to grab yet
+        GrabObject(heldObjectL, false);
+        GrabObject(heldObjectR, true);
+    }
+
+
+
+    public void GrabObject(Transform newObject, bool isRightHand)
+    {
+        if (newObject == null)
+        {
+            return;
+        }
+
+        //RIGHT
+        if (isRightHand)
+        {
+            heldObjectR = newObject;
+            newObject.SetParent(grabR, true);
+            newObject.position = grabR.position;
+            newObject.rotation = grabR.rotation;
+        }
+
+        //LEFT
+        else
+        {
+            heldObjectL = newObject;
+            newObject.SetParent(grabL, true);
+            newObject.position = grabL.position;
+            newObject.rotation = grabL.rotation;
+        }
     }
 
 

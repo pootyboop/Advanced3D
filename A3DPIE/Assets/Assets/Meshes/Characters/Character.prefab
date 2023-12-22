@@ -181,6 +181,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1878718142843143998}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5288323464337276288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8598734310608798848}
+  m_Layer: 0
+  m_Name: grabR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8598734310608798848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288323464337276288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.000202, y: 0.000871, z: -0.000055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4247004134088962764}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6608485602762630037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2515572915084081264}
+  m_Layer: 0
+  m_Name: grabL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2515572915084081264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6608485602762630037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.000202, y: 0.000871, z: -0.000055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6242121085679915694}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5473481960012656903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,6 +605,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7509460656999408859}
+    - targetCorrespondingSourceObject: {fileID: 2113823035348575145, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2515572915084081264}
+    - targetCorrespondingSourceObject: {fileID: 8144149791181161419, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8598734310608798848}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
@@ -811,9 +879,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookAtTransform: {fileID: 3323795480643465724}
   lookAtTransformParent: {fileID: 2672701545814384817}
+  state: 0
   looksAtPlayerBeforeInteracting: 1
   lookingAtPlayer: 0
-  isSitting: 0
+  heldObjectL: {fileID: 0}
+  heldObjectR: {fileID: 0}
 --- !u!136 &2903654727773753979
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -874,6 +944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rootBone: {fileID: 8819533790821096880}
+  grabL: {fileID: 2515572915084081264}
+  grabR: {fileID: 8598734310608798848}
   originalRenderer: {fileID: 3689394486974130081}
   randomlyGenerate: 1
   body:
@@ -899,6 +971,9 @@ MonoBehaviour:
     legs:
       mesh: {fileID: 0}
       materialTypes: 
+    hair:
+      mesh: {fileID: 0}
+      materialTypes: 
     skinTone: {r: 0, g: 0, b: 0, a: 0}
     eyeColor: {r: 0, g: 0, b: 0, a: 0}
     lipColor: {r: 0, g: 0, b: 0, a: 0}
@@ -916,6 +991,7 @@ MonoBehaviour:
   handL: {fileID: 0}
   handR: {fileID: 0}
   legs: {fileID: 0}
+  hair: {fileID: 0}
 --- !u!114 &1667639303705859431
 MonoBehaviour:
   m_ObjectHideFlags: 0

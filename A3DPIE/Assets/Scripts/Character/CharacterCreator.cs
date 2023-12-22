@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterCreator : MonoBehaviour
 {
-    public Transform rootBone;
+    public Transform rootBone, grabL, grabR;
     public SkinnedMeshRenderer originalRenderer;
 
 
@@ -19,6 +19,7 @@ public class CharacterCreator : MonoBehaviour
     void Start()
     {
         GenerateCharacter();
+        UpdateHandTransforms();
     }
 
 
@@ -35,10 +36,13 @@ public class CharacterCreator : MonoBehaviour
 
         head = AddBodyPart(body.head, "Head");
         torso = AddBodyPart(body.torso, "Torso");
+
         armL = AddBodyPart(body.armL, "Arm Left");
         armR = AddBodyPart(body.armR, "Arm Right");
+
         handL = AddBodyPart(body.handL, "Hand Left");
         handR = AddBodyPart(body.handR, "Hand Right");
+
         legs = AddBodyPart(body.legs, "Legs");
         hair = AddBodyPart(body.hair, "Hair");
     }
@@ -122,5 +126,13 @@ public class CharacterCreator : MonoBehaviour
                 //just return black since we're probably dealing with UNSET which is used for the solid black inside of characters' mouths
                 return new Color(0f, 0f, 0f);
         }
+    }
+
+
+
+    void UpdateHandTransforms()
+    {
+        Character character = GetComponent<Character>();
+        character.SetGrabTransforms(grabL, grabR);
     }
 }
