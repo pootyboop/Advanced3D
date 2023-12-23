@@ -31,8 +31,10 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     }
 
     public string name;
+    public int kartetCost = 0;
+    private bool paid = false;
 
-    bool grabbed = false;
+    private bool grabbed = false;
 
     Rigidbody rb;
     Collider collider;
@@ -103,6 +105,12 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         if (moveAlongSpline != null)
         {
             moveAlongSpline.barConveyorBelt.LeaveConveyorBelt(gameObject);
+        }
+
+        if (!paid && kartetCost > 0)
+        {
+            Inventory.instance.PayKartet(kartetCost);
+            paid = true;
         }
     }
 }

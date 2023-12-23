@@ -33,7 +33,8 @@ public class Inventory : MonoBehaviour
 
     public void PayKartet(int amount)
     {
-
+        kartet -= amount;
+        UpdateInvUI();
     }
 
 
