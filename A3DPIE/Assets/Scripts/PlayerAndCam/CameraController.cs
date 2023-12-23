@@ -1,0 +1,166 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class CameraController : MonoBehaviour
+{
+    public static CameraController instance;
+
+    public Image reticle;
+    public Transform grabPoint;
+
+    public float sensitivity = 300.0f;
+    public Vector2 rot = new Vector2(0f, 0f);
+    public bool canRotateView;
+    float interactionRange = 4.0f;
+
+    public IInteractable targetInteractable;
+
+    void Start()
+    {
+        instance = this;
+
+        //hide mouse
+        SetMouseVisibility(false, true);
+    }
+
+
+    public void Setup()
+    {
+
+        rot = new Vector2(0f, 0f);
+        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+    }
+
+
+    public void SetMouseVisibility(bool isVisible, bool canControlCharacterView)
+    {
+        Cursor.visible = isVisible;
+        if (isVisible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        canRotateView = canControlCharacterView;
+        reticle.gameObject.SetActive(canRotateView);
+    }
+
+
+
+    //called from PlayerMovement.Update() rather than this script using its own Update() to avoid some weird camera movement issues
+    public void SyncedUpdate()
+    {
+        //don't do anything if we can't look around
+        //SyncedUpdate() should never return here but it's just in case i do something with the camera independently of the player
+        if (!canRotateView)
+        {
+            return;
+        }
+
+
+
+        Look();
+        CheckInteractable();
+    }
+
+
+
+    void Look()
+    {
+        //credit:
+        //https://youtu.be/f473C43s8nE
+        //http://gyanendushekhar.com/2020/02/06/first-person-movement-in-unity-3d/
+
+        Vector2 mousePos = new Vector2(0.0f, 0.0f);
+
+        mousePos.x = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
+        mousePos.y = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensitivity;
+
+        rot.y += mousePos.x;
+        rot.x = Mathf.Clamp(rot.x - mousePos.y, -90f, 90f);
+
+        transform.rotation = Quaternion.Euler(rot.x, rot.y, 0.0f);
+        //transform.parent.gameObject.transform.Rotate(new Vector3(0f, rot.y, 0f));
+    }
+
+
+
+    void CheckInteractable()
+    {
+        Ray ray = new Ray(transform.position, transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, interactionRange))
+        {
+            if (hitInfo.collider.gameObject.TryGetComponent(out IInteractable hitInteractableObject))
+            {
+                TryTargetInteractable(hitInteractableObject);
+            }
+
+            else
+            {
+                StopTargetInteractable();
+            }
+        }
+
+        else
+        {
+            StopTargetInteractable();
+        }
+    }
+
+
+
+    void TryTargetInteractable(IInteractable interactable)
+    {
+        if (interactable != targetInteractable)
+        {
+            StopTargetInteractable();
+
+            if (interactable.targetable)
+            {
+                StartTargetInteractable(interactable);
+            }
+        }
+    }
+
+
+
+    void StartTargetInteractable(IInteractable newInteractable)
+    {
+        targetInteractable = newInteractable;
+        UI.instance.ShowInteractionText(newInteractable);
+
+        targetInteractable.OnTargetedChanged(true);
+    }
+
+
+
+    public void StopTargetInteractable()
+    {
+        if (targetInteractable == null)
+        {
+            return;
+        }
+
+        targetInteractable.OnTargetedChanged(false);
+
+        targetInteractable = null;
+        UI.instance.HideInteractionText();
+    }
+
+
+
+    public void TryInteract()
+    {
+        if (targetInteractable != null)
+        {
+            UI.instance.HideInteractionText();
+            targetInteractable.Interact();
+        }
+    }
+}

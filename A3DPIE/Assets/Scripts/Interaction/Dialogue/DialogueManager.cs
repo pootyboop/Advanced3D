@@ -112,6 +112,8 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.gameObject.SetActive(false);
 
         Translator.instance.gameObject.SetActive(false);
+
+        Inventory.instance.SellIelsek(conversation.ielsekBought, conversation.ielsekBuyRate);
     }
 
 
