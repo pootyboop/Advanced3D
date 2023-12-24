@@ -21,6 +21,14 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         }
     }
 
+    public int kartetCost
+    {
+        get
+        {
+            return 0;
+        }
+    }
+
     public bool targetable
     {
         get

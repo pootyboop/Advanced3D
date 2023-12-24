@@ -8,6 +8,8 @@ public class BarConveyorBelt : MonoBehaviour
     SplineContainer spline;
     float splineLength;
 
+    public DialogueCharacter bartenderDialogueOnBuy;
+
     public Beverage glassOfDrinkPrefab;
     public GameObject[] conveyorObjects;
 
@@ -34,6 +36,7 @@ public class BarConveyorBelt : MonoBehaviour
         for (int i = 0; i < drinkCount; i++)
         {
             GameObject obj = Instantiate(glassOfDrinkPrefab).gameObject;
+            obj.GetComponent<GrabbableObject>().dialogueOnFirstGrab = bartenderDialogueOnBuy;
             JoinConveyorBelt(obj);
         }
     }

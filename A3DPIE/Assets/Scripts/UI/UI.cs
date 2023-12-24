@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionBG, interactionText;
+    public GameObject interactionBG, interactionName, interactionAction;
     public Image fadeToBlackPanel;
     private float fadeToBlackSpeed = 0.45f;
 
@@ -23,9 +23,27 @@ public class UI : MonoBehaviour
     {
         interactionBG.SetActive(true);
 
-        //a little ugly but this keeps the interaction prompt all in one single TMPro. less public references
-        string newInteractionText = "- " + interactable.interactionName + " -\n<size=70%><color=#FFC317>" + GetInteractionText(interactable.interactionType) + " (E)";
-        interactionText.GetComponent<TMPro.TextMeshProUGUI>().text = newInteractionText;
+        interactionName.GetComponent<TMPro.TextMeshProUGUI>().text = "- " + interactable.interactionName + " -";
+
+
+
+        string interactionActionText;
+        
+        if (interactable.kartetCost == 0)
+        {
+            interactionActionText = GetInteractionText(interactable.interactionType) + " (E)";
+        }
+
+        else
+        {
+            //mark this interaction as a purchase and add the cost of the item
+            interactionActionText = "Buy (E)" +
+                " for <color=#FFDD00><b>" +
+                interactable.kartetCost +
+                " <s>KT</s></b>";
+        }
+
+        interactionAction.GetComponent<TMPro.TextMeshProUGUI>().text = interactionActionText;
     }
 
 

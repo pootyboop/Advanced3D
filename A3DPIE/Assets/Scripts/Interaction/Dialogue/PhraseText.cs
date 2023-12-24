@@ -66,7 +66,7 @@ public class PhraseText : MonoBehaviour
         }
 
 
-        TMProText += "\n<size=40%>\n<color=#666666>";
+        TMProText += "\n<size=40%>\n<color=#AAAAAA>";
 
         //context
         if (language == translatedLanguage && phrase.context != null && phrase.context != "")

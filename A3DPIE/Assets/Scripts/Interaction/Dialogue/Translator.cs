@@ -57,7 +57,7 @@ public class Translator : MonoBehaviour
     private void TranslatorLanguageUpdated()
     {
         languageText.text =
-            "<size=50%><color=#DDDDDD>Translating:\n<size=100%><color=#" +
+            "<color=#" +
             LanguageDataMap.instance.GetLanguageHexCode(language) +
             ">" +
             language.ToString();

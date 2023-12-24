@@ -28,6 +28,12 @@ public interface IInteractable
         get;
     }
 
+    //cost of the interaction. used for purchasing interactable items (like drinks)
+    int kartetCost
+    {
+        get;
+    }
+
     bool targetable
     {
         get;

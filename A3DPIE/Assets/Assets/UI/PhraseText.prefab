@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <color=#FF9900>Ven!\n<size=50%><color=#AAAAAA>|<size=100%><color=#FFFFFF>\nHi!\n<size=40%><color=#666666>(Universal
+  m_text: <color=#FF9900>Ven!\n<size=50%><color=#AAAAAA>|<size=100%><color=#FFFFFF>\nHi!\n<size=40%><color=#AAAAAA>(universal
     greeting)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92c062b46bb00a14eab62c83edece671, type: 2}

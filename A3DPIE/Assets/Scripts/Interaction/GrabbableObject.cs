@@ -22,6 +22,14 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         }
     }
 
+    public int kartetCost
+    {
+        get
+        {
+            return itemCost;
+        }
+    }
+
     public bool targetable
     {
         get
@@ -31,7 +39,8 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     }
 
     public string name;
-    public int kartetCost = 0;
+    public int itemCost = 0;
+    public DialogueCharacter dialogueOnFirstGrab;
     private bool paid = false;
 
     private bool grabbed = false;
@@ -76,6 +85,13 @@ public class GrabbableObject : MonoBehaviour, IInteractable
 
         TryLeaveConveyorBelt();
 
+        if (!paid && itemCost > 0)
+        {
+            Inventory.instance.PayKartet(itemCost);
+            paid = true;
+            itemCost = 0;
+        }
+
         rb.isKinematic = true;
         transform.SetParent(CameraController.instance.grabPoint, false);
         transform.localPosition = Vector3.zero;
@@ -83,6 +99,12 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         collider.enabled = false;
 
         PlayerMovement.instance.GrabObject(this);
+
+        if (dialogueOnFirstGrab != null)
+        {
+            dialogueOnFirstGrab.Interact();
+            dialogueOnFirstGrab = null;
+        }
     }
 
 
@@ -105,12 +127,6 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         if (moveAlongSpline != null)
         {
             moveAlongSpline.barConveyorBelt.LeaveConveyorBelt(gameObject);
-        }
-
-        if (!paid && kartetCost > 0)
-        {
-            Inventory.instance.PayKartet(kartetCost);
-            paid = true;
         }
     }
 }

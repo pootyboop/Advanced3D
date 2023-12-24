@@ -21,7 +21,7 @@ public class Beverage : MonoBehaviour
     {
 
         string drinkName = "Glass";
-        int kartetCost = 0;
+        int cost = 0;
 
         int drinkID = UnityEngine.Random.Range(0, 4);
 
@@ -29,25 +29,25 @@ public class Beverage : MonoBehaviour
         {
             case 0:
                 drinkName += " of Bollet Voenni";
-                kartetCost = 178;
+                cost = 178;
                 break;
             case 1:
                 drinkName += " of Ecas Cisc Asca";
-                kartetCost = 100;
+                cost = 100;
                 break;
             case 2:
                 drinkName += " of Lup Binet";
-                kartetCost = 80;
+                cost = 80;
                 break;
             case 3:
                 drinkName += " of Pical Anlon";
-                kartetCost = 125;
+                cost = 125;
                 break;
 
         }
 
         grabbableObject.name = drinkName;
-        grabbableObject.kartetCost = kartetCost;
+        grabbableObject.itemCost = cost;
 
         Material[] mats = meshRenderer.materials;
         mats[1] = drinkMaterials[drinkID];
