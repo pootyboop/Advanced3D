@@ -92,6 +92,11 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             itemCost = 0;
         }
 
+        else
+        {
+            AudioManager.instance.PlayAudioByTag("pickup");
+        }
+
         rb.isKinematic = true;
         transform.SetParent(CameraController.instance.grabPoint, false);
         transform.localPosition = Vector3.zero;

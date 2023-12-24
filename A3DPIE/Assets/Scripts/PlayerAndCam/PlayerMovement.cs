@@ -250,6 +250,7 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = preSeatedPosition;
                 break;
             case EPlayerState.CUTSCENE:
+                Inventory.instance.SetVisibility(true);
                 camController.gameObject.SetActive(true);
                 break;
             default:
@@ -262,6 +263,7 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case EPlayerState.CUTSCENE:
+                Inventory.instance.SetVisibility(true);
                 camController.SetMouseVisibility(false, false);
                 camController.gameObject.SetActive(false);
                 break;

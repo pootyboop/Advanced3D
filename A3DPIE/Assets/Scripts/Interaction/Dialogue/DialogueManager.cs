@@ -53,6 +53,8 @@ public class DialogueManager : MonoBehaviour
         //default to common language for every new conversation
         //KEEP THIS AFTER NextDialogue()
         Translator.instance.SetTranslatorLanguage(ELanguage.HIESCA);
+
+        AudioManager.instance.PlayAudioByTag("dialogue");
     }
 
 

@@ -48,4 +48,11 @@ public class Inventory : MonoBehaviour
             kartet +
             " <s>KT</s>";
     }
+
+
+
+    public void SetVisibility(bool visible)
+    {
+        invUI.gameObject.SetActive(visible);
+    }
 }
