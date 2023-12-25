@@ -44,6 +44,8 @@ public class Door : MonoBehaviour, IInteractable
 
     bool open = false;
 
+    public ELoadArea loadArea1, loadArea2;
+
     Animator animator;
     Collider collider;
 
@@ -59,7 +61,7 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        Open(!open);
+        SetOpen(!open);
     }
 
 
@@ -70,7 +72,7 @@ public class Door : MonoBehaviour, IInteractable
 
 
 
-    void Open(bool isOpening)
+    void SetOpen(bool isOpening)
     {
         open = isOpening;
         collider.enabled = !isOpening;
@@ -79,6 +81,15 @@ public class Door : MonoBehaviour, IInteractable
         if (open)
         {
             StartCoroutine(DoorTimer());
+
+            AreaLoadManager.instance.SetAreaLoaded(loadArea1, true);
+            AreaLoadManager.instance.SetAreaLoaded(loadArea2, true);
+        }
+
+        else
+        {
+            AreaLoadManager.instance.SetAreaLoaded(loadArea1, false);
+            AreaLoadManager.instance.SetAreaLoaded(loadArea2, false);
         }
     }
 
@@ -87,6 +98,6 @@ public class Door : MonoBehaviour, IInteractable
     IEnumerator DoorTimer()
     {
         yield return new WaitForSeconds(stayOpenTime);
-        Open(false);
+        SetOpen(false);
     }
 }

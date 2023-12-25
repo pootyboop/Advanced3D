@@ -114,6 +114,9 @@ public class PlayerMovement : MonoBehaviour
             case "Ladder":
                 SetPlayerState(EPlayerState.LADDER);
                 break;
+            case "LoadArea":
+                AreaLoadManager.instance.EnteredAreaHitbox(other.gameObject);
+                break;
         }
     }
 
