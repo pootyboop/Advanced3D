@@ -8,6 +8,8 @@ public class AreaLoadManager : MonoBehaviour
     public Area[] areas;
     public ELoadArea currentArea = ELoadArea.F2;
 
+    public bool enableAreaLoader = false;
+
 
 
     void Start()
@@ -24,6 +26,8 @@ public class AreaLoadManager : MonoBehaviour
     IEnumerator DelayedInitialLoad()
     {
         yield return new WaitForSeconds(3.0f);
+
+        enableAreaLoader = true;
 
         //start with just the F2 area active (since that's where the game starts)
         UnloadAll();
@@ -48,6 +52,13 @@ public class AreaLoadManager : MonoBehaviour
     //called by the player when overlapping an area's hitbox
     public void EnteredAreaHitbox(GameObject newArea)
     {
+        if (!enableAreaLoader)
+        {
+            return;
+        }
+
+
+
         for (int i = 0; i < areas.Length; i++)
         {
             if (areas[i].reference == newArea)
@@ -63,6 +74,13 @@ public class AreaLoadManager : MonoBehaviour
     //also unloads any old non-adjacent areas
     public void LoadNewArea(ELoadArea newArea)
     {
+        if (!enableAreaLoader)
+        {
+            return;
+        }
+
+
+
         //areas to load in
         List<ELoadArea> loadAreas = new List<ELoadArea>(GetAreaByEnum(newArea).coloadedAreas);
         loadAreas.Add(newArea);
@@ -119,9 +137,18 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
+    //directly load or unload an area. does NOT take coloaded areas into account. use with caution.
     //called by doors to directly load/unload whatever's around the door
     public void SetAreaLoaded(ELoadArea area, bool isLoaded)
     {
+
+        if (!enableAreaLoader)
+        {
+            return;
+        }
+
+
+
         //never allowed to unload the area the player is currently in
         if (area == currentArea && !isLoaded)
         {

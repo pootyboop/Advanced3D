@@ -250,7 +250,11 @@ public class PlayerMovement : MonoBehaviour
         switch (state)
         {
             case EPlayerState.SEATED:
-                transform.position = preSeatedPosition;
+                //do NOT leave the seat if talking while seated
+                if (newState != EPlayerState.DIALOGUE)
+                {
+                    transform.position = preSeatedPosition;
+                }
                 break;
             case EPlayerState.CUTSCENE:
                 Inventory.instance.SetVisibility(true);

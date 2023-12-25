@@ -31,7 +31,7 @@ public class Character : MonoBehaviour
     private Vector3 defaultLookAt;
     private float lookAtTime = 0.3f;
 
-    public ECharacterState state;
+    public ECharacterState state = ECharacterState.STANDING;
 
     public bool looksAtPlayerBeforeInteracting = true;
     public bool lookingAtPlayer = false;
@@ -43,12 +43,18 @@ public class Character : MonoBehaviour
 
 
 
-
     void Start()
+    {
+        //animator = GetComponent<Animator>();
+        //defaultLookAt = lookAtTransform.position;
+    }
+
+
+
+    void OnEnable()
     {
         animator = GetComponent<Animator>();
         defaultLookAt = lookAtTransform.position;
-
         SetCharacterState(state);
     }
 
