@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//seat that the player and characters can sit in
+//player sitting logic is handled here while character sitting logic is in Character
 public class Seat : MonoBehaviour, IInteractable
 {
     public string interactionName
@@ -12,6 +16,7 @@ public class Seat : MonoBehaviour, IInteractable
         }
     }
 
+    //always a seat
     public EInteractionType interactionType
     {
         get
@@ -20,6 +25,7 @@ public class Seat : MonoBehaviour, IInteractable
         }
     }
 
+    //doesn't cost anything to sit in a seat
     public int kartetCost
     {
         get
@@ -28,6 +34,7 @@ public class Seat : MonoBehaviour, IInteractable
         }
     }
 
+    //only targetable if nobody's sitting in the seat already
     public bool targetable
     {
         get
@@ -37,14 +44,14 @@ public class Seat : MonoBehaviour, IInteractable
     }
 
     public string name = "Seat";
-    public Transform seatPosition;
+    public Transform seatPosition;  //where characters sit relative to
     public bool occupied = false;
 
 
 
     void Start()
     {
-        //default seat info when none is set
+        //use default transform for seat info when none is set
         if (seatPosition == null)
         {
             seatPosition = transform;
@@ -53,6 +60,7 @@ public class Seat : MonoBehaviour, IInteractable
 
 
 
+    //occupy seat when interacted with
     public void Interact()
     {
         Sit();
@@ -60,15 +68,17 @@ public class Seat : MonoBehaviour, IInteractable
 
 
 
+    //seats don't care if you look at them
     public void OnTargetedChanged(bool isTargeting)
     {
     }
 
 
 
+    //put the player in the seat
     public void Sit()
     {
-        //stand up from current seat
+        //stand up from current seat if sitting
         if (PlayerMovement.instance.state == EPlayerState.SEATED)
         {
             //just set this seat to unoccupied rather than standing then sitting again
@@ -78,6 +88,8 @@ public class Seat : MonoBehaviour, IInteractable
 
         occupied = true;
 
+        //snap to seat
+        //PlayerMovement and CameraController handle the movement and camera for sitting
         PlayerMovement.instance.SetPlayerState(EPlayerState.SEATED);
         PlayerMovement.instance.currentSeat = this;
         PlayerMovement.instance.transform.SetParent(seatPosition);
@@ -86,10 +98,12 @@ public class Seat : MonoBehaviour, IInteractable
 
 
 
+    //remove the player from this seat
     public void Stand()
     {
         occupied = false;
 
+        //return to MOVABLE, which we assume the player was prior to sitting
         PlayerMovement.instance.transform.SetParent(null);
         PlayerMovement.instance.SetPlayerState(EPlayerState.MOVABLE);
     }
