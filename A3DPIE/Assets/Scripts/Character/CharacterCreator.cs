@@ -57,7 +57,9 @@ public class CharacterCreator : MonoBehaviour
         SkinnedMeshRenderer renderer = newBodyPartObj.AddComponent<SkinnedMeshRenderer>();
         renderer.sharedMesh = bodyPart.mesh;
 
-        renderer.localBounds = new Bounds(new Vector3(0f, 1f, 0f), new Vector3(1f, 2f, 1f));
+        //set the bounds as tight as i safely can without knowing the exact proportions of the character
+        //these should still be relative to the root bone as all body parts use the same skeleton with the root centered between the character's feet
+        renderer.localBounds = new Bounds(new Vector3(0f, 0f, 0f), new Vector3(0.1f, 0.3f, 0.1f));
         renderer.bones = originalRenderer.bones;
         renderer.rootBone = rootBone;
 
@@ -79,6 +81,7 @@ public class CharacterCreator : MonoBehaviour
                     break;
                 case EMaterialType.METAL:
                 case EMaterialType.EMISSIVE:
+                case EMaterialType.CLOTH:
                     renderer.materials[i].SetColor("_Tint", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
                     break;
                 default:
