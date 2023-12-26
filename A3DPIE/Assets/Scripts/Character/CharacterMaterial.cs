@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 
+//container for linking EMaterialTypes with the materials they use
 [System.Serializable]
 public class CharacterMaterial
 {

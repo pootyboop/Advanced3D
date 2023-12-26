@@ -4,6 +4,7 @@ using UnityEngine;
 
 
 
+//easily-passable name for each loadable area
 public enum ELoadArea
 {
     F0,
@@ -15,10 +16,11 @@ public enum ELoadArea
 
 
 
+//container for data about each loadable area
 [System.Serializable]
 public class Area
 {
     public ELoadArea areaName;
-    public GameObject reference;
-    public ELoadArea[] coloadedAreas;
+    public GameObject reference;    //the actual in-game parent of all objects constituting that area
+    public ELoadArea[] coloadedAreas;   //areas that must be loaded when this area is loaded (areas that are visible from this area)
 }

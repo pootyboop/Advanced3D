@@ -4,6 +4,8 @@ using UnityEngine;
 
 
 
+//type of material usable by character body part skinned meshes
+//this is used instead of material references to save memory
 public enum EMaterialType
 {
     UNSET,
@@ -19,6 +21,7 @@ public enum EMaterialType
 
 
 
+//container for the necessary data for each body part: the mesh itself and the material types it uses
 [System.Serializable]
 public class BodyPart
 {

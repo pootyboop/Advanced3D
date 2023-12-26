@@ -3,17 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this generates random character data
+//also holds info about what materials to use for each material type so CharacterCreator can reference it
 public class CharacterCreationManager : MonoBehaviour
 {
     public static CharacterCreationManager instance;
+    //these gradients hold all the color info for random characters
+    //gradients are GREAT for this since i can easily change the prominence of values by changing the gradient in the inspector
     public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange, leatherColorRange;
+    //stature range (how big/small the character can be). stature is 1 by default
     public float minStature = .9f;
     public float maxStature = 1.1f;
+    //these arrays hold all body parts random characters can use
     public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs, hairs;
+    //the materials to use for each material type
+    //here for CharacterCreator to reference when generating skinned meshes
+    //otherwise each character would need to reference all these materials
     public CharacterMaterial[] characterMaterials;
-
-    //TEMP VARIABLES -- used during character generation
-    EMaterialType[] materialTypes;
 
 
 
@@ -24,31 +30,34 @@ public class CharacterCreationManager : MonoBehaviour
 
 
 
+    //randomly generate a Body for the CharacterCreator to use
     public Body GenerateCharacter(Body pregeneratedInfo)
     {
-        materialTypes = new EMaterialType[0];
-
         Body newBody;
 
+        //if we already passed in info, leave it alone
         if (pregeneratedInfo != null)
         {
             newBody = pregeneratedInfo;
         }
 
+        //otherwise start from scratch
         else
         {
             newBody = new Body();
         }
 
-        newBody.stature = UnityEngine.Random.Range(minStature, maxStature);
-        newBody = GenerateColors(newBody);
-        newBody = GenerateBodyParts(newBody);
+        newBody.stature = UnityEngine.Random.Range(minStature, maxStature); //random stature in range
+        newBody = GenerateColors(newBody); //generate the color scheme for this character
+        newBody = GenerateBodyParts(newBody); //generate all body parts
 
         return newBody;
     }
 
 
 
+    //randomly grab a part from each pool for each necessary body part
+    //no weighting involved, all parts are equally likely
     Body GenerateBodyParts(Body body)
     {
         body.head = GenerateBodyPart(body.head, heads);
@@ -65,6 +74,7 @@ public class CharacterCreationManager : MonoBehaviour
 
 
 
+    //randomly grab a single body part from the specified pool
     BodyPart GenerateBodyPart(BodyPart bodyPart, BodyPart[] partPool)
     {
         return partPool[UnityEngine.Random.Range(0, partPool.Length)];
@@ -72,6 +82,7 @@ public class CharacterCreationManager : MonoBehaviour
 
 
 
+    //grabs a random value from the respective gradient for each necessary color
     Body GenerateColors(Body body)
     {
         body.skinTone = skinToneRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
@@ -90,6 +101,7 @@ public class CharacterCreationManager : MonoBehaviour
 
 
 
+    //same as the rest, just grabs a random color from the gradient
     Color GenerateClothColor()
     {
         return clothColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
@@ -97,13 +109,15 @@ public class CharacterCreationManager : MonoBehaviour
 
 
 
+    //finds the actual material to use for the specified material type
+    //this data is set in the inspector
     public Material GetBaseMaterialByType(EMaterialType materialType)
     {
-        for (int i = 0; i < characterMaterials.Length; i++)
+        foreach (CharacterMaterial charMat in characterMaterials)
         {
-            if (materialType == characterMaterials[i].materialType)
+            if (materialType == charMat.materialType)
             {
-                return characterMaterials[i].material;
+                return charMat.material;
             }
         }
 

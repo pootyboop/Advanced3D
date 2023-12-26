@@ -2,12 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//manages loading areas of the level in and out by activating/deactivating their parent objects
+//relies on PlayerMovement to tell it when we're entering a new area
+//also relies on Door to tell it when to load in/out the area behind a door
 public class AreaLoadManager : MonoBehaviour
 {
     public static AreaLoadManager instance;
-    public Area[] areas;
-    public ELoadArea currentArea = ELoadArea.F2;
+    public Area[] areas;    //all area data
+    public ELoadArea currentArea = ELoadArea.F2;    //start on F2 as that's where we spawn
 
+    //LEAVE THIS DISABLED!
+    //auto-enables after the first few seconds so characters and other scripts have time to get set up before they get disabled
     public bool enableAreaLoader = false;
 
 
@@ -16,7 +23,7 @@ public class AreaLoadManager : MonoBehaviour
     {
         instance = this;
 
-        //wait a couple seconds, then set up the load.
+        //wait a couple seconds, then start the area loader.
         //this allows characters/animations to get set up properly before being disabled (if unloaded)
         StartCoroutine(DelayedInitialLoad());
     }
@@ -25,8 +32,10 @@ public class AreaLoadManager : MonoBehaviour
 
     IEnumerator DelayedInitialLoad()
     {
+        //wait a few seconds
         yield return new WaitForSeconds(3.0f);
 
+        //now we can enable the area loader
         enableAreaLoader = true;
 
         //start with just the F2 area active (since that's where the game starts)
@@ -37,7 +46,8 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
-    //unloads all areas. to be used as a clean reset from which to load an area in
+    //unloads all areas
+    //to be used as a clean reset from which to load an area in
     public void UnloadAll()
     {
         SetAreaLoaded(ELoadArea.F0, false);
@@ -50,6 +60,7 @@ public class AreaLoadManager : MonoBehaviour
 
 
     //called by the player when overlapping an area's hitbox
+    //hitboxes are spaced a bit to prevent spam
     public void EnteredAreaHitbox(GameObject newArea)
     {
         if (!enableAreaLoader)
@@ -59,19 +70,20 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
-        for (int i = 0; i < areas.Length; i++)
+        //find the corresponding parent object for the area and load it
+        foreach (Area curr in areas)
         {
-            if (areas[i].reference == newArea)
+            if (curr.reference == newArea)
             {
-                LoadNewArea(areas[i].areaName);
+                LoadNewArea(curr.areaName);
             }
         }
     }
 
 
 
-    //loads a new area and adjacent areas that should load in with it.
-    //also unloads any old non-adjacent areas
+    //loads a new area and adjacent areas ("coloaded" areas) that should load in with it
+    //also unloads any old coloaded areas
     public void LoadNewArea(ELoadArea newArea)
     {
         if (!enableAreaLoader)
@@ -81,21 +93,22 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
-        //areas to load in
+        //areas to load in no matter what
         List<ELoadArea> loadAreas = new List<ELoadArea>(GetAreaByEnum(newArea).coloadedAreas);
         loadAreas.Add(newArea);
         
-        //all potential areas to load out
+        //potential areas to unload. may contain areas we need to load in
         List<ELoadArea> newUnloadAreas = new List<ELoadArea>(GetAreaByEnum(currentArea).coloadedAreas);
         newUnloadAreas.Add(currentArea);
 
-        //will contain all definitive areas to load out
+        //will contain all definitive areas to unload
         List<ELoadArea> finalUnloadAreas = new List<ELoadArea>();
 
 
         //create final list of areas to unload. this list excludes areas we intend to load in.
         foreach (ELoadArea currArea in newUnloadAreas)
         {
+            //do not unload any areas we need to load in
             if (!loadAreas.Contains(currArea))
             {
                 finalUnloadAreas.Add(currArea);
@@ -116,29 +129,15 @@ public class AreaLoadManager : MonoBehaviour
             SetAreaLoaded(currArea, false);
         }
 
-
-        //SetColoadedAreasLoaded(currentArea, false);
-
+        //set the current area to the new area for next time
         currentArea = newArea;
-
-        //SetColoadedAreasLoaded(newArea, true);
     }
 
 
 
-    void SetColoadedAreasLoaded(ELoadArea area, bool isLoaded)
-    {
-        ELoadArea[] coloadedAreas = GetAreaByEnum(area).coloadedAreas;
-        for (int i = 0; i < coloadedAreas.Length; i++)
-        {
-            SetAreaLoaded(coloadedAreas[i], isLoaded);
-        }
-    }
-
-
-
-    //directly load or unload an area. does NOT take coloaded areas into account. use with caution.
-    //called by doors to directly load/unload whatever's around the door
+    //directly load or unload an area
+    //does NOT take coloaded areas into account. use with caution
+    //called by Door to directly load/unload whatever's around the door
     public void SetAreaLoaded(ELoadArea area, bool isLoaded)
     {
 
@@ -155,21 +154,10 @@ public class AreaLoadManager : MonoBehaviour
             return;
         }
 
-        //Area currArea = GetAreaByEnum(currentArea);
-
-        //for (int i = 0; i < currArea.coloadedAreas.Length; i++)
-        //{
-        //    if (currArea.coloadedAreas[i])
-        //    {
-
-        //    }
-        //}
-
-
-
+        //grab the area data from its enum name
         Area loadArea = GetAreaByEnum(area);
 
-        //only use SetActive if not already in the intended state
+        //only use SetActive if not already in the intended active/deactive state
         if (loadArea.reference.activeSelf != isLoaded)
         {
             loadArea.reference.SetActive(isLoaded);
@@ -178,13 +166,14 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
+    //gets the area data for an area's enum name
     Area GetAreaByEnum(ELoadArea area)
     {
-        for (int i = 0; i < areas.Length; i++)
+        foreach (Area currArea in areas)
         {
-            if (areas[i].areaName == area)
+            if (currArea.areaName == area)
             {
-                return areas[i];
+                return currArea;
             }
         }
 

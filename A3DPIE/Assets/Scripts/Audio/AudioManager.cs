@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//manages volume settings and plays one shot UI sounds
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
@@ -9,7 +12,10 @@ public class AudioManager : MonoBehaviour
     public float musicVolume = 1.0f;
     public float sfxVolume = 1.0f;
 
-    private AudioSource audioSource;
+    private AudioSource audioSource;    //audioSource used to play one shot sounds
+
+    //audioClips tagged with a string name so they're easy to call from other scripts
+    //mess with these in the inspector
     public TaggedAudio[] taggedAudios;
 
 
@@ -23,19 +29,21 @@ public class AudioManager : MonoBehaviour
 
 
 
+    //takes a pre-assigned audio clip name and plays a one shot sound
     public void PlayAudioByTag(string tag)
     {
-        for (int i = 0; i < taggedAudios.Length; i++)
+        foreach (TaggedAudio taggedAudio in taggedAudios)
         {
-            if (taggedAudios[i].name == tag)
+            if (taggedAudio.name == tag)
             {
-                PlayAudioByClip(taggedAudios[i].clip);
+                PlayAudioByClip(taggedAudio.clip);
             }
         }
     }
 
 
 
+    //plays a one shot sound
     public void PlayAudioByClip(AudioClip clip)
     {
         //audioSource.Stop();
