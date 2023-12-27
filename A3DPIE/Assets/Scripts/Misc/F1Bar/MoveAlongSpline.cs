@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.Splines;
 
 /*
-
-This script is based on a GitHub repository.
+    This script is based on a GitHub repository.
     Author: AnanD3V
     https://github.com/AnanD3V/Splines-2.0/blob/main/Scripts/MoveAlongSpline.cs
     Accessed: 6/12/2023
