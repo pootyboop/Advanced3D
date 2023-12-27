@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+//stores information about languages to be referenced by translation UI
+//i also reference this during development for other stuff like what colors/icons banners should use
 [System.Serializable]
 public class LanguageDataMap : MonoBehaviour
 {
     public static LanguageDataMap instance;
 
-    public LanguageData[] languageDataList = new LanguageData[1];
+    public LanguageData[] languageDataList = new LanguageData[1];   //languages tied to their icons and colors. managed in inspector
 
 
 
@@ -18,13 +22,14 @@ public class LanguageDataMap : MonoBehaviour
 
 
 
+    //returns the Color of a language
     public Color GetLanguageColor(ELanguage language)
     {
-        for (int i = 0; i < languageDataList.Length; i++)
+        foreach (LanguageData currLang in languageDataList)
         {
-            if (language == languageDataList[i].language)
+            if (language == currLang.language)
             {
-                return languageDataList[i].color;
+                return currLang.color;
             }
         }
 
@@ -34,13 +39,16 @@ public class LanguageDataMap : MonoBehaviour
 
 
 
+    //returns the hexcode color of a language
+    //used for in-text formatting where unity's Color doesn't work
+    //return does not include the # at the start
     public string GetLanguageHexCode(ELanguage language)
     {
-        for (int i = 0; i < languageDataList.Length; i++)
+        foreach (LanguageData currLang in languageDataList)
         {
-            if (language == languageDataList[i].language)
+            if (language == currLang.language)
             {
-                return ColorUtility.ToHtmlStringRGB(languageDataList[i].color);
+                return ColorUtility.ToHtmlStringRGB(currLang.color);
             }
         }
 
@@ -50,21 +58,25 @@ public class LanguageDataMap : MonoBehaviour
 
 
 
+    //returns the icon of a language
     public Sprite GetLanguageIcon(ELanguage language)
     {
-        for (int i = 0; i < languageDataList.Length; i++)
+        foreach (LanguageData currLang in languageDataList)
         {
-            if (language == languageDataList[i].language)
+            if (language == currLang.language)
             {
-                return languageDataList[i].icon;
+                return currLang.icon;
             }
         }
 
+        //no icon for the given language
         return null;
     }
 
 
-
+    
+    //returns the language with the requested ID
+    //used by the translator slider to convert slider value into language
     public ELanguage GetLanguageByID(int ID)
     {
         for (int i = 0; i < languageDataList.Length; i++)
@@ -75,11 +87,13 @@ public class LanguageDataMap : MonoBehaviour
             }
         }
 
+        //no language at that ID
         return ELanguage.UNSET;
     }
 
 
-
+    //returns the language ID of a language
+    //used to set the translator slider value to the currently translated language
     public int GetIDByLanguage(ELanguage language)
     {
         for (int i = 0; i < languageDataList.Length; i++)
@@ -90,6 +104,7 @@ public class LanguageDataMap : MonoBehaviour
             }
         }
 
+        //no ID for that language
         return -1;
     }
 }
