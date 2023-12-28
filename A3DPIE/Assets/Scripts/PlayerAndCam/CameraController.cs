@@ -93,7 +93,7 @@ public class CameraController : MonoBehaviour
         //rotate mouse input in a weird but necessary way for expected behavior
         rot.y += mousePos.x;
         //this clamp prevents the camera from rotating past straight up or straight down, which would disorient the player
-        rot.x = Mathf.Clamp(rot.x - mousePos.y, -90f, 90f);
+        rot.x = Mathf.Clamp(rot.x - mousePos.y, -89.9f, 89.9f);
 
         //set the new camera rotation
         transform.rotation = Quaternion.Euler(rot.x, rot.y, 0.0f);

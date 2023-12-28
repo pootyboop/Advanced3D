@@ -50,6 +50,7 @@ public class BarConveyorBelt : MonoBehaviour
     {
         MoveAlongSpline newObj = obj.AddComponent<MoveAlongSpline>();   //add the spline movement component
         newObj.barConveyorBelt = this;
+        newObj.transform.SetParent(transform, true);  //make the drink a child of this object so it loads in/out properly
         newObj.spline = spline;
         newObj.splineLength = splineLength;
 
@@ -69,7 +70,7 @@ public class BarConveyorBelt : MonoBehaviour
     {
         //enable physics
         obj.GetComponent<Rigidbody>().isKinematic = false;
-
+        obj.transform.SetParent(null, true);
         //destroy the spline follow script
         Destroy(obj.GetComponent<MoveAlongSpline>());
     }

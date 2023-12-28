@@ -396,11 +396,16 @@ public class PlayerMovement : MonoBehaviour
         Vector3 right = StripYFromNormalizedVector(cam.transform.right);
 
         //multiply by player movement input (meaning the character moves relative to its rotation)
-        forward *= Input.GetAxis("Vertical");
-        right *= Input.GetAxis("Horizontal");
+        //using GetAxisRaw for snappy movement
+        forward *= Input.GetAxisRaw("Vertical");
+        right *= Input.GetAxisRaw("Horizontal");
 
-        //combine into one final vector, multiply by movement speed, and we're done
-        return (forward + right) * moveSpeed;
+        //combine into one final vector and normalize the final direction vector so you don't move faster diagonally
+        Vector3 mvmtDir = forward + right;
+        mvmtDir = mvmtDir.normalized;
+
+        //multiply by movement speed, and we're done
+        return mvmtDir * moveSpeed;
     }
 
 
