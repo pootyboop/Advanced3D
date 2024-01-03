@@ -12,6 +12,10 @@ public class KitOrel : MonoBehaviour
     public AudioSource engineRumble;    //constant engine noise around the ship
 
     private float trailRendererStrength = 0.06f;    //length of the trail renderers
+    private bool freezeDist = false; //whether or not to freeze the "distance" the ship traveled, simulating flight when the object stays in place
+    private float dist = 0.0f;  //distance tracked across frames
+
+    private IEnumerator updateTrailRenderers;
 
 
 
@@ -19,7 +23,24 @@ public class KitOrel : MonoBehaviour
     public void StartTrailRenderers()
     {
         engineRumble.volume = 1.0f;
-        StartCoroutine(UpdateTrailRenderers());
+        updateTrailRenderers = UpdateTrailRenderers();
+        StartCoroutine(updateTrailRenderers);
+    }
+
+
+
+    //stops trail renderers
+    public void StopTrailRenderers()
+    {
+        if (updateTrailRenderers != null)
+        {
+            StopCoroutine(updateTrailRenderers);
+
+            //low rumble as if the engine's still on
+            engineRumble.volume = 0.1f;
+            engineRumble.pitch = 0.3f;
+            engineRumble.maxDistance = 7f;
+        }
     }
 
 
@@ -30,20 +51,14 @@ public class KitOrel : MonoBehaviour
         //will continue running until the ship stops moving
         while (true)
         {
-            float dist = Vector3.Distance(lastPosition, transform.position);
+            //don't update dist if freezing the distance
+            if (!freezeDist)
+            {
+                dist = Vector3.Distance(lastPosition, transform.position);
+            }
 
             //hardcoding bad i know. these values give about the pitch range i want when the ship is flying
             engineRumble.pitch = Mathf.Clamp (.8f + .5f * dist, 0.8f, 1.5f);
-
-            //ship stopped moving
-            if (dist == 0)
-            {
-                //low rumble as if the engine's still on
-                engineRumble.volume = 0.1f;
-                engineRumble.pitch = 0.3f;
-                engineRumble.maxDistance = 7f;
-                yield break;    //done updating the effects, so stop this coroutine
-            }
 
             //update the trail renderers when there's substantial movement
             if (dist > 0.1f)
@@ -55,8 +70,23 @@ public class KitOrel : MonoBehaviour
                 }
             }
 
+            ////ship stopped moving
+            //else if (dist == 0)
+            //{
+            //    //done updating the effects, so stop this coroutine with this function
+            //    StopTrailRenderers();
+            //}
+
             lastPosition = transform.position;  //update lastPosition for next time
             yield return new WaitForSeconds(.05f);  //instead of updating each frame, wait a second so the effect is more pronounced/staggered
         }
+    }
+
+
+
+    public void FreezeTrailRendererDistance()
+    {
+        freezeDist = true;
+        dist = 0.5f;
     }
 }

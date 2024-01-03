@@ -14,7 +14,8 @@ public enum EInteractionType
     READABLE,   //Read
     GRABBABLE,  //Grab/Pick up
     SEAT,       //Sit
-    DOOR        //Door
+    DOOR,       //Door
+    SPACESHIPDEPART //Leave Kallay Tirridor from the Kit Orel dashboard
 }
 
 

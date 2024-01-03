@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Playables;
 
 /*
-    Awake(), Director_Played(), and Director_Stopped() are from Unity Learn.
+    Start(), Director_Played(), and Director_Stopped() are from Unity Learn.
     Author: Unity Technologies
     https://learn.unity.com/tutorial/starting-timeline-through-a-c-script-2019-3#5ff8d183edbc2a0020996601
     Accessed: 18/12/2023
@@ -17,9 +17,12 @@ public class CutsceneManager : MonoBehaviour
 {
     public static CutsceneManager instance;
 
-    public PlayableDirector introCutscene;  //cutscene that plays when the game begins
+    public PlayableDirector introCutscene, outroCutscene;  //cutscene references
     public Camera cutsceneCam;  //cinematic camera used in cutscenes instead of the player camera
-    public bool playIntroCutscene = true;   //easy toggle to turn off the intro cutscene during development
+
+    //easy toggles to turn off cutscenes during development
+    public bool playIntroCutscene = true;
+    public bool playOutroCutscene = true;
 
 
 
@@ -27,20 +30,18 @@ public class CutsceneManager : MonoBehaviour
     {
         instance = this;
 
-        //automatically plays the intro cutscene on start unless turned off
-        if (playIntroCutscene)
-        {
-            introCutscene.Play();
-        }
-    }
+        cutsceneCam.gameObject.SetActive(false);
 
-
-
-    private void Awake()
-    {
         //events for when the director starts and stops (when cutscenes begin and end)
+        //Unity's code begins here.
         introCutscene.played += Director_Played;
         introCutscene.stopped += Director_Stopped;
+        outroCutscene.played += Director_Played;
+        outroCutscene.stopped += Director_Stopped;
+        //Unity's code ends here.
+
+        //automatically plays the intro cutscene on start unless turned off (bool playIntroCutscene)
+        PlayIntroCutscene();
     }
 
 
@@ -48,6 +49,7 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene begins
     private void Director_Played(PlayableDirector obj)
     {
+        PlayerMovement.instance.SetPlayerState(EPlayerState.CUTSCENE);
         cutsceneCam.gameObject.SetActive(true);
     }
 
@@ -57,5 +59,28 @@ public class CutsceneManager : MonoBehaviour
     private void Director_Stopped(PlayableDirector obj)
     {
         cutsceneCam.gameObject.SetActive(false);
+        PlayerMovement.instance.SetPlayerState(EPlayerState.MOVABLE);
+    }
+
+
+
+    //plays the intro cutscene if allowed to
+    public void PlayIntroCutscene()
+    {
+        if (playIntroCutscene)
+        {
+            introCutscene.Play();
+        }
+    }
+
+
+
+    //plays the outro cutscene if allowed to
+    public void PlayOutroCutscene()
+    {
+        if (playOutroCutscene)
+        {
+            outroCutscene.Play();
+        }
     }
 }

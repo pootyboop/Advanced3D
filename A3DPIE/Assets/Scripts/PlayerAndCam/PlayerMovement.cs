@@ -76,7 +76,11 @@ public class PlayerMovement : MonoBehaviour
         charController = gameObject.GetComponent<CharacterController>();
 
         //make sure all the proper setup for the state selected in inspector is executed
-        SetPlayerState(state);
+        //do NOT overwrite this if starting in a cutscene
+        if (state != EPlayerState.CUTSCENE)
+        {
+            SetPlayerState(state);
+        }
     }
 
 
@@ -104,7 +108,10 @@ public class PlayerMovement : MonoBehaviour
         {
             //overlap ladder's hitbox to climb it
             case "Ladder":
-                SetPlayerState(EPlayerState.LADDER);
+                if (state  == EPlayerState.MOVABLE) //ONLY allow this during regular movement or things could get messy
+                {
+                    SetPlayerState(EPlayerState.LADDER);
+                }
                 break;
             //overlap a loadable area to tell AreaLoadManager where we entered and to manage loaded areas as necessary
             case "LoadArea":
@@ -124,8 +131,12 @@ public class PlayerMovement : MonoBehaviour
         switch (other.gameObject.tag)
         {
             //leave a ladder to stop climbing it
+            //ONLY do this if the player was in LADDER state
             case "Ladder":
-                SetPlayerState(EPlayerState.MOVABLE);
+                if (state == EPlayerState.LADDER)
+                {
+                    SetPlayerState(EPlayerState.MOVABLE);
+                }
                 break;
         }
     }
@@ -168,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
                 case EPlayerState.DIALOGUE:
                     DialogueManager.instance.NextDialogue(true);
                     break;
-                default:
+                case EPlayerState.CUTSCENE:
                     break;
             }
         }
@@ -257,24 +268,6 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    //enter cutscene state
-    //called from cutscene
-    public void EnterCutscene()
-    {
-        SetPlayerState(EPlayerState.CUTSCENE);
-    }
-
-
-
-    //exit cutscene state
-    //called from cutscene
-    public void ExitCutscene()
-    {
-        SetPlayerState(EPlayerState.MOVABLE);
-    }
-
-
-
     //player movement/action state machine
     //switch player state between stuff like normal movement, climbing ladder, sitting down, in dialogue...
     //state should NOT be set outside of this function. this is the correct way to update state
@@ -306,7 +299,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //before cutscene, hide inventory and disable camera
             case EPlayerState.CUTSCENE:
-                Inventory.instance.SetVisibility(true);
+                Inventory.instance.SetVisibility(false);
                 camController.SetMouseVisibility(false, false);
                 cam.gameObject.SetActive(false);
                 break;

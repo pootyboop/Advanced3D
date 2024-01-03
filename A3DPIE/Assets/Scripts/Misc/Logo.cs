@@ -12,12 +12,15 @@ public class Logo : MonoBehaviour
     public float fadeSpeed = 5.0f;  //how fast the logo fades in
     public float moveSpeed = 50.0f; //how fast the logo moves upward
 
+    private IEnumerator fade;
+
 
 
     //start fading in the logo
     public void FadeIn()
     {
-        StartCoroutine(Fade());
+        fade = Fade();
+        StartCoroutine(fade);
     }
 
 
@@ -41,5 +44,16 @@ public class Logo : MonoBehaviour
             //wait a moment before changing fade again. won't be noticeable
             yield return new WaitForSeconds(.05f);
         }
+    }
+
+
+
+    public void HideLogo()
+    {
+        if (fade != null)
+        {
+            StopCoroutine(fade);
+        }
+        text.color = new Color(text.color.r, text.color.g, text.color.b, 0.0f);
     }
 }

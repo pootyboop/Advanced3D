@@ -76,6 +76,8 @@ public class UI : MonoBehaviour
                 return "Sit";
             case EInteractionType.DOOR:
                 return "Open";
+            case EInteractionType.SPACESHIPDEPART:
+                return "Depart";
         }
     }
 
