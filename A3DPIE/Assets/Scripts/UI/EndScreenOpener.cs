@@ -10,8 +10,6 @@ public class EndScreenOpener : MonoBehaviour
 {
     public void OpenEndScreen()
     {
-        //show the cursor so we can use the end screen
-        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("EndScreen");
     }
 }
