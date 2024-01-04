@@ -15,7 +15,8 @@ public enum EPlayerState
     CUTSCENE,
     DIALOGUE,
     SEATED,
-    LADDER
+    LADDER,
+    PAUSED
 }
 
 /*
@@ -152,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             //EPlayerStates that don't require updating the camera
             case EPlayerState.DIALOGUE:
             case EPlayerState.CUTSCENE:
+            case EPlayerState.PAUSED:
                 break;
             default:
                 camController.SyncedUpdate();
@@ -180,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
                     DialogueManager.instance.NextDialogue(true);
                     break;
                 case EPlayerState.CUTSCENE:
+                case EPlayerState.PAUSED:
                     break;
             }
 
@@ -211,6 +214,12 @@ public class PlayerMovement : MonoBehaviour
 
             //finally, update the cancel interaction prompt on screen to be the most fitting prompt
             SolveCancelText();
+        }
+
+        //pausing
+        else if (Input.GetButtonDown("Back"))
+        {
+            UI.instance.TogglePause();
         }
     }
 
@@ -319,8 +328,9 @@ public class PlayerMovement : MonoBehaviour
                     transform.position = preSeatedPosition;
                 }
                 break;
-            //after cutscene, make inventory visible again and enable camera
+            //after cutscene/paused, make inventory visible again and enable camera
             case EPlayerState.CUTSCENE:
+            case EPlayerState.PAUSED:
                 Inventory.instance.SetVisibility(true);
                 if (cam != null)
                 {
@@ -345,6 +355,9 @@ public class PlayerMovement : MonoBehaviour
                     cam.gameObject.SetActive(false);
                 }
                 break;
+            case EPlayerState.PAUSED:
+                Inventory.instance.SetVisibility(false);
+                camController.SetMouseVisibility(true, false);
                 break;
             case EPlayerState.DIALOGUE:
                 camController.SetMouseVisibility(true, false);

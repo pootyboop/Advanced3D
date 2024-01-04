@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 
 
-//handles the player's HUD and screenspace canvas UI
+//handles the player's HUD, pause screen, and other screenspace canvas UI
 public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionBG, interactionName, interactionAction, cancelActionText;    //interaction prompt references
+    public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen;    //interaction prompt references
 
     public Image fadeToBlackPanel;  //a huge black image that covers the screen used for fading to-from black
     private float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
+
+    private bool paused;    //currently paused?
+    private EPlayerState previousState = EPlayerState.MOVABLE;  //state to return player to after pausing
 
 
     void Start()
@@ -190,5 +193,35 @@ public class UI : MonoBehaviour
     Color MakeBlackWithAlpha(float alpha)
     {
         return new Color(0.0f, 0.0f, 0.0f, alpha);
+    }
+
+
+
+    //just switch paused state to whatever it currently isn't
+    public void TogglePause()
+    {
+        SetPaused(!paused);
+    }
+
+
+
+    //open or close the pause screen
+    public void SetPaused(bool newPause)
+    {
+        paused = newPause;
+        if (paused)
+        {
+            previousState = PlayerMovement.instance.state;
+            PlayerMovement.instance.SetPlayerState(EPlayerState.PAUSED);
+            pauseScreen.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+
+        else
+        {
+            Time.timeScale = 1.0f;
+            pauseScreen.SetActive(false);
+            PlayerMovement.instance.SetPlayerState(previousState);
+        }
     }
 }
