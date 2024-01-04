@@ -36,12 +36,12 @@ public class GrabbableObject : MonoBehaviour, IInteractable
     }
 
 
-    //only targetable if not currently grabbed
+    //only targetable if not currently grabbed AND if the player isn't holding something already
     public bool targetable
     {
         get
         {
-            return !grabbed;
+            return (!grabbed && !PlayerMovement.instance.HasGrabbableObject());
         }
     }
 
@@ -150,6 +150,9 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         //re-enable physics/collisions
         rb.isKinematic = false;
         collider.enabled = true;
+
+        //clear the player's grabbed object
+        PlayerMovement.instance.GrabObject(null);
     }
 
 

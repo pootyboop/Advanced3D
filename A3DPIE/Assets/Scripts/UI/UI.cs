@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionBG, interactionName, interactionAction;    //interaction prompt references
+    public GameObject interactionBG, interactionName, interactionAction, cancelActionText;    //interaction prompt references
 
     public Image fadeToBlackPanel;  //a huge black image that covers the screen used for fading to-from black
     private float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
@@ -59,6 +59,22 @@ public class UI : MonoBehaviour
 
 
 
+    //display the text prompt for ending/stopping/cancelling an interaction
+    public void ShowCancelText(IInteractable interactable)
+    {
+        if (interactable == null)
+        {
+            HideCancelText();
+            return;
+        }
+
+        cancelActionText.SetActive(true);
+        cancelActionText.GetComponent<TMPro.TextMeshProUGUI>().text = GetCancelText(interactable.interactionType) + " (Q)";
+
+    }
+
+
+
     //get the interaction verb for the type of interactable being targeted
     private string GetInteractionText(EInteractionType interactionType)
     {
@@ -83,11 +99,40 @@ public class UI : MonoBehaviour
 
 
 
+    //get the interaction verb for cancelling/ending the interaction with the current interactable
+    private string GetCancelText(EInteractionType interactionType)
+    {
+        switch (interactionType)
+        {
+            default:
+                return "Cancel";
+            case EInteractionType.DIALOGUE:
+                return "End Conversation";
+            case EInteractionType.READABLE:
+                return "Stop Reading";
+            case EInteractionType.GRABBABLE:
+                return "Drop";
+            case EInteractionType.SEAT:
+                return "Stand";
+            case EInteractionType.DOOR:
+                return "Close";
+        }
+    }
+
+
+
     //hide the interaction text
     //doesn't wipe text, which will be overwritten next time
     public void HideInteractionText()
     {
         interactionBG.SetActive(false);
+    }
+
+
+
+    public void HideCancelText()
+    {
+        cancelActionText.SetActive(false);
     }
 
 

@@ -182,10 +182,13 @@ public class PlayerMovement : MonoBehaviour
                 case EPlayerState.CUTSCENE:
                     break;
             }
+
+            //finally, update the cancel interaction prompt on screen to be the most fitting prompt
+            SolveCancelText();
         }
 
         //player trying to drop/cancel?
-        if (Input.GetButtonDown("Drop"))
+        else if (Input.GetButtonDown("Drop"))
         {
             //stop sitting if seated
             if (state == EPlayerState.SEATED)
@@ -205,7 +208,40 @@ public class PlayerMovement : MonoBehaviour
             {
                 grabbedObject.Drop();
             }
+
+            //finally, update the cancel interaction prompt on screen to be the most fitting prompt
+            SolveCancelText();
         }
+    }
+
+
+
+    //solves what "cancel interaction" prompt to show on the UI
+    void SolveCancelText()
+    {
+        UI.instance.ShowCancelText(GetCurrentCancellableInteraction());
+    }
+
+
+
+    //gets the currently-in-action, cancellable interaction
+    IInteractable GetCurrentCancellableInteraction()
+    {
+        //state interactions
+        switch (state)
+        {
+            case EPlayerState.SEATED:
+                return currentSeat;
+        }
+
+        //grabbed object
+        if (grabbedObject != null)
+        {
+            return grabbedObject;
+        }
+
+        //no cancellable interaction found
+        return null;
     }
 
 
@@ -286,7 +322,10 @@ public class PlayerMovement : MonoBehaviour
             //after cutscene, make inventory visible again and enable camera
             case EPlayerState.CUTSCENE:
                 Inventory.instance.SetVisibility(true);
-                cam.gameObject.SetActive(true);
+                if (cam != null)
+                {
+                    cam.gameObject.SetActive(true);
+                }
                 break;
             default:
                 break;
@@ -301,7 +340,10 @@ public class PlayerMovement : MonoBehaviour
             case EPlayerState.CUTSCENE:
                 Inventory.instance.SetVisibility(false);
                 camController.SetMouseVisibility(false, false);
-                cam.gameObject.SetActive(false);
+                if (cam != null)
+                {
+                    cam.gameObject.SetActive(false);
+                }
                 break;
                 break;
             case EPlayerState.DIALOGUE:
@@ -492,14 +534,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //W to go up
-        else if (Input.GetAxis("Vertical") > 0)
+        else if (Input.GetAxis("Vertical") > 0.0f)
         {
             move = Vector3.up / ladderSpeed;
             return move;
         }
 
         //S to go down
-        else if (Input.GetAxis("Vertical") < 0)
+        else if (Input.GetAxis("Vertical") < 0.0f)
         {
             move = Vector3.down / ladderSpeed;
         }
@@ -514,5 +556,12 @@ public class PlayerMovement : MonoBehaviour
     public void GrabObject(GrabbableObject grabbableObject)
     {
         grabbedObject = grabbableObject;
+    }
+
+
+
+    public bool HasGrabbableObject()
+    {
+        return (grabbedObject != null);
     }
 }

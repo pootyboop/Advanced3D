@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dark Metal
-    second: {fileID: 2100000, guid: 7f8d7049cfe9357498a72a06f5f62548, type: 2}
+    second: {fileID: 2100000, guid: 5d773e3623a7b584094d0886923e6693, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

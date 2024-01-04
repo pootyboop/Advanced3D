@@ -12,10 +12,11 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager instance;
 
     public DialogueBox dialogueBox; //dialogue UI box
+    public GameObject continueText; //text prompt to press E to continue conversation
 
     private bool inDialogue = false;
 
-    DialogueCharacter character;    //the character/readable/etc the player is in dialogue with
+    public DialogueCharacter character;    //the character/readable/etc the player is in dialogue with
 
     //data from the DialogueCharacter, just made more easily accessible
     //this is not cleaned out between conversations, just overwritten
@@ -53,6 +54,9 @@ public class DialogueManager : MonoBehaviour
         {
             previousPlayerState = PlayerMovement.instance.state;
             PlayerMovement.instance.SetPlayerState(EPlayerState.DIALOGUE);
+
+            //only show continue text when the player has control over the dialogue
+            continueText.SetActive(true);
         }
 
         //start at the first dialogue in the conversation
@@ -138,6 +142,9 @@ public class DialogueManager : MonoBehaviour
 
         //turn off translator
         Translator.instance.gameObject.SetActive(false);
+
+        //hide continue text
+        continueText.SetActive(false);
 
         //finally, make any ielsek sales the player and character agreed to
         Inventory.instance.SellIelsek(conversation.ielsekBought, conversation.ielsekBuyRate);
