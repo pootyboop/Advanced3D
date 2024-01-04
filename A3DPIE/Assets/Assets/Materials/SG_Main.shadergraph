@@ -59,6 +59,15 @@
         },
         {
             "m_Id": "4fd89af187c14dbf96564eb9d439974c"
+        },
+        {
+            "m_Id": "1f1b109982b345c8ae5afe1dbf4f7077"
+        },
+        {
+            "m_Id": "0b023dfc55e24e15bdcd63b77db44646"
+        },
+        {
+            "m_Id": "938009d1daed40e1ad34b922c066b411"
         }
     ],
     "m_Keywords": [],
@@ -314,6 +323,18 @@
         },
         {
             "m_Id": "038045dd12b948e5b7e108f570f6cc69"
+        },
+        {
+            "m_Id": "c235a0bccd3042f6a97321e54e1ba72f"
+        },
+        {
+            "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
+        },
+        {
+            "m_Id": "956b6d2515254169b645d717d9c52913"
+        },
+        {
+            "m_Id": "adad4a797ffc4b5292789e4116bd0909"
         }
     ],
     "m_GroupDatas": [
@@ -328,6 +349,9 @@
         },
         {
             "m_Id": "a7565eed08c24773be1414ca61d46835"
+        },
+        {
+            "m_Id": "66bcd22b7169477b84a0b3e0dcf5a716"
         }
     ],
     "m_StickyNoteDatas": [],
@@ -985,9 +1009,9 @@
             },
             "m_InputSlot": {
                 "m_Node": {
-                    "m_Id": "af27c3fa1bda4a57a3299280674e379d"
+                    "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
                 },
-                "m_SlotId": 0
+                "m_SlotId": 1217249260
             }
         },
         {
@@ -1063,6 +1087,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "956b6d2515254169b645d717d9c52913"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
+                },
+                "m_SlotId": 608014431
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "9b2d8ed0696f49b990c007971c11258e"
                 },
                 "m_SlotId": 2
@@ -1128,6 +1166,20 @@
                     "m_Id": "624080d3064b4f0a9e7080ae5b035fed"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "adad4a797ffc4b5292789e4116bd0909"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
+                },
+                "m_SlotId": 748941760
             }
         },
         {
@@ -1226,6 +1278,20 @@
                     "m_Id": "8ca28ee2f54340cfa5af0a0d449715f3"
                 },
                 "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "c235a0bccd3042f6a97321e54e1ba72f"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
+                },
+                "m_SlotId": -1369112859
             }
         },
         {
@@ -1413,6 +1479,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "ee47482bbfa640d3bf6dd5c6edfae93b"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "af27c3fa1bda4a57a3299280674e379d"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "ff6f371ecb4443658771f5c8ce2bd550"
                 },
                 "m_SlotId": 0
@@ -1554,6 +1634,21 @@
     "m_ObjectId": "0402469f5e1a4fa1913d2476fccd65a3",
     "m_Id": 0,
     "m_DisplayName": "Alpha Clip Threshold",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "041b01c43c1c4b5fb8d905b6daeacbb1",
+    "m_Id": 0,
+    "m_DisplayName": "Dirt Strength",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1877,6 +1972,34 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "0b023dfc55e24e15bdcd63b77db44646",
+    "m_Guid": {
+        "m_GuidSerialized": "4537661e-8bc3-41f5-b0f9-5fd1d04b3307"
+    },
+    "m_Name": "Dirt Strength",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Dirt Strength",
+    "m_DefaultReferenceName": "_Dirt_Strength",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "0b026791ce3c4ec9a9616fd0b769c29a",
@@ -1938,6 +2061,15 @@
         },
         {
             "m_Id": "4fd89af187c14dbf96564eb9d439974c"
+        },
+        {
+            "m_Id": "1f1b109982b345c8ae5afe1dbf4f7077"
+        },
+        {
+            "m_Id": "0b023dfc55e24e15bdcd63b77db44646"
+        },
+        {
+            "m_Id": "938009d1daed40e1ad34b922c066b411"
         }
     ]
 }
@@ -2731,6 +2863,36 @@
 }
 
 {
+    "m_SGVersion": 3,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
+    "m_ObjectId": "1f1b109982b345c8ae5afe1dbf4f7077",
+    "m_Guid": {
+        "m_GuidSerialized": "7cb65983-008f-4590-a9cb-6279a3024c8a"
+    },
+    "m_Name": "Dirt Color",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Dirt Color",
+    "m_DefaultReferenceName": "_Dirt_Color",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "r": 0.1603773832321167,
+        "g": 0.1400737315416336,
+        "b": 0.12315772473812103,
+        "a": 1.0
+    },
+    "isMainColor": false,
+    "m_ColorMode": 0
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "209923ab0ddd463599e9af436152c739",
@@ -3482,6 +3644,21 @@
     "useTilingAndOffset": true,
     "m_Modifiable": true,
     "m_DefaultType": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "3e3dbbb5fed04c84be67e899c3d3f8c0",
+    "m_Id": 748941760,
+    "m_DisplayName": "Dirt Strength",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Dirt_Strength",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
 }
 
 {
@@ -4882,6 +5059,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "63a0f7fbe1614521bf925737a915f0da",
+    "m_Id": 1217249260,
+    "m_DisplayName": "In",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_In",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1Node",
     "m_ObjectId": "6420b60bbc794730b7077fdd2e6c227b",
     "m_Group": {
@@ -5088,6 +5290,17 @@
         "e31": 0.0,
         "e32": 0.0,
         "e33": 1.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.GroupData",
+    "m_ObjectId": "66bcd22b7169477b84a0b3e0dcf5a716",
+    "m_Title": "Dirt",
+    "m_Position": {
+        "x": -106.4000244140625,
+        "y": -277.60003662109377
     }
 }
 
@@ -6045,6 +6258,21 @@
 }
 
 {
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "87c40997a7a7483ba1a88eb6ef9b681d",
+    "m_Id": 608014431,
+    "m_DisplayName": "Dirt Scale",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Dirt_Scale",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
     "m_SGVersion": 1,
     "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
     "m_ObjectId": "888d08224b0b404eb584974627becfee",
@@ -6157,6 +6385,31 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "8c7ce3b074ad4787b9504733b240eece",
+    "m_Id": 0,
+    "m_DisplayName": "Dirt Color",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -6364,10 +6617,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 22.000009536743165,
-            "y": 104.00004577636719,
-            "width": 56.00004577636719,
-            "height": 23.999954223632814
+            "x": -299.20001220703127,
+            "y": 103.19994354248047,
+            "width": 56.000030517578128,
+            "height": 24.000015258789064
         }
     },
     "m_Slots": [
@@ -6400,10 +6653,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 21.999969482421876,
-            "y": -152.9999237060547,
-            "width": 56.000022888183597,
-            "height": 23.9998779296875
+            "x": -299.20001220703127,
+            "y": -153.60000610351563,
+            "width": 56.000030517578128,
+            "height": 23.999984741210939
         }
     },
     "m_Slots": [
@@ -6436,10 +6689,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 22.000089645385743,
-            "y": 67.99998474121094,
-            "width": 55.99989318847656,
-            "height": 24.00000762939453
+            "x": -299.20001220703127,
+            "y": 67.19998168945313,
+            "width": 56.000030517578128,
+            "height": 24.000015258789064
         }
     },
     "m_Slots": [
@@ -6493,6 +6746,34 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "938009d1daed40e1ad34b922c066b411",
+    "m_Guid": {
+        "m_GuidSerialized": "8692f093-2359-4ae1-8350-80748764fb7f"
+    },
+    "m_Name": "Dirt UV Scale",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Dirt UV Scale",
+    "m_DefaultReferenceName": "_Dirt_UV_Scale",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
@@ -6572,6 +6853,42 @@
     "m_PreviewMode": 0,
     "m_CustomColors": {
         "m_SerializableColors": []
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "956b6d2515254169b645d717d9c52913",
+    "m_Group": {
+        "m_Id": "66bcd22b7169477b84a0b3e0dcf5a716"
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -98.39999389648438,
+            "y": -127.20000457763672,
+            "width": 144.8000030517578,
+            "height": 33.600006103515628
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "f6cd7893d42c431ab732ae7a13f3f074"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "938009d1daed40e1ad34b922c066b411"
     }
 }
 
@@ -7492,6 +7809,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "adad4a797ffc4b5292789e4116bd0909",
+    "m_Group": {
+        "m_Id": "66bcd22b7169477b84a0b3e0dcf5a716"
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -95.99999237060547,
+            "y": -100.00000762939453,
+            "width": 142.39999389648438,
+            "height": 33.59999084472656
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "041b01c43c1c4b5fb8d905b6daeacbb1"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "0b023dfc55e24e15bdcd63b77db44646"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.LerpNode",
     "m_ObjectId": "ae236a5b693b4ccdacc30b557fcc0597",
     "m_Group": {
@@ -8353,6 +8706,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "c235a0bccd3042f6a97321e54e1ba72f",
+    "m_Group": {
+        "m_Id": "66bcd22b7169477b84a0b3e0dcf5a716"
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -80.80001068115235,
+            "y": -153.6000213623047,
+            "width": 127.20001220703125,
+            "height": 33.599998474121097
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "8c7ce3b074ad4787b9504733b240eece"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "1f1b109982b345c8ae5afe1dbf4f7077"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "c3f0bfb985ea40e58c9701990c48f037",
     "m_Id": 2,
@@ -9044,6 +9433,31 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "d1958f541ef3465f9a86c72393dcfb18",
+    "m_Id": -1369112859,
+    "m_DisplayName": "Dirt Color",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_Dirt_Color",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "d19d42efc86d40ca9f175adaa430c44f",
     "m_Id": 0,
@@ -9280,6 +9694,31 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "dd739a313e204da7a530c236dcefe8bd",
+    "m_Id": 0,
+    "m_DisplayName": "Dirtied_Vector4",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Dirtied_Vector4",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
 }
 
 {
@@ -9934,6 +10373,66 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
+    "m_ObjectId": "ee47482bbfa640d3bf6dd5c6edfae93b",
+    "m_Group": {
+        "m_Id": "66bcd22b7169477b84a0b3e0dcf5a716"
+    },
+    "m_Name": "Dirt",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 46.40005874633789,
+            "y": -217.60000610351563,
+            "width": 212.79998779296876,
+            "height": 302.3999938964844
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "63a0f7fbe1614521bf925737a915f0da"
+        },
+        {
+            "m_Id": "d1958f541ef3465f9a86c72393dcfb18"
+        },
+        {
+            "m_Id": "87c40997a7a7483ba1a88eb6ef9b681d"
+        },
+        {
+            "m_Id": "3e3dbbb5fed04c84be67e899c3d3f8c0"
+        },
+        {
+            "m_Id": "dd739a313e204da7a530c236dcefe8bd"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"7dc47c49dca498443b9b4a5ace9ded59\",\n        \"type\": 3\n    }\n}",
+    "m_PropertyGuids": [
+        "77505d06-08ef-41aa-85d7-6945897cf7dd",
+        "88f2ff51-82a3-4d7b-ac34-29c8b2f62d45",
+        "c7598d83-3f1e-47c8-b7a5-b9397587159d",
+        "52c75755-6406-4002-9cec-ee1b0f2e8825"
+    ],
+    "m_PropertyIds": [
+        -1369112859,
+        1217249260,
+        608014431,
+        748941760
+    ],
+    "m_Dropdowns": [],
+    "m_DropdownSelectedEntries": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
     "m_ObjectId": "efd2e75ffd514829a37b64e073796a95",
     "m_Id": 0,
@@ -10015,6 +10514,21 @@
     "m_ObjectId": "f52796031877478f9467a042e0a5de9b",
     "m_Id": 0,
     "m_DisplayName": "Emission Strength",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "f6cd7893d42c431ab732ae7a13f3f074",
+    "m_Id": 0,
+    "m_DisplayName": "Dirt UV Scale",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
