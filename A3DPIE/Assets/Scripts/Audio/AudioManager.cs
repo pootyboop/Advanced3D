@@ -53,4 +53,20 @@ public class AudioManager : MonoBehaviour
 
         audioSource.PlayOneShot(clip, sfxVolume);
     }
+
+
+
+    //set music volume from settings slider
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+    }
+
+
+
+    //set sfx volume from settings slider
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = volume;
+    }
 }

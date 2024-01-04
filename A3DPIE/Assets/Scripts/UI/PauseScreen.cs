@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 
 
-//manages opening tabs on the pause screen
+//manages settings (other than audio, handled by AudioManager) and opens tabs on the pause screen
 public class PauseScreen : MonoBehaviour
 {
     public Color selectedColor, unselectedColor;
     public GameObject[] tabs;
-    public TMPro.TextMeshProUGUI[] buttonTexts;
+    public TextMeshProUGUI[] buttonTexts;
+
+    //public Slider musicSlider, sfxSlider;
+    //public Toggle fullscreenToggle;
 
 
 
@@ -27,17 +31,37 @@ public class PauseScreen : MonoBehaviour
     {
         for (int i = 0; i < tabs.Length; i++)
         {
+            //hide non-selected tabs
             if (tabs[i] != tab)
             {
                 buttonTexts[i].color = unselectedColor;
+                // this weird operator just removes the underline fontstyle if it's currently applied
+                buttonTexts[i].fontStyle &= ~FontStyles.Underline;
                 tabs[i].SetActive(false);
             }
 
+            //unhide selected tab
             else
             {
                 tabs[i].SetActive(true);
                 buttonTexts[i].color = selectedColor;
+                buttonTexts[i].fontStyle = FontStyles.Underline;
             }
+        }
+    }
+
+
+    //set fullscreen from slider
+    public void SetFullscreen(bool fullscreen)
+    {
+        if (fullscreen)
+        {
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+        }
+
+        else
+        {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
         }
     }
 
