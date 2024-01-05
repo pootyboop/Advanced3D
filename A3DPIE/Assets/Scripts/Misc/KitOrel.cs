@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class KitOrel : MonoBehaviour
     Vector3 lastPosition;   //where the spaceship was last frame
     public TrailRenderer[] trailRenderers;  //the trail renderers on the spaceship's blasters? boosters? whatever they're called
     public AudioSource engineRumble;    //constant engine noise around the ship
+
+    public ParticleSystem shipLanding;  //particles to play on ship landing/takeoff
 
     private float trailRendererStrength = 0.06f;    //length of the trail renderers
     private bool freezeDist = false; //whether or not to freeze the "distance" the ship traveled, simulating flight when the object stays in place
@@ -84,9 +87,23 @@ public class KitOrel : MonoBehaviour
 
 
 
+    //stop updating the spaceship's current speed for future trail renderers/engine noise
     public void FreezeTrailRendererDistance()
     {
         freezeDist = true;
         dist = 0.5f;
+    }
+
+
+
+    //turn on/off the landing particles
+    public void SetLandingParticlesActive(bool active)
+    {
+        shipLanding.enableEmission = active;
+
+        if (active)
+        {
+            shipLanding.Play();
+        }
     }
 }
