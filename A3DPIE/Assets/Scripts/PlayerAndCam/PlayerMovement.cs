@@ -193,8 +193,14 @@ public class PlayerMovement : MonoBehaviour
         //player trying to drop/cancel?
         else if (Input.GetButtonDown("Drop"))
         {
+            //skip cutscene
+            if (state == EPlayerState.CUTSCENE)
+            {
+                CutsceneManager.instance.SkipCutscene();
+            }
+
             //stop sitting if seated
-            if (state == EPlayerState.SEATED)
+            else if (state == EPlayerState.SEATED)
             {
                 currentSeat.Stand();
                 currentSeat = null;

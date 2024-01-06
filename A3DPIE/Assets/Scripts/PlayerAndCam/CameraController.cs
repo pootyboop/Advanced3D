@@ -42,26 +42,6 @@ public class CameraController : MonoBehaviour
 
 
 
-    //toggles the mouse cursor visibility and whether or not the player can move the camera
-    public void SetMouseVisibility(bool isVisible, bool canControlCharacterView)
-    {
-        Cursor.visible = isVisible;
-        if (isVisible)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
-
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
-        canRotateView = canControlCharacterView;
-        reticle.gameObject.SetActive(canRotateView);    //hide reticle when unable to control camera
-    }
-
-
-
     //called from PlayerMovement.Update() rather than this script using its own Update() to avoid some weird camera movement issues
     public void SyncedUpdate()
     {
@@ -197,5 +177,33 @@ public class CameraController : MonoBehaviour
             //and interact with the target interactable. it will handle the interaction from here
             targetInteractable.Interact();
         }
+    }
+
+
+
+    //toggles the mouse cursor visibility and whether or not the player can move the camera
+    public void SetMouseVisibility(bool isVisible, bool canControlCharacterView)
+    {
+        Cursor.visible = isVisible;
+        if (isVisible)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        canRotateView = canControlCharacterView;
+        reticle.gameObject.SetActive(canRotateView);    //hide reticle when unable to control camera
+    }
+
+
+
+    //sets the mouse sensitivity
+    public void SetMouseSensitivity(float newSensitivity)
+    {
+        sensitivity = newSensitivity;
     }
 }

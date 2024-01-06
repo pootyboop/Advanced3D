@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
+
+
+//the game's current state in relation to cutscenes
+public enum ECutsceneState
+{
+    GAME,
+    INTRO,
+    OUTRO
+}
+
 /*
     Start(), Director_Played(), and Director_Stopped() are from Unity Learn.
     Author: Unity Technologies
@@ -20,10 +30,13 @@ public class CutsceneManager : MonoBehaviour
     public PlayableDirector introCutscene, outroCutscene;  //cutscene references
     public Camera cutsceneCam;  //cinematic camera used in cutscenes instead of the player camera
 
+    public CanvasGroupFader skipText;
+
     //easy toggles to turn off cutscenes during development
     public bool playIntroCutscene = true;
     public bool playOutroCutscene = true;
 
+    public ECutsceneState currCutscene; //current cutscene
 
 
     void Start()
@@ -51,6 +64,7 @@ public class CutsceneManager : MonoBehaviour
     {
         PlayerMovement.instance.SetPlayerState(EPlayerState.CUTSCENE);
         cutsceneCam.gameObject.SetActive(true);
+        skipText.FadeAlpha(true);
     }
 
 
@@ -58,6 +72,8 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene ends
     private void Director_Stopped(PlayableDirector obj)
     {
+        skipText.SetAlpha(0.0f);
+        currCutscene = ECutsceneState.GAME;
         cutsceneCam.gameObject.SetActive(false);
         PlayerMovement.instance.SetPlayerState(EPlayerState.MOVABLE);
     }
@@ -69,6 +85,7 @@ public class CutsceneManager : MonoBehaviour
     {
         if (playIntroCutscene)
         {
+            currCutscene = ECutsceneState.INTRO;
             introCutscene.Play();
         }
     }
@@ -80,7 +97,32 @@ public class CutsceneManager : MonoBehaviour
     {
         if (playOutroCutscene)
         {
+            currCutscene = ECutsceneState.OUTRO;
             outroCutscene.Play();
         }
+    }
+
+
+
+    //skips the cutscene
+    public void SkipCutscene()
+    {
+        PlayableDirector currentCutscene;
+
+        //get the playabledirector from currCutscene
+        switch (currCutscene)
+        {
+            default:
+                return;
+            case ECutsceneState.INTRO:
+                currentCutscene = introCutscene;
+                break;
+            case ECutsceneState.OUTRO:
+                currentCutscene = outroCutscene;
+                break;
+        }
+
+        currentCutscene.time = currentCutscene.duration;
+        currentCutscene.Evaluate();
     }
 }

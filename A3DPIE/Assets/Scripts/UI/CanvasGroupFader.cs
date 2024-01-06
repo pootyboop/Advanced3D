@@ -13,6 +13,14 @@ public class CanvasGroupFader : MonoBehaviour
 
 
 
+    //directly set the CanvasGroup's alpha
+    public void SetAlpha(float newAlpha)
+    {
+        alpha.alpha = newAlpha;
+    }
+
+
+
     //start fading
     public void FadeAlpha(bool fadeIn)
     {
