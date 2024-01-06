@@ -9,6 +9,15 @@ public class Piston : MonoBehaviour
 {
     public float startDelay = 0.0f; //used to offset pistons so they don't all have to slam down at the exact same time
     private Animator animator;
+    public AudioSource audio;
+    private ParticleSystem particles;
+
+
+
+    void Start()
+    {
+        particles = GetComponent<ParticleSystem>();
+    }
 
 
 
@@ -18,6 +27,7 @@ public class Piston : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         animator.enabled = false;   //starts disabled, but this is here to make sure the start delay still works when re-activating
+
         StartCoroutine(StartDelay());
     }
 
@@ -28,5 +38,14 @@ public class Piston : MonoBehaviour
     {
         yield return new WaitForSeconds(startDelay);
         animator.enabled = true;
+    }
+
+
+
+    //called from animation when the piston hits the ground
+    public void PistonSlam()
+    {
+        audio.Play();
+        particles.Play();
     }
 }

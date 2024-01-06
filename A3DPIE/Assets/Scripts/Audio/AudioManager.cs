@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public float musicVolume = 1.0f;
     public float sfxVolume = 1.0f;
 
+    public AudioSource[] musics;
+
     private AudioSource audioSource;    //audioSource used to play one shot sounds
 
     //audioClips tagged with a string name so they're easy to call from other scripts
@@ -60,6 +62,12 @@ public class AudioManager : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         musicVolume = volume;
+
+        //update all musics' volume
+        foreach (AudioSource music in musics)
+        {
+            music.volume = musicVolume;
+        }
     }
 
 

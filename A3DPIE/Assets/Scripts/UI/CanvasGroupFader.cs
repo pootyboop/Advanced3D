@@ -10,12 +10,18 @@ public class CanvasGroupFader : MonoBehaviour
 {
     public CanvasGroup alpha;
     public float fadeSpeed = 0.1f;
+    IEnumerator coroutine;
 
 
 
     //directly set the CanvasGroup's alpha
+    //also stop fading if currently doing so
     public void SetAlpha(float newAlpha)
     {
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
         alpha.alpha = newAlpha;
     }
 
@@ -24,7 +30,8 @@ public class CanvasGroupFader : MonoBehaviour
     //start fading
     public void FadeAlpha(bool fadeIn)
     {
-        StartCoroutine(FadeAlphaOverTime(fadeIn));
+        coroutine = FadeAlphaOverTime(fadeIn);
+        StartCoroutine(coroutine);
     }
 
 
