@@ -108,12 +108,14 @@ public class GrabbableObject : MonoBehaviour, IInteractable
             Inventory.instance.PayKartet(itemCost);
             paid = true;
             itemCost = 0;   //set this to 0 so IInteractable doesn't think it still costs money
+
+            AudioManager.instance.PlayAudioByTag("buy");    //special buy noise
         }
 
         //the item is picked up with no cost to the player
         else
         {
-            AudioManager.instance.PlayAudioByTag("pickup");
+            AudioManager.instance.PlayAudioByTag("pickup"); //generic pickup noise
         }
 
         //disable physics/collisions

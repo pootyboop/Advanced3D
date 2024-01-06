@@ -48,6 +48,8 @@ public class Door : MonoBehaviour, IInteractable
     public string name = "Door";
     public float stayOpenTime = 7.0f;   //how long the door stays open before auto-closing
 
+    AudioSource audio;
+
     bool open = false;
 
     public ELoadArea loadArea1, loadArea2;  //the loadable areas on either side of this door
@@ -61,6 +63,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
+        audio = GetComponent<AudioSource>();
     }
 
 
@@ -95,6 +98,8 @@ public class Door : MonoBehaviour, IInteractable
             //load the areas on both sides of the door since the player can see both
             AreaLoadManager.instance.SetAreaLoaded(loadArea1, true);
             AreaLoadManager.instance.SetAreaLoaded(loadArea2, true);
+
+            audio.Play();
         }
 
         else
