@@ -97,6 +97,8 @@ public class UI : MonoBehaviour
                 return "Open";
             case EInteractionType.SPACESHIPDEPART:
                 return "Depart";
+            case EInteractionType.INSPECTABLE:
+                return "Inspect";
         }
     }
 

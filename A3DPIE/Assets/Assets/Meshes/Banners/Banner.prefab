@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61add368e2871e84ebbec35b5aea17ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 7
   name: Banner of Voenn
   spokenLanguage: 1
   conversations:

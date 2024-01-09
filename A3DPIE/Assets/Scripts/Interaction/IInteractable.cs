@@ -15,7 +15,8 @@ public enum EInteractionType
     GRABBABLE,  //Grab/Pick up
     SEAT,       //Sit
     DOOR,       //Door
-    SPACESHIPDEPART //Leave Kallay Tirridor from the Kit Orel dashboard
+    SPACESHIPDEPART, //Leave Kallay Tirridor from the Kit Orel dashboard
+    INSPECTABLE //Inspect something
 }
 
 
