@@ -231,6 +231,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c1d0cdf98f8a074ab47c6057da28072, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8147481509549708579}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c1d0cdf98f8a074ab47c6057da28072, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 163851600949970107}
   m_SourcePrefab: {fileID: 100100000, guid: 8c1d0cdf98f8a074ab47c6057da28072, type: 3}
 --- !u!1 &7456057386726401666 stripped
 GameObject:
@@ -5148,6 +5151,33 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &163851600949970107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7456057386726401666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61add368e2871e84ebbec35b5aea17ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  name: Piston
+  spokenLanguage: 1
+  conversations:
+  - conversationID: 
+    ielsekBought: 0
+    ielsekBuyRate: 2400
+    dialogues:
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: I'm not entirely sure what these do, but last time I visited I heard
+          they help with making Bollet Voenni somehow.
+        translation: 
+        context: 
 --- !u!4 &7796553513734077496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c1d0cdf98f8a074ab47c6057da28072, type: 3}

@@ -122,6 +122,9 @@ public class GrabbableObject : MonoBehaviour, IInteractable
         rb.isKinematic = true;
         collider.enabled = false;
 
+        //leave the object's previous parent, maintaining the grabbable's object transform
+        transform.SetParent(null, true);
+
         //put the object in the player's "hand": a transform offset from the camera
         transform.SetParent(CameraController.instance.grabPoint, false);
         transform.localPosition = Vector3.zero;

@@ -70,7 +70,6 @@ public class BarConveyorBelt : MonoBehaviour
     {
         //enable physics
         obj.GetComponent<Rigidbody>().isKinematic = false;
-        obj.transform.SetParent(null, true);
         //destroy the spline follow script
         Destroy(obj.GetComponent<MoveAlongSpline>());
     }

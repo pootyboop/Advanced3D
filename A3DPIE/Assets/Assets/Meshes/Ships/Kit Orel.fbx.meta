@@ -22,6 +22,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Emissive2
+    second: {fileID: 2100000, guid: 5b7377157dd451e4ab4d33026428f80b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EmissiveScreen
+    second: {fileID: 2100000, guid: 163655b8bfd68fe4e81bf10fd837150d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass
     second: {fileID: 2100000, guid: 5a527adf565162948a28325d10955779, type: 2}
   - first:
@@ -59,6 +69,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Paint2
     second: {fileID: 2100000, guid: 4758a37339d0a2b4d93215f8b9e35aa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlanetProjection
+    second: {fileID: 2100000, guid: 5bb90a0e2396e9a468131aa675a6f4ef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

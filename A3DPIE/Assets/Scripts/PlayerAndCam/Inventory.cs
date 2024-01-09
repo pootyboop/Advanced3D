@@ -55,7 +55,7 @@ public class Inventory : MonoBehaviour
         invUI.text =
             "<color=#B7F126>" + //ielsek color (lime green)
             ielsek +
-            " Ielsek\r\n<color=#FFDD00>" +  //kartet color (yellow/gold)
+            "\r\n<color=#FFDD00>" +  //kartet color (yellow/gold)
             kartet +
             " <s>KT</s>";
     }

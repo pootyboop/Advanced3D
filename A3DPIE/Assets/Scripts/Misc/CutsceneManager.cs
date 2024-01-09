@@ -38,6 +38,9 @@ public class CutsceneManager : MonoBehaviour
 
     public ECutsceneState currCutscene; //current cutscene
 
+    public DialogueCharacter startGameConversation; //conversation to start after the intro cutscene
+    public GameObject quuvol;   //character representing Quuvol (the protagonist) in cutscenes
+
 
     void Start()
     {
@@ -62,6 +65,8 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene begins
     private void Director_Played(PlayableDirector obj)
     {
+        quuvol.SetActive(true);
+
         PlayerMovement.instance.SetPlayerState(EPlayerState.CUTSCENE);
         cutsceneCam.gameObject.SetActive(true);
         skipText.FadeAlpha(true);
@@ -72,10 +77,19 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene ends
     private void Director_Stopped(PlayableDirector obj)
     {
+        quuvol.SetActive(false);
+
         skipText.SetAlpha(0.0f);
-        currCutscene = ECutsceneState.GAME;
         cutsceneCam.gameObject.SetActive(false);
         PlayerMovement.instance.SetPlayerState(EPlayerState.MOVABLE);
+
+        //start the start game dialogue after intro cutscene
+        if (currCutscene == ECutsceneState.INTRO)
+        {
+            startGameConversation.Interact();
+        }
+
+        currCutscene = ECutsceneState.GAME; //set this last so intro cutscene can be recognized first (and after player has left CUTSCENE state)
     }
 
 
