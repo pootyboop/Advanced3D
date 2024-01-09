@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5879798332349034791
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2878081229039609868, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_Name
+      value: Banner of Lunscu Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.678107
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3223221693628576438, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711118806635365400, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: name
+      value: Banner of Lunscu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711118806635365400, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: The banner of Lunscu, the beautiful bubbling planet. Everyone should
+        visit at least once in their lives.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5711118806635365400, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: I've always loved Lunsci culture. Their tattoos are beautiful, and Ecas
+        Cisc Asca is the best cocktail I've ever had.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506287167953523486, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cf8f7c82e5ebda942a49e3cb1c14beef, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ccaccf9bba413064aa6467e3296e873c, type: 3}

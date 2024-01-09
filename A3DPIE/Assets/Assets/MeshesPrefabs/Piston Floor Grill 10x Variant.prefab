@@ -1,0 +1,622 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &65942381149349343
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -16.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &6906485004003368561 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 65942381149349343}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &323067670115383588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -12.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &6577861222308364938 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 323067670115383588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &893622492518433291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &6004509242738768293 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 893622492518433291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2466801801271423574
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &9009823312157706744 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 2466801801271423574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3391676103683305708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3830597351938891005, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: startDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123796859657676070, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill 10x Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.908035
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.952
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 642005901768598636, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+    - {fileID: 3048934720939531774, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7323137892512634815}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4283956952794374215}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2256024745599904034}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9009823312157706744}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6577861222308364938}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3490117429475623909}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6906485004003368561}
+    - targetCorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6004509242738768293}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+--- !u!4 &5081951946696904560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7608584371674562460, guid: 8ab581db78a1fd4449284227bd11218d, type: 3}
+  m_PrefabInstance: {fileID: 3391676103683305708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4220865326625664017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &7323137892512634815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 4220865326625664017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4647019057853960844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &2256024745599904034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 4647019057853960844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7224101033285098473
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &4283956952794374215 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 7224101033285098473}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8024824048207362123
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5081951946696904560}
+    m_Modifications:
+    - target: {fileID: 2390206777738600797, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: startDelay
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086989929858097428, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_Name
+      value: Piston Floor Grill Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+--- !u!4 &3490117429475623909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6859692224169524142, guid: 348ccdeeb46bbbe418f3790a75b1832f, type: 3}
+  m_PrefabInstance: {fileID: 8024824048207362123}
+  m_PrefabAsset: {fileID: 0}

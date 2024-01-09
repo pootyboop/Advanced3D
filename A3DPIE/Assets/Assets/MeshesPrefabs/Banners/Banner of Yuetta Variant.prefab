@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7247700595836765905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1009063454550444617, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b5ff78dd78cd65340815cf1afb06ffc1, type: 2}
+    - target: {fileID: 1948906501784362319, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: name
+      value: Banner of Yuetta
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948906501784362319, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: The banner of Yuetta, the water planet. Mainly known for the underwater
+        city of Guenador, the capital of the system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1948906501784362319, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: Despite the danger in its most populated areas, I'd love to visit Guenador
+        one day (if I could ever afford it).
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339241308935926107, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_Name
+      value: Banner of Yuetta Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.678107
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 27.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8714816457261968353, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6582457dc296e56469de51d6857d9a2a, type: 3}
