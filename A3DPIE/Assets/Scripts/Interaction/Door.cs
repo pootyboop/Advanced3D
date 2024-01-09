@@ -36,12 +36,12 @@ public class Door : MonoBehaviour, IInteractable
         }
     }
 
-    //doors can always be targeted since their hitboxes are disabled when they're open (meaning you can't interact with them anyway)
+    //doors can be targeted when closed
     public bool targetable
     {
         get
         {
-            return true;
+            return !open;
         }
     }
 
@@ -68,10 +68,13 @@ public class Door : MonoBehaviour, IInteractable
 
 
 
-    //open the door when interacted with
+    //open the door when interacted with if currently closed
     public void Interact()
     {
-        SetOpen(!open);
+        if (!open)
+        {
+            SetOpen(true);
+        }
     }
 
 

@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1544614711289235439, guid: dbc6374c3d642964484a3b6b3ad2031c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3944007847445316200, guid: dbc6374c3d642964484a3b6b3ad2031c, type: 3}
       propertyPath: m_Name
       value: Chandelier Long Double Variant
@@ -77,6 +81,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8569776568539706815}
     m_Modifications:
+    - target: {fileID: 1306184483494732654, guid: c1e7b646f3beee54f817a2e42e9891f9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3599505330150352617, guid: c1e7b646f3beee54f817a2e42e9891f9, type: 3}
       propertyPath: m_Name
       value: Chandelier
