@@ -25,7 +25,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Metallic: 1
     m_Colors:
     - _Secondary_Tint: {r: 0.20754716, g: 0.5188679, b: 0.3805032, a: 0}
   m_BuildTextureStacks: []

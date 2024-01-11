@@ -27,6 +27,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
+    - _Metallic: 1
     m_Colors:
     - _Secondary_Tint: {r: 0.20630117, g: 0.5777995, b: 0.8962264, a: 0}
   m_BuildTextureStacks: []

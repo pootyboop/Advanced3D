@@ -8,6 +8,12 @@ using UnityEngine;
 //random glass of one of the drinks
 public class Beverage : MonoBehaviour
 {
+    //force set what drink this is
+    public int drinkID = -1;
+
+    //does drink cost money
+    public bool costsKartet = true;
+
     //the materials this drink can use
     public Material[] drinkMaterials = new Material[4];
 
@@ -33,8 +39,11 @@ public class Beverage : MonoBehaviour
         string drinkName = "Glass";
         int cost = 0;
 
-        //random drink ID
-        int drinkID = UnityEngine.Random.Range(0, drinkMaterials.Length);
+        //if set to -1, randomize ID
+        if (drinkID == -1)
+        {
+            drinkID = UnityEngine.Random.Range(0, drinkMaterials.Length);
+        }
 
         //set the drink name and cost
         switch (drinkID)
@@ -56,6 +65,13 @@ public class Beverage : MonoBehaviour
                 cost = 125;
                 break;
 
+        }
+
+
+        //set cost to 0 if it's free
+        if (!costsKartet)
+        {
+            cost = 0;
         }
 
         //pass the name and cost to the grabbable object
