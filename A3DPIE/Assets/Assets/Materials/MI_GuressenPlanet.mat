@@ -30,11 +30,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emission_Strength: 0
+    - _Emission_Strength: 0.26
     - _Use_Secondary_Tint: 1
     m_Colors:
     - _Secondary_Tint: {r: 0, g: 0.2119317, b: 1, a: 0}
-    - _Tint: {r: 0.72075474, g: 1, b: 0.98040384, a: 0}
+    - _Tint: {r: 0.72156864, g: 0.9182684, b: 1, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8707600078983310089
 MonoBehaviour:
