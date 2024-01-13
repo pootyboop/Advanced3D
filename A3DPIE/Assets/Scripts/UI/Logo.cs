@@ -28,22 +28,31 @@ public class Logo : MonoBehaviour
     //fade in the logo over time
     IEnumerator Fade()
     {
-        float startAlpha = text.color.a;    //instead of 0, start with the preexisting alpha in case it's changed in the inspector
-        float time = 0f;    //how far into the animation we are
-
-        while (time < fadeSpeed)
+        while (text.color.a < 1.0f)
         {
-            time += Time.deltaTime;
-
-            float alpha = Mathf.Lerp(startAlpha, 1.0f, time / fadeSpeed);   //lerp the alpha
+            //fade in alpha-
+            float alpha = text.color.a + Time.deltaTime * fadeSpeed;
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
 
             //move the logo upward
             transform.position = new Vector3(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime, transform.position.z);
 
-            //wait a moment before changing fade again. won't be noticeable
-            yield return new WaitForSeconds(.05f);
+            yield return null;
         }
+
+        //while (time < fadeSpeed)
+        //{
+        //    time += Time.deltaTime;
+
+        //    float alpha = Mathf.Lerp(startAlpha, 1.0f, time / fadeSpeed);   //lerp the alpha
+        //    text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
+
+        //    //move the logo upward
+        //    transform.position = new Vector3(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime, transform.position.z);
+
+        //    //wait a moment before changing fade again. won't be noticeable
+        //    yield return new WaitForSeconds(.05f);
+        //}
     }
 
 

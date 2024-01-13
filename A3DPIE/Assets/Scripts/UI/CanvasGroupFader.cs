@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class CanvasGroupFader : MonoBehaviour
 {
     public CanvasGroup alpha;
-    public float fadeSpeed = 0.1f;
+    public float fadeSpeed = 1.0f;
     IEnumerator coroutine;
 
 
@@ -53,8 +53,8 @@ public class CanvasGroupFader : MonoBehaviour
             (alpha.alpha > 0.0f && !fadeIn) //fading out and not invisible
             )
         {
-            alpha.alpha += fadeAmount;
-            yield return new WaitForSeconds(0.05f); //arbitrary value
+            alpha.alpha += fadeAmount * Time.deltaTime;
+            yield return null;
         }
     }
 }
