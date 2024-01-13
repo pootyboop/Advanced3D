@@ -19,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Gold
     second: {fileID: 2100000, guid: 3cf4a343fe8bef54ca6fa83ce234c092, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RectDesign
+    second: {fileID: 2100000, guid: 649e9bbea283f074385ef26b46d84a65, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
