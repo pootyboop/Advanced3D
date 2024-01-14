@@ -30,6 +30,11 @@ public class CanvasGroupFader : MonoBehaviour
     //start fading
     public void FadeAlpha(bool fadeIn)
     {
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+
         coroutine = FadeAlphaOverTime(fadeIn);
         StartCoroutine(coroutine);
     }

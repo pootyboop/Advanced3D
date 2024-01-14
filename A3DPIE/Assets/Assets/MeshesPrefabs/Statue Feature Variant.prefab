@@ -165,42 +165,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 762ff4de1e6a9084d9f6229fb1cc9c05, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2190258762195128209}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 762ff4de1e6a9084d9f6229fb1cc9c05, type: 3}
 --- !u!4 &2504084102837402403 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 762ff4de1e6a9084d9f6229fb1cc9c05, type: 3}
   m_PrefabInstance: {fileID: 2687226501885992136}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2993657445729116569 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 762ff4de1e6a9084d9f6229fb1cc9c05, type: 3}
-  m_PrefabInstance: {fileID: 2687226501885992136}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2190258762195128209
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2993657445729116569}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.9453864, y: 0.12843448, z: 1.1327645}
-  m_Center: {x: 0.0016042143, y: 0.06422193, z: 0.09368547}
 --- !u!1001 &2783425260229188228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,80 +250,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2504084102837402403}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5081629745314317749}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5668288795690934760}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
 --- !u!4 &2389740125542301039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
   m_PrefabInstance: {fileID: 2783425260229188228}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3053967587135350741 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fc2e5e842560cf345b47a2657792e246, type: 3}
-  m_PrefabInstance: {fileID: 2783425260229188228}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5081629745314317749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3053967587135350741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61add368e2871e84ebbec35b5aea17ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 7
-  name: Hierri Statue
-  spokenLanguage: 1
-  conversations:
-  - conversationID: 
-    ielsekBought: 0
-    ielsekBuyRate: 2400
-    dialogues:
-    - speaker: 2
-      phrases:
-      - overrideLanguage: 0
-        phrase: Wow, this must've been expensive. You normally only see these in
-          big cities like Zephe.
-        translation: 
-        context: 
-    - speaker: 2
-      phrases:
-      - overrideLanguage: 0
-        phrase: It's holding an object embossed with the Hierre symbol. Very patriotic.
-        translation: 
-        context: 
---- !u!136 &5668288795690934760
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3053967587135350741}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.005
-  m_Height: 0.016
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.008}
 --- !u!1001 &7680091378903449805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -414,10 +318,101 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 858282391052856817, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7301637523385235274}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 45858315294340939, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5475629696941074124}
+    - targetCorrespondingSourceObject: {fileID: 45858315294340939, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2522259530677183824}
+    - targetCorrespondingSourceObject: {fileID: 45858315294340939, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7419841372999147956}
   m_SourcePrefab: {fileID: 100100000, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
 --- !u!4 &7024508359096741180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 858282391052856817, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
   m_PrefabInstance: {fileID: 7680091378903449805}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7653798907419916166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 45858315294340939, guid: aafe8ea18d1fbbf4f8710d06e408530d, type: 3}
+  m_PrefabInstance: {fileID: 7680091378903449805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5475629696941074124
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653798907419916166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.015
+  m_Height: 0.05
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.035}
+--- !u!65 &2522259530677183824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653798907419916166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.028361592, y: 0.003853035, z: 0.03398292}
+  m_Center: {x: 0, y: -0.01, z: 0.06}
+--- !u!114 &7419841372999147956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7653798907419916166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61add368e2871e84ebbec35b5aea17ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 7
+  name: Hierri Statue
+  spokenLanguage: 1
+  conversations:
+  - conversationID: 
+    ielsekBought: 0
+    ielsekBuyRate: 2400
+    dialogues:
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: Wow, this must've been expensive. You normally only see these in
+          big cities like Zephe.
+        translation: 
+        context: 
+    - speaker: 2
+      phrases:
+      - overrideLanguage: 0
+        phrase: It's holding an object embossed with the Hierre symbol. Very patriotic.
+        translation: 
+        context: 

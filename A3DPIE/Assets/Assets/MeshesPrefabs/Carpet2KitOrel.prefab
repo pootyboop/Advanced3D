@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Carpet2KitOrel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7f0224fe3e3774a95855571e11447f05, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

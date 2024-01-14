@@ -76,12 +76,13 @@ Material:
     - _BUILTIN_ZWrite: 1
     - _BUILTIN_ZWriteControl: 0
     - _Dirt_Scale: 0
+    - _Dirt_Strength: 1
     - _Dirt_UV_Scale: 1
     - _Emission_Sine_Strength: 0
     - _Emission_Strength: 0
     - _Invert_Metallic_for_Roughness: 0
     - _Metallic: 0
-    - _Roughness: 0.417
+    - _Roughness: 0.208
     - _Use_Emission_Tint: 0
     - _Use_Secondary_Tint: 0
     m_Colors:
