@@ -134,7 +134,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b386d65f761a32541ab889028aefc0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drinkID: -1
+  costsKartet: 1
   drinkMaterials:
   - {fileID: 2100000, guid: fb743d139aa2cd24c8cdd09e2cf4df90, type: 2}
   - {fileID: 2100000, guid: 4efed215b9bf37f4bbb6105ab0c3aa4b, type: 2}
@@ -168,4 +170,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Drink
-  kartetCost: 100
+  itemCost: 0
+  dialogueOnFirstGrab: {fileID: 0}

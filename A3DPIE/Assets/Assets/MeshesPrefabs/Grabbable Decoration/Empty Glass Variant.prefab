@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: name
       value: Empty Glass
       objectReference: {fileID: 0}
+    - target: {fileID: 7321532319394352987, guid: 8961d4edbfbcbc1478950bce2040f784, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2528030040632968555, guid: 8961d4edbfbcbc1478950bce2040f784, type: 3}
     m_RemovedGameObjects: []
