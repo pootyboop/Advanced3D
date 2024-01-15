@@ -43,6 +43,6 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Background_Color: {r: 0.89411765, g: 0.7882353, b: 0.5411765, a: 1}
+    - _Background_Color: {r: 0.735849, g: 0.6681648, b: 0.51023495, a: 1}
     - _Icon_Color: {r: 0.41509432, g: 0.4004998, b: 0.3504806, a: 1}
   m_BuildTextureStacks: []
