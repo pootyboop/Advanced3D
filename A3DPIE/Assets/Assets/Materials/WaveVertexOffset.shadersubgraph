@@ -2060,7 +2060,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.GroupData",
     "m_ObjectId": "7b1c4fda63a44a8fab53a1b1d04e2de4",
-    "m_Title": "Wave Vertex Offset - BASED ON https://youtu.be/1yevpCAA_rU?si=Pvv3wq0WM8F84WEc",
+    "m_Title": "Wave Vertex Position Offset - BASED ON https://youtu.be/1yevpCAA_rU?si=Pvv3wq0WM8F84WEc",
     "m_Position": {
         "x": -913.7390747070313,
         "y": -284.00006103515627

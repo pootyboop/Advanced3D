@@ -253,9 +253,6 @@
         },
         {
             "m_Id": "60dfefebb8e242f2b016f1391b7c6b7f"
-        },
-        {
-            "m_Id": "20cda1b6726a4eb190eda4843d0d288d"
         }
     ],
     "m_StickyNoteDatas": [],
@@ -2082,17 +2079,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.GroupData",
-    "m_ObjectId": "20cda1b6726a4eb190eda4843d0d288d",
-    "m_Title": "Wave Vertex Offset - BASED ON https://youtu.be/1yevpCAA_rU?si=Pvv3wq0WM8F84WEc",
-    "m_Position": {
-        "x": -453.0,
-        "y": -515.0000610351563
-    }
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicVectorMaterialSlot",
     "m_ObjectId": "20dc891137724a6aaddaebf7a434e8a7",
     "m_Id": 0,
@@ -2120,7 +2106,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "210c58459fe1456f9e560103bcd8f595",
     "m_Group": {
-        "m_Id": "20cda1b6726a4eb190eda4843d0d288d"
+        "m_Id": ""
     },
     "m_Name": "Property",
     "m_DrawState": {
@@ -3020,7 +3006,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "36ede516032c49a781e67a9108850395",
     "m_Group": {
-        "m_Id": "20cda1b6726a4eb190eda4843d0d288d"
+        "m_Id": ""
     },
     "m_Name": "Property",
     "m_DrawState": {
@@ -5173,7 +5159,7 @@
     "m_Type": "UnityEditor.ShaderGraph.SubGraphNode",
     "m_ObjectId": "a1d1134e3f864862a8b5485168a3f5e9",
     "m_Group": {
-        "m_Id": "20cda1b6726a4eb190eda4843d0d288d"
+        "m_Id": ""
     },
     "m_Name": "WaveVertexOffset",
     "m_DrawState": {
@@ -6197,7 +6183,7 @@
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "cbb363bf7aee4d2397000979cc2d09df",
     "m_Group": {
-        "m_Id": "20cda1b6726a4eb190eda4843d0d288d"
+        "m_Id": ""
     },
     "m_Name": "Property",
     "m_DrawState": {

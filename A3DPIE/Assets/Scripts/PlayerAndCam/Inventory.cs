@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
 
     //run this dialogue when the player has sold all of their ielsek to prompt them to leave
     public DialogueCharacter soldAllIelsekDialogue;
+    private bool soldAllIelsek = false;
 
 
 
@@ -47,6 +48,13 @@ public class Inventory : MonoBehaviour
         //update the UI to match the new quantities
         UpdateInvUI();
         InvUIChange(-1 * amountSold, totalPay);
+
+        //if sold all ielsek, prompt player to return to ship and end game
+        if (ielsek == 0 && !soldAllIelsek)
+        {
+            soldAllIelsek = true;   //make sure this only runs once
+            soldAllIelsekDialogue.Interact();
+        }
     }
 
 
@@ -60,12 +68,6 @@ public class Inventory : MonoBehaviour
         //update the UI to match
         UpdateInvUI();
         InvUIChange(0, -1 * amount);
-
-        //if sold all ielsek, prompt player to return to ship and end game
-        if (kartet == 0)
-        {
-            soldAllIelsekDialogue.Interact();
-        }
     }
 
 
