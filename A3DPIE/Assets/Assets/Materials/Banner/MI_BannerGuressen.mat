@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 0
+--- !u!114 &-4240400470118973512
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -23,15 +39,20 @@ Material:
   m_Name: MI_BannerGuressen
   m_Shader: {fileID: -6465566751694194690, guid: 3525c14328d35414a9f7a7956f203413, type: 3}
   m_Parent: {fileID: 2100000, guid: 092d768aa1cccff47a65819a8e063032, type: 2}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2225
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3

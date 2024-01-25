@@ -10,19 +10,25 @@ Material:
   m_Name: M_BrandingKitOrel
   m_Shader: {fileID: -6465566751694194690, guid: e66446214ca0aea4c89c34f75248ccd8, type: 3}
   m_Parent: {fileID: 2100000, guid: b4c40c459d518ac4bb4e994f27594c1f, type: 2}
-  m_ModifiedSerializedProperties: 0
+  m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
+  m_InvalidKeywords:
   - _BUILTIN_ALPHATEST_ON
   - _BUILTIN_AlphaClip
   - _BUILTIN_SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2225
   stringTagMap:
-    RenderType: Transparent
-  disabledShaderPasses: []
+    MotionVector: User
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -54,3 +60,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 0
+--- !u!114 &3950083709974359059
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 

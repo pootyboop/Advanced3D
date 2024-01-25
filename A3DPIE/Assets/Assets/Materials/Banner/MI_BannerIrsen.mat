@@ -23,15 +23,20 @@ Material:
   m_Name: MI_BannerIrsen
   m_Shader: {fileID: -6465566751694194690, guid: 3525c14328d35414a9f7a7956f203413, type: 3}
   m_Parent: {fileID: 2100000, guid: 092d768aa1cccff47a65819a8e063032, type: 2}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ModifiedSerializedProperties: 16
+  m_ValidKeywords:
+  - _DISABLE_SSR_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2225
   stringTagMap: {}
-  disabledShaderPasses: []
+  disabledShaderPasses:
+  - TransparentDepthPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
+  - RayTracingPrepass
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -46,3 +51,19 @@ Material:
     - _Background_Color: {r: 0.0051619764, g: 0.03773582, b: 0.012918245, a: 1}
     - _Icon_Color: {r: 0.2830189, g: 0.028034888, b: 0.028034888, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &2105006363716170857
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
