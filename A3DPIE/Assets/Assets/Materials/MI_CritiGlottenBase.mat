@@ -18,12 +18,14 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225
-  stringTagMap: {}
+  stringTagMap:
+    MotionVector: User
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -42,14 +44,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emission_Sine_Strength: 0.4
+    - _Emission_Sine_Strength: 400
     - _Emission_Strength: 0
     - _Use_Emission_Tint: 1
     - _Use_Secondary_Tint: 1
     m_Colors:
     - _Emission_Tint: {r: 0.20591938, g: 0, b: 0.20754719, a: 0}
-    - _Secondary_Tint: {r: 0.95, g: 0.43924728, b: 0.67419356, a: 0}
-    - _Tint: {r: 0.09019608, g: 0.09019608, b: 0.09019608, a: 0}
+    - _Secondary_Tint: {r: 0.09019608, g: 0.09019608, b: 0.09019608, a: 0}
+    - _Tint: {r: 0.3962264, g: 0, b: 0.18287367, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6464829116778042728
 MonoBehaviour:
