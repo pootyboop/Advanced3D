@@ -143,7 +143,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
-    - _Roughness: 1
+    - _Roughness: 0.945
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 0

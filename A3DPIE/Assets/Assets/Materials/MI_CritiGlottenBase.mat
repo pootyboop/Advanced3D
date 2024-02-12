@@ -44,14 +44,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Emission_Sine_Strength: 400
+    - _Emission_Sine_Strength: 100
     - _Emission_Strength: 0
     - _Use_Emission_Tint: 1
     - _Use_Secondary_Tint: 1
     m_Colors:
     - _Emission_Tint: {r: 0.20591938, g: 0, b: 0.20754719, a: 0}
     - _Secondary_Tint: {r: 0.09019608, g: 0.09019608, b: 0.09019608, a: 0}
-    - _Tint: {r: 0.3962264, g: 0, b: 0.18287367, a: 0}
+    - _Tint: {r: 0.18867922, g: 0.027589884, b: 0.105536416, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6464829116778042728
 MonoBehaviour:

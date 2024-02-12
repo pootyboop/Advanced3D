@@ -66,6 +66,7 @@ Material:
     - _CullMode: 0
     - _CullModeForward: 0
     - _DoubleSidedEnable: 1
+    - _DoubleSidedNormalMode: 1
     m_Colors:
-    - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
   m_BuildTextureStacks: []

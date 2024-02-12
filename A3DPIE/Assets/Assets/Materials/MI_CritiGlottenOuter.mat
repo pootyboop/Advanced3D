@@ -32,10 +32,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Emission_Sine_Strength: 200
+    - _Emission_Sine_Strength: 80
     - _Use_Emission_Tint: 1
     m_Colors:
-    - _Emission_Tint: {r: 0, g: 0.16171718, b: 0.5283019, a: 0}
+    - _Emission_Tint: {r: 0.045167312, g: 0.1145386, b: 0.2735849, a: 0}
     - _Secondary_Tint: {r: 0.1270588, g: 0.10323528, b: 0.27, a: 0}
     - _Tint: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
