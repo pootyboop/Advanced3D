@@ -26,14 +26,14 @@ Material:
   m_Name: MI_Drink_PicalAnlon
   m_Shader: {fileID: -6465566751694194690, guid: b6ce8f9c2b312cd419538c9dabb3ea42, type: 3}
   m_Parent: {fileID: 2100000, guid: d7f3fba371e0eba42941e8b0de1ccec7, type: 2}
-  m_ModifiedSerializedProperties: 16
+  m_ModifiedSerializedProperties: 20
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
   stringTagMap:

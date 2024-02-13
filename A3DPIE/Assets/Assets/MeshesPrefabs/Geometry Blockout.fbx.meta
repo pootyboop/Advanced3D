@@ -12,8 +12,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: ec3b9ab2c1aa1c447af023381f8af68e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Glass
-    second: {fileID: 2100000, guid: 5a527adf565162948a28325d10955779, type: 2}
+    second: {fileID: 2100000, guid: 5411e2554ea5ed347923b55df142a4f6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

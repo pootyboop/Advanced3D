@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Gold
+    second: {fileID: 2100000, guid: 3cf4a343fe8bef54ca6fa83ce234c092, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Hair
     second: {fileID: 2100000, guid: 3cf4a343fe8bef54ca6fa83ce234c092, type: 2}
   - first:

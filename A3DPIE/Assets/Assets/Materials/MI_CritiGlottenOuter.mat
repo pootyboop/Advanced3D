@@ -33,6 +33,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Emission_Sine_Strength: 80
+    - _Invert_Metallic_for_Roughness: 0
+    - _Metallic: 1
+    - _Roughness: 0.5
     - _Use_Emission_Tint: 1
     m_Colors:
     - _Emission_Tint: {r: 0.045167312, g: 0.1145386, b: 0.2735849, a: 0}

@@ -47,7 +47,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   maxFogDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   mipFogMaxMip:
     m_OverrideState: 0
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: DefaultSettingsVolumeProfile
   m_EditorClassIdentifier: 
   components:
+  - {fileID: -702755684999875178}
   - {fileID: 7686318427622180703}
   - {fileID: -1016694868962581565}
   - {fileID: 7502528774814404555}
@@ -194,7 +195,6 @@ MonoBehaviour:
   - {fileID: 5315503232242033309}
   - {fileID: 1932259527246508038}
   - {fileID: 448115243408767295}
-  - {fileID: -702755684999875178}
   - {fileID: -3597884742977133237}
   - {fileID: 3738686478200207128}
 --- !u!114 &448115243408767295
