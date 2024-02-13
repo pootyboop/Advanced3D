@@ -13,7 +13,7 @@ public class UI : MonoBehaviour
     public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen;    //interaction prompt references
 
     public Image fadeToBlackPanel;  //a huge black image that covers the screen used for fading to-from black
-    private float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
+    public float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
 
     private bool paused;    //currently paused?
     private EPlayerState previousState = EPlayerState.MOVABLE;  //state to return player to after pausing
@@ -185,7 +185,7 @@ public class UI : MonoBehaviour
             fadeToBlackPanel.color = MakeBlackWithAlpha(fadeToBlackPanel.color.a + newAddTime);
 
             //wait a bit then go again
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         }
     }
 

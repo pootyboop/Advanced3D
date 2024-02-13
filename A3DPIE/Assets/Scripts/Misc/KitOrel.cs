@@ -14,7 +14,7 @@ public class KitOrel : MonoBehaviour
 
     public ParticleSystem shipLanding;  //particles to play on ship landing/takeoff
 
-    private float trailRendererStrength = 0.06f;    //length of the trail renderers
+    public float trailRendererStrength = 0.06f;    //length of the trail renderers
     private bool freezeDist = false; //whether or not to freeze the "distance" the ship traveled, simulating flight when the object stays in place
     private float dist = 0.0f;  //distance tracked across frames
 

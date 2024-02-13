@@ -57,6 +57,7 @@ public class CutsceneManager : MonoBehaviour
         //Unity's code ends here.
 
         //automatically plays the intro cutscene on start unless turned off (bool playIntroCutscene)
+        //StartCoroutine(IntroCutsceneTimer());
         PlayIntroCutscene();
     }
 
@@ -90,6 +91,14 @@ public class CutsceneManager : MonoBehaviour
         }
 
         currCutscene = ECutsceneState.GAME; //set this last so intro cutscene can be recognized first (and after player has left CUTSCENE state)
+    }
+
+
+
+    private IEnumerator IntroCutsceneTimer()
+    {
+        yield return new WaitForSeconds(2);
+        PlayIntroCutscene();
     }
 
 

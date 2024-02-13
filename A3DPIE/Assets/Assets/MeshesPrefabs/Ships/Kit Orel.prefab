@@ -9515,6 +9515,7 @@ MonoBehaviour:
   - {fileID: 4516464433269083140}
   engineRumble: {fileID: 7920469379475593669}
   shipLanding: {fileID: 8926426063452671252}
+  trailRendererStrength: 0.09
 --- !u!114 &496118834393781744
 MonoBehaviour:
   m_ObjectHideFlags: 0

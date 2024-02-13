@@ -1053,6 +1053,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 515115374777124883}
     m_Modifications:
+    - target: {fileID: 301047142237819574, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1296893545419662435, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1865177953214914380, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122307159594943415, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777218801984400164, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813117560175266425, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4585335165100987454, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5081951946696904560, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1096,6 +1124,18 @@ PrefabInstance:
     - target: {fileID: 5606252501327746506, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
       propertyPath: m_Name
       value: Piston Floor Grill 10x (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6765587604856059108, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8269826997191532067, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779939820221611393, guid: 756b451b09c8b3c40951f3c04a2b05d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
