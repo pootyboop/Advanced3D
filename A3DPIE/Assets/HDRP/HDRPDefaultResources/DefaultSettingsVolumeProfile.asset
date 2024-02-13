@@ -38,11 +38,11 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 1
   colorMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   color:
-    m_OverrideState: 0
-    m_Value: {r: 64, g: 64, b: 64, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 38.726303, g: 81.156296, b: 84.63893, a: 1}
   tint:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -77,7 +77,7 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   depthExtent:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 933.8
   denoisingMode:
     m_OverrideState: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
     m_Value: 8
   compensation:
     m_OverrideState: 1
-    m_Value: 2.5
+    m_Value: 2.5010767
   limitMin:
     m_OverrideState: 1
     m_Value: 6

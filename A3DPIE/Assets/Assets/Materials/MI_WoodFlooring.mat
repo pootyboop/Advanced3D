@@ -65,5 +65,5 @@ Material:
     - _Use_Secondary_Tint: 0
     m_Colors:
     - _Secondary_Tint: {r: 0.2264151, g: 0.19544323, b: 0.19544323, a: 0}
-    - _Tint: {r: 0.17, g: 0.14314, b: 0.14314, a: 0}
+    - _Tint: {r: 0.16037738, g: 0.11120507, b: 0.14651388, a: 0}
   m_BuildTextureStacks: []
