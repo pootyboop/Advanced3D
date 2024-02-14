@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 38.726303, g: 81.156296, b: 84.63893, a: 1}
+    m_Value: {r: 132.39542, g: 194.69914, b: 145.32639, a: 1}
   tint:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   albedo:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.40428087, g: 0.745283, b: 0.54104656, a: 1}
   globalLightProbeDimmer:
     m_OverrideState: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
     m_Value: 8
   compensation:
     m_OverrideState: 1
-    m_Value: 2.5010767
+    m_Value: 2.5007524
   limitMin:
     m_OverrideState: 1
     m_Value: 6

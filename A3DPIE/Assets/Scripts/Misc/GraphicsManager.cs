@@ -15,6 +15,10 @@ public class GraphicsManager : MonoBehaviour
     private float exposureStart = 1f;
     private float exposureTarget = 2.5f;
 
+    public FogData defaultFogData;
+    private FogData currentFogData;
+    public float fogFadeTime = 3f;
+
 
     void Start()
     {
@@ -30,6 +34,42 @@ public class GraphicsManager : MonoBehaviour
         {
             throw new System.NullReferenceException(nameof(exposure));
         }
+
+        currentFogData = defaultFogData;
+        ChangeFogAppearance(currentFogData);
+    }
+
+
+
+    public void ChangeFogAppearance(FogData newFogData)
+    {
+        if (fog.enabled.value == false)
+        {
+            SetFog(true);
+        }
+
+        StartCoroutine(FogFade(newFogData));
+    }
+
+
+
+    private IEnumerator FogFade(FogData newFogData)
+    {
+        float time = 0.0f;
+        while (time < fogFadeTime)
+        {
+            time += Time.deltaTime;
+            float alpha = time / fogFadeTime;
+
+            fog.meanFreePath.value = Mathf.Lerp(currentFogData.attenuationDistance, newFogData.attenuationDistance, alpha);
+            fog.color.value = Color.Lerp(currentFogData.HDRColor, newFogData.HDRColor, alpha);
+
+            yield return null;
+        }
+
+        fog.meanFreePath.value = newFogData.attenuationDistance;
+        fog.color.value = newFogData.HDRColor;
+        currentFogData = newFogData;
     }
 
 

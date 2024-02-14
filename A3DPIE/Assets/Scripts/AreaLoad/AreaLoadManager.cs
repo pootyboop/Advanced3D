@@ -93,6 +93,11 @@ public class AreaLoadManager : MonoBehaviour
 
 
 
+        //setup the correct fog data
+        GraphicsManager.instance.ChangeFogAppearance(GetAreaByEnum(newArea).fogData);
+
+
+
         //areas to load in no matter what
         List<ELoadArea> loadAreas = new List<ELoadArea>(GetAreaByEnum(newArea).coloadedAreas);
         loadAreas.Add(newArea);
