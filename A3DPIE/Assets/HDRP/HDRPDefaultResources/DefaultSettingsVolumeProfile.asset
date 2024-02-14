@@ -42,7 +42,7 @@ MonoBehaviour:
     m_Value: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 132.39542, g: 194.69914, b: 145.32639, a: 1}
+    m_Value: {r: 38.984867, g: 80.935974, b: 84.74972, a: 1}
   tint:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -450,7 +450,7 @@ MonoBehaviour:
     m_Value: 8
   compensation:
     m_OverrideState: 1
-    m_Value: 2.5007524
+    m_Value: 2.5
   limitMin:
     m_OverrideState: 1
     m_Value: 6

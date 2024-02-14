@@ -11,9 +11,9 @@ public class GraphicsManager : MonoBehaviour
     private Fog fog;
     private Exposure exposure;
 
-    public float exposureFadeInSpeed = .5f;
-    private float exposureStart = 1f;
-    private float exposureTarget = 2.5f;
+    public float exposureFadeInTime = 3f;
+    public float exposureStart = 1f;
+    public float exposureTarget = 2.5f;
 
     public FogData defaultFogData;
     private FogData currentFogData;
@@ -35,6 +35,7 @@ public class GraphicsManager : MonoBehaviour
             throw new System.NullReferenceException(nameof(exposure));
         }
 
+        SetFog(true);
         currentFogData = defaultFogData;
         ChangeFogAppearance(currentFogData);
     }
@@ -43,11 +44,6 @@ public class GraphicsManager : MonoBehaviour
 
     public void ChangeFogAppearance(FogData newFogData)
     {
-        if (fog.enabled.value == false)
-        {
-            SetFog(true);
-        }
-
         StartCoroutine(FogFade(newFogData));
     }
 
@@ -96,14 +92,18 @@ public class GraphicsManager : MonoBehaviour
 
     private IEnumerator ExposureFade()
     {
+        float time = 0.0f;
         while (exposure.compensation.value < exposureTarget)
         {
-            float newAddTime = exposureFadeInSpeed * Time.deltaTime;   //new time to scale the added alpha by, scaled by speed
+            time += Time.deltaTime;
+            float alpha = time / exposureFadeInTime;
 
-            exposure.compensation.value += newAddTime;
+            exposure.compensation.value = Mathf.Lerp(exposureStart, exposureTarget, alpha);
 
             //wait a bit then go again
             yield return null;
         }
+
+        exposure.compensation.value = exposureTarget;
     }
 }
