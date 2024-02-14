@@ -136,8 +136,8 @@ MonoBehaviour:
   m_Effectors:
   - m_Transform: {fileID: 3323795480643465724}
     m_Style:
-      shape: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-      color: {r: 0, g: 1, b: 0.43028927, a: 0.79607844}
+      shape: {fileID: 0}
+      color: {r: 0, g: 1, b: 0.43028927, a: 0.8352941}
       size: 0.2
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
@@ -924,6 +924,8 @@ MonoBehaviour:
   spokenLanguage: 1
   conversations:
   - conversationID: 
+    ielsekBought: 0
+    ielsekBuyRate: 2400
     dialogues:
     - speaker: 0
       phrases:
