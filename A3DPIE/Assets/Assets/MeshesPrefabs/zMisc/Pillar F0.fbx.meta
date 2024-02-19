@@ -17,6 +17,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: RectDesign
+    second: {fileID: 2100000, guid: b975a4eef1d6d12438c59bf86621f6d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wood
     second: {fileID: 2100000, guid: e39d81bad25a34c43844a8e2ef307d47, type: 2}
   materials:
