@@ -36,8 +36,8 @@ public class CameraController : MonoBehaviour
     //called from PlayerMovement to ensure the player and camera stay in sync
     public void Setup()
     {
-        rot = new Vector2(0f, 0f);
         transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        rot = new Vector2(transform.eulerAngles.x, transform.eulerAngles.y);
     }
 
 
