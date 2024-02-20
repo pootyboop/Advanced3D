@@ -6,6 +6,8 @@ using UnityEngine;
 //so this generates the actual meshes, materials, etc. that represent this character in-game
 public class CharacterCreator : MonoBehaviour
 {
+    public CharDistCull culler;
+
     public Transform rootBone, grabL, grabR;    //grabL and grabR are 
     public SkinnedMeshRenderer originalRenderer;    //this won't actually render anything but it drives the animation and rigging for all body parts
 
@@ -61,6 +63,10 @@ public class CharacterCreator : MonoBehaviour
         //create the object and parent it to the character
         GameObject newBodyPartObj = new GameObject(partName);
         newBodyPartObj.transform.SetParent(transform, false);
+        if (culler != null)
+        {
+            culler.AddCullableObject(newBodyPartObj);
+        }
 
         //add the skinned mesh
         SkinnedMeshRenderer renderer = newBodyPartObj.AddComponent<SkinnedMeshRenderer>();

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7371100020765569665}
   - component: {fileID: 5172536950084404997}
   - component: {fileID: 6082175604386104650}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AutoInteractHitbox
   m_TagString: AutoInteractHitbox
   m_Icon: {fileID: 0}

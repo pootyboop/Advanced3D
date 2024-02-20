@@ -77,6 +77,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 1de3649af3efa0440878eb9778c70ff5, type: 2}
     - target: {fileID: 1690375056540740217, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: name
+      value: Naiteh Anbolket Sign
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690375056540740217, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
       propertyPath: conversations.Array.data[0].dialogues.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -103,6 +107,30 @@ PrefabInstance:
     - target: {fileID: 1690375056540740217, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
       propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].overrideLanguage
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Size.x
+      value: 0.077812135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Size.y
+      value: 0.0045867832
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Size.z
+      value: 0.017964823
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Center.y
+      value: -2.389755e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733487670007513719, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
+      propertyPath: m_Center.z
+      value: 0.001299721
       objectReference: {fileID: 0}
     - target: {fileID: 3648822641869294247, guid: e64fd3525226e8d48970a882d2f093dc, type: 3}
       propertyPath: m_Mesh

@@ -50,8 +50,8 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Background_Color: {r: 0.0051619764, g: 0.03773582, b: 0.012918245, a: 1}
-    - _Icon_Color: {r: 0.2830189, g: 0.028034888, b: 0.028034888, a: 1}
+    - _Background_Color: {r: 0.0058181803, g: 0.064, b: 0.020363636, a: 1}
+    - _Icon_Color: {r: 0.3764706, g: 0.08809413, b: 0.08809413, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &2105006363716170857
 MonoBehaviour:

@@ -75,8 +75,8 @@ MonoBehaviour:
         transform: {fileID: 0}
         weight: 0
     m_Offset: {x: 20, y: 0, z: 0}
-    m_MinLimit: -80
-    m_MaxLimit: 80
+    m_MinLimit: -70
+    m_MaxLimit: 70
     m_AimAxis: 2
     m_UpAxis: 4
     m_WorldUpType: 0
@@ -150,6 +150,75 @@ MonoBehaviour:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
     m_Visible: 1
+--- !u!1 &3562447781133640818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3291471568659358354}
+  - component: {fileID: 261108968623289854}
+  - component: {fileID: 6707983454796277420}
+  m_Layer: 2
+  m_Name: Culler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &3291471568659358354
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562447781133640818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5512141694858778348}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261108968623289854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562447781133640818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c02146d292b2b2a47b5f72b1e3457567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cullable: 1
+  cullDistance: 30
+  cullObjects: []
+--- !u!135 &6707983454796277420
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3562447781133640818}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 12
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 115
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 30
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &4222697512073936857
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,6 +548,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3219814581922887918, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5546185
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219814581922887918, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.8321048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219814581922887918, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000021233296
+      objectReference: {fileID: 0}
+    - target: {fileID: 3219814581922887918, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000019544629
+      objectReference: {fileID: 0}
     - target: {fileID: 3479357643614354933, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -535,6 +620,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6374139680547022755, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5474477
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374139680547022755, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.44755012
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374139680547022755, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.44755015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374139680547022755, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5474476
+      objectReference: {fileID: 0}
     - target: {fileID: 6387205367352308629, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -579,6 +680,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8173459429439240216, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.07041842
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173459429439240216, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.023000758
+      objectReference: {fileID: 0}
     - target: {fileID: 8348628115825287716, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -605,6 +714,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7509460656999408859}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3291471568659358354}
     - targetCorrespondingSourceObject: {fileID: 2113823035348575145, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2515572915084081264}
@@ -945,6 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc48276e90f9017418912acc9052c824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  culler: {fileID: 261108968623289854}
   rootBone: {fileID: 8819533790821096880}
   grabL: {fileID: 2515572915084081264}
   grabR: {fileID: 8598734310608798848}
