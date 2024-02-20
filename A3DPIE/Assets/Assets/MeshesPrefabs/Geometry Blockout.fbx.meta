@@ -37,6 +37,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Tile
+    second: {fileID: 2100000, guid: 065bf4697fadfaf43a13401074558051, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wall
     second: {fileID: 2100000, guid: 852fae6152c509e439801b30cbe8b065, type: 2}
   - first:
