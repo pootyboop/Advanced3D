@@ -18,4 +18,5 @@ public class Body
     //various colors for various clothing items
     //arms use same color as torso so they appear as sleeves
     public Color clothColorHead, clothColorTorso, clothColorLegs;
+    public Texture2D clothTexture;
 }

@@ -11,9 +11,14 @@ public class CharacterCreationManager : MonoBehaviour
     //these gradients hold all the color info for random characters
     //gradients are GREAT for this since i can easily change the prominence of values by changing the gradient in the inspector
     public Gradient skinToneRange, eyeColorRange, lipColorRange, hairColorRange, clothColorRange, metalColorRange, emissiveColorRange, leatherColorRange;
+
     //stature range (how big/small the character can be). stature is 1 by default
     public float minStature = .9f;
     public float maxStature = 1.1f;
+
+    //textures
+    public Texture2D[] clothTextures;
+
     //these arrays hold all body parts random characters can use
     public BodyPart[] heads, torsos, armsL, armsR, handsL, handsR, legs, hairs;
     //the materials to use for each material type
@@ -49,6 +54,7 @@ public class CharacterCreationManager : MonoBehaviour
 
         newBody.stature = UnityEngine.Random.Range(minStature, maxStature); //random stature in range
         newBody = GenerateColors(newBody); //generate the color scheme for this character
+        newBody = GenerateTextures(newBody); //generate all textures
         newBody = GenerateBodyParts(newBody); //generate all body parts
 
         return newBody;
@@ -105,6 +111,14 @@ public class CharacterCreationManager : MonoBehaviour
     Color GenerateClothColor()
     {
         return clothColorRange.Evaluate(UnityEngine.Random.Range(0f, 1f));
+    }
+
+
+
+    Body GenerateTextures(Body body) {
+        body.clothTexture = clothTextures[UnityEngine.Random.Range(0,clothTextures.Length)];
+
+        return body;
     }
 
 

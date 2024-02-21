@@ -102,8 +102,11 @@ public class CharacterCreator : MonoBehaviour
                     break;
                 case EMaterialType.METAL:   //these material types use my master shader graph, so set the Tint property
                 case EMaterialType.EMISSIVE:
+                    renderer.materials[i].SetColor("_Tint", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
+                    break;
                 case EMaterialType.CLOTH:
                     renderer.materials[i].SetColor("_Tint", GetColorByPartMaterial(partName, bodyPart.materialTypes[i]));
+                    renderer.materials[i].SetTexture("_Texture", body.clothTexture);
                     break;
                 default:    //by default, assume it's a default unity material and just set the color property
                     renderer.materials[i].color = GetColorByPartMaterial(partName, bodyPart.materialTypes[i]);
@@ -142,8 +145,8 @@ public class CharacterCreator : MonoBehaviour
             case EMaterialType.CLOTH:
                 switch (partName)
                 {
-                    case "Head":
-                        return body.clothColorHead;
+                    //case "Hair":
+                    //    return body.clothColorHead;
                     case "Legs":
                         return body.clothColorLegs;
                     default:
