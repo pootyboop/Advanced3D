@@ -42,6 +42,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Tile Bar
+    second: {fileID: 2100000, guid: 8384733991bf3ab4e93ae0b8b84e5bd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Wall
     second: {fileID: 2100000, guid: 852fae6152c509e439801b30cbe8b065, type: 2}
   - first:

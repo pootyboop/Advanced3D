@@ -56,7 +56,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Metallic_Map:
         m_Texture: {fileID: 2800000, guid: cfbd42a3d8a79244aab651321ab2f03d, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 0.5, y: 0.5}
         m_Offset: {x: 0, y: 0}
     - _Metallic_Texture:
         m_Texture: {fileID: 0}
@@ -176,7 +176,7 @@ Material:
     - _Pan_Speed: {r: 0, g: 0, b: 0, a: 0}
     - _Secondary_Tint: {r: 0.376, g: 0.24258065, b: 0, a: 0}
     - _Specular_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _Tint: {r: 0, g: 0, b: 0, a: 0}
+    - _Tint: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7253679288761556852
 MonoBehaviour:
