@@ -13,6 +13,8 @@ public class EndScreen : MonoBehaviour
         //show the cursor so we can use the end screen
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        UI.instance.FadeToBlack(true);
     }
 
 
@@ -27,5 +29,10 @@ public class EndScreen : MonoBehaviour
     public void QuitToDesktop()
     {
         Application.Quit();
+    }
+
+    
+    public void GoToItch() {
+        Application.OpenURL("https://elliotgmann.itch.io/");
     }
 }

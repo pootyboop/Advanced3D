@@ -18,9 +18,16 @@ public class KitOrel : MonoBehaviour
     private bool freezeDist = false; //whether or not to freeze the "distance" the ship traveled, simulating flight when the object stays in place
     private float dist = 0.0f;  //distance tracked across frames
 
+    public bool playEngineNoise = true;
+
     private IEnumerator updateTrailRenderers;
 
 
+    private void Start() {
+        if (playEngineNoise) {
+            engineRumble.Play();
+        }
+    }
 
     //starts spaceship flight effects
     public void StartTrailRenderers()
@@ -39,10 +46,12 @@ public class KitOrel : MonoBehaviour
         {
             StopCoroutine(updateTrailRenderers);
 
+            if (playEngineNoise) {
             //low rumble as if the engine's still on
             engineRumble.volume = 0.1f;
             engineRumble.pitch = 0.3f;
             engineRumble.maxDistance = 7f;
+            }
         }
     }
 
@@ -60,8 +69,10 @@ public class KitOrel : MonoBehaviour
                 dist = Vector3.Distance(lastPosition, transform.position);
             }
 
-            //hardcoding bad i know. these values give about the pitch range i want when the ship is flying
-            engineRumble.pitch = Mathf.Clamp (.8f + .5f * dist, 0.8f, 1.5f);
+            if (playEngineNoise) {
+                //hardcoding bad i know. these values give about the pitch range i want when the ship is flying
+                engineRumble.pitch = Mathf.Clamp (.8f + .5f * dist, 0.8f, 1.5f);
+            }
 
             //update the trail renderers when there's substantial movement
             if (dist > 0.1f)

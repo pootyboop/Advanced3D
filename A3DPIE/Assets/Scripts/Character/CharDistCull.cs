@@ -38,7 +38,21 @@ public class CharDistCull : MonoBehaviour
 
     void SolveCullState()
     {
-        SetCharacterCulled(!IsPlayerInCollRadius());
+        bool solvedCull = false;
+
+    if (PlayerMovement.instance == null) {
+        solvedCull = false;
+    }
+
+    else if (PlayerMovement.instance.state == EPlayerState.CUTSCENE) {
+        solvedCull = false;
+    }
+
+    else {
+        solvedCull = !IsPlayerInCollRadius();
+    }
+
+        SetCharacterCulled(solvedCull);
     }
 
 

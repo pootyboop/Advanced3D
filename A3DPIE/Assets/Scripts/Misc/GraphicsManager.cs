@@ -11,6 +11,8 @@ public class GraphicsManager : MonoBehaviour
     private Fog fog;
     private Exposure exposure;
 
+    public bool startWithFogEnabled = true;
+
     public float exposureFadeInTime = 3f;
     public float exposureStart = 1f;
     public float exposureTarget = 2.5f;
@@ -35,9 +37,11 @@ public class GraphicsManager : MonoBehaviour
             throw new System.NullReferenceException(nameof(exposure));
         }
 
-        SetFog(true);
+        SetFog(startWithFogEnabled);
         currentFogData = defaultFogData;
+        if (startWithFogEnabled) {
         ChangeFogAppearance(currentFogData);
+        }
     }
 
 

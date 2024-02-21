@@ -10,6 +10,6 @@ public class EndScreenOpener : MonoBehaviour
 {
     public void OpenEndScreen()
     {
-        SceneManager.LoadScene("EndScreen");
+        SceneManager.LoadScene("MainMenu");
     }
 }

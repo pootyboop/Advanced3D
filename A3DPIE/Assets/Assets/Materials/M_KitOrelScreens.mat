@@ -49,11 +49,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Emission_Sine_Strength: 0
-    - _Emission_Strength: 0.5
+    - _Emission_Strength: 100
     - _Use_Emission_Tint: 1
     m_Colors:
-    - _Emission_Tint: {r: 0.72156864, g: 0.89622086, b: 1, a: 0}
-    - _Tint: {r: 0.6309185, g: 0.9622642, b: 0.95004195, a: 0}
+    - _Emission_Tint: {r: 0.4772606, g: 0.6232169, b: 0.7075472, a: 0}
+    - _Tint: {r: 0.12575649, g: 0.16981131, b: 0.16814886, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7124238510302618287
 MonoBehaviour:
