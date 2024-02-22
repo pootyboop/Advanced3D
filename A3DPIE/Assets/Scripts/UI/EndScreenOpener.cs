@@ -10,6 +10,10 @@ public class EndScreenOpener : MonoBehaviour
 {
     public void OpenEndScreen()
     {
+        if (PlayerMovement.instance.state == EPlayerState.PAUSED) {
+            UI.instance.SetPaused(false);
+        }
+
         SceneManager.LoadScene("MainMenu");
     }
 }

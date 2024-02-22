@@ -9,6 +9,8 @@ using TMPro;
 //manages settings (other than audio, handled by AudioManager) and opens tabs on the pause screen
 public class PauseScreen : MonoBehaviour
 {
+    public static PauseScreen instance;
+
     public Color selectedColor, unselectedColor;
     public GameObject[] tabs;
     public TextMeshProUGUI[] buttonTexts;
@@ -16,6 +18,10 @@ public class PauseScreen : MonoBehaviour
     //public Slider musicSlider, sfxSlider;
     //public Toggle fullscreenToggle;
 
+
+    private void Start() {
+        instance = this;
+    }
 
 
     //auto-open How To Play (the first tab)

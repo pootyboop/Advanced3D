@@ -18,6 +18,8 @@ public class UI : MonoBehaviour
     private bool paused;    //currently paused?
     private EPlayerState previousState = EPlayerState.MOVABLE;  //state to return player to after pausing
 
+    private IEnumerator fadeToBlackCoroutine;
+
 
     void Start()
     {
@@ -145,7 +147,12 @@ public class UI : MonoBehaviour
     //fade camera to/from black
     public void FadeToBlack(bool fadeIn)
     {
-        StartCoroutine(FadeBlack(fadeIn));
+        if (fadeToBlackCoroutine != null) {
+            StopCoroutine(fadeToBlackCoroutine);
+        }
+
+        fadeToBlackCoroutine = FadeBlack(fadeIn);
+        StartCoroutine(fadeToBlackCoroutine);
     }
 
 
@@ -187,6 +194,8 @@ public class UI : MonoBehaviour
             //wait a bit then go again
             yield return null;
         }
+
+        fadeToBlackCoroutine = null;
     }
 
 

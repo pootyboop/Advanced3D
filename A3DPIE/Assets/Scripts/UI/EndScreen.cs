@@ -8,6 +8,10 @@ using UnityEngine.SceneManagement;
 //simple actions for the buttons on the end screen (in the EndScreen scene opened after outro cutscene)
 public class EndScreen : MonoBehaviour
 {
+    public GameObject[] disableOnPlay;
+    public float fadeThenPlayTime = 2f;
+    public float fadeToBlackSpeed;
+
     void Start()
     {
         //show the cursor so we can use the end screen
@@ -21,7 +25,25 @@ public class EndScreen : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("Main");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        foreach (GameObject obj in disableOnPlay) {
+            obj.SetActive(false);
+        }
+
+        UI.instance.fadeToBlackSpeed = fadeToBlackSpeed;
+        UI.instance.FadeToBlack(false);
+        StartCoroutine(FadeAndStart());
+    }
+
+
+
+    IEnumerator FadeAndStart() {
+        while (true) {
+            yield return new WaitForSeconds(fadeThenPlayTime);
+            SceneManager.LoadScene("Main");
+        }
     }
 
 

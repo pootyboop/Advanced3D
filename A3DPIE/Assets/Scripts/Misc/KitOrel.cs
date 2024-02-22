@@ -8,6 +8,8 @@ using UnityEngine;
 //manages effects on the player's spaceship like speed trails and engine noise
 public class KitOrel : MonoBehaviour
 {
+    public static KitOrel instance;
+
     Vector3 lastPosition;   //where the spaceship was last frame
     public TrailRenderer[] trailRenderers;  //the trail renderers on the spaceship's blasters? boosters? whatever they're called
     public AudioSource engineRumble;    //constant engine noise around the ship
@@ -24,6 +26,8 @@ public class KitOrel : MonoBehaviour
 
 
     private void Start() {
+        instance = this;
+
         if (playEngineNoise) {
             engineRumble.Play();
         }
@@ -42,16 +46,22 @@ public class KitOrel : MonoBehaviour
     //stops trail renderers
     public void StopTrailRenderers()
     {
+
+        foreach (TrailRenderer trail in trailRenderers)
+        {
+                trail.time = 0f;
+        }
+
         if (updateTrailRenderers != null)
         {
             StopCoroutine(updateTrailRenderers);
+        }
 
-            if (playEngineNoise) {
-            //low rumble as if the engine's still on
-            engineRumble.volume = 0.1f;
-            engineRumble.pitch = 0.3f;
-            engineRumble.maxDistance = 7f;
-            }
+        if (playEngineNoise) {
+        //low rumble as if the engine's still on
+        engineRumble.volume = 0.1f;
+        engineRumble.pitch = 0.3f;
+        engineRumble.maxDistance = 7f;
         }
     }
 

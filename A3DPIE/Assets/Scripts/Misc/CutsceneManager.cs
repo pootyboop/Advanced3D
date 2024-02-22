@@ -66,7 +66,9 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene begins
     private void Director_Played(PlayableDirector obj)
     {
-        quuvol.SetActive(true);
+        if (quuvol != null) {
+            quuvol.SetActive(true);
+        }
 
         PlayerMovement.instance.SetPlayerState(EPlayerState.CUTSCENE);
         cutsceneCam.gameObject.SetActive(true);
@@ -78,7 +80,9 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene ends
     private void Director_Stopped(PlayableDirector obj)
     {
-        quuvol.SetActive(false);
+        if (quuvol != null) {
+            quuvol.SetActive(false);
+        }
 
         skipText.SetAlpha(0.0f);
         cutsceneCam.gameObject.SetActive(false);
@@ -147,5 +151,7 @@ public class CutsceneManager : MonoBehaviour
 
         currentCutscene.time = currentCutscene.duration;
         currentCutscene.Evaluate();
+
+        KitOrel.instance.StopTrailRenderers();
     }
 }

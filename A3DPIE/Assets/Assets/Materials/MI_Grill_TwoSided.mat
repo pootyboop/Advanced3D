@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 2100000, guid: 3cf4a343fe8bef54ca6fa83ce234c092, type: 2}
   m_ModifiedSerializedProperties: 28
   m_ValidKeywords:
+  - _ALPHATEST_ON
   - _DISABLE_SSR_TRANSPARENT
   - _DOUBLESIDED_ON
   - _ENABLE_FOG_ON_TRANSPARENT
@@ -43,8 +44,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaCutoffEnable: 1
     - _AlphaDstBlend: 10
-    - _Alpha_Clip_Threshold: 0.5
+    - _Alpha_Clip_Threshold: 1
     - _BUILTIN_AlphaClip: 1
     - _BUILTIN_CullMode: 0
     - _BUILTIN_DstBlend: 10
@@ -63,6 +65,7 @@ Material:
     - _StencilRefMV: 32
     - _SurfaceType: 1
     - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 3
     - _ZWrite: 0
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
