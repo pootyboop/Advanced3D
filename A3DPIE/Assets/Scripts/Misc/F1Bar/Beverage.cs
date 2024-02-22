@@ -16,6 +16,10 @@ public class Beverage : MonoBehaviour
 
     //the materials this drink can use
     public Material[] drinkMaterials = new Material[4];
+    private Material mat;
+    private int matIndex = 2;
+    private float drinkTime = 1.0f;
+    private bool drank = false;
 
     private GrabbableObject grabbableObject;
     private MeshRenderer meshRenderer;
@@ -81,7 +85,41 @@ public class Beverage : MonoBehaviour
         //add the material
         //have to do it this way since renderers won't let you set one element in the array
         Material[] mats = meshRenderer.materials;
-        mats[1] = drinkMaterials[drinkID];
+        mats[matIndex] = drinkMaterials[drinkID];
+        mat = mats[matIndex];
         meshRenderer.materials = mats;
+    }
+
+
+
+    public void Drink() {
+        drank = true;
+
+        Material[] mats = meshRenderer.materials;
+        mats[matIndex] = new Material(drinkMaterials[drinkID]);
+        mat = mats[matIndex];
+        meshRenderer.materials = mats;
+
+        StartCoroutine(DrinkOverTime());
+    }
+
+
+
+    IEnumerator DrinkOverTime() {
+        float time = 0.0f;
+
+        while (time < drinkTime) {
+            time += Time.deltaTime;
+
+            mat.SetFloat("_LiquidAmount", 1.0f - time / drinkTime);
+
+            yield return null;
+        }
+    }
+
+
+
+    public bool CanDrink() {
+        return !drank;
     }
 }

@@ -63,7 +63,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: e8e744a25749005439925706ab00153c, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: fb743d139aa2cd24c8cdd09e2cf4df90, type: 2}
+      objectReference: {fileID: 2100000, guid: 3cf4a343fe8bef54ca6fa83ce234c092, type: 2}
     - target: {fileID: 919132149155446097, guid: e8e744a25749005439925706ab00153c, type: 3}
       propertyPath: m_Name
       value: Glass of Drink

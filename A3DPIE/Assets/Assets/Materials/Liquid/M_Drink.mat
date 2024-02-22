@@ -70,6 +70,8 @@ Material:
     - _Foam_Shine_Size: 0.85
     - _Foam_Shine_Smoothness: 0.6
     - _Initial_Time_Offset: 5
+    - _LiquidAmount: 1
+    - _LiquidAmountSideScaling: 0.5
     - _Noise_Density: 7
     - _Noise_Reshaping: 0.8
     - _OpaqueCullMode: 2

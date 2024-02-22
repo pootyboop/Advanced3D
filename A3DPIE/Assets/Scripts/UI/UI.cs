@@ -10,7 +10,7 @@ public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen;    //interaction prompt references
+    public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen, drinkActionText;    //interaction prompt references
 
     public Image fadeToBlackPanel;  //a huge black image that covers the screen used for fading to-from black
     public float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
@@ -246,5 +246,11 @@ public class UI : MonoBehaviour
             pauseScreen.SetActive(false);
             PlayerMovement.instance.SetPlayerState(previousState);
         }
+    }
+
+
+
+    public void SetDrinkActionTextVisible(bool newVis) {
+        drinkActionText.SetActive(newVis);
     }
 }

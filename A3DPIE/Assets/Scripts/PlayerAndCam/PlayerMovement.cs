@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     public Seat currentSeat;
     private Vector3 preSeatedPosition;  //player's previous standing position from before they sat
     private GrabbableObject grabbedObject;  //currently held grabbableobject
+    private bool hasGrabbedDrink = false;
 
 
 
@@ -220,6 +221,11 @@ public class PlayerMovement : MonoBehaviour
 
             //finally, update the cancel interaction prompt on screen to be the most fitting prompt
             SolveCancelText();
+        }
+
+        else if (Input.GetButtonDown("Drink") && hasGrabbedDrink) {
+            grabbedObject.GetComponent<Beverage>().Drink();
+            SetHasDrinkableDrink(false);
         }
 
         //pausing
@@ -574,7 +580,26 @@ public class PlayerMovement : MonoBehaviour
     //most GrabbableObject code for player grabbing is handled on CameraController
     public void GrabObject(GrabbableObject grabbableObject)
     {
+        if (hasGrabbedDrink) {
+            SetHasDrinkableDrink(false);
+        }
+
         grabbedObject = grabbableObject;
+
+        if (grabbedObject != null) {
+            if (grabbedObject.GetComponent<Beverage>() != null) {
+                if (grabbedObject.GetComponent<Beverage>().CanDrink()) {
+                    SetHasDrinkableDrink(true);
+                }
+            }
+        }
+    }
+
+
+
+    public void SetHasDrinkableDrink(bool hasDrink) {
+        hasGrabbedDrink = hasDrink;
+        UI.instance.SetDrinkActionTextVisible(hasGrabbedDrink);
     }
 
 
