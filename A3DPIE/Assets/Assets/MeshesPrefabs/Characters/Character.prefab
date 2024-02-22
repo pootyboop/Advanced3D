@@ -1099,6 +1099,7 @@ MonoBehaviour:
     clothColorHead: {r: 0, g: 0, b: 0, a: 0}
     clothColorTorso: {r: 0, g: 0, b: 0, a: 0}
     clothColorLegs: {r: 0, g: 0, b: 0, a: 0}
+    clothTexture: {fileID: 0}
   head: {fileID: 0}
   torso: {fileID: 0}
   armL: {fileID: 0}
