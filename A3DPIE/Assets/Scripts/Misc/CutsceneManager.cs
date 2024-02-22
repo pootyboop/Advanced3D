@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 
 
@@ -40,6 +41,19 @@ public class CutsceneManager : MonoBehaviour
 
     public DialogueCharacter startGameConversation; //conversation to start after the intro cutscene
     public GameObject quuvol;   //character representing Quuvol (the protagonist) in cutscenes
+
+
+
+    private void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+
+    }
+
 
 
     void Start()

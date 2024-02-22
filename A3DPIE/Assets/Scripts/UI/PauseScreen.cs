@@ -11,6 +11,8 @@ public class PauseScreen : MonoBehaviour
 {
     public static PauseScreen instance;
 
+    public Slider mouseSensitivity;
+
     public Color selectedColor, unselectedColor;
     public GameObject[] tabs;
     public TextMeshProUGUI[] buttonTexts;
@@ -52,6 +54,13 @@ public class PauseScreen : MonoBehaviour
                 tabs[i].SetActive(true);
                 buttonTexts[i].color = selectedColor;
                 buttonTexts[i].fontStyle = FontStyles.Underline;
+
+                switch (tabs[i].name) {
+                    case "Settings":
+                        AudioManager.instance.UpdateSliders();
+                        mouseSensitivity.value = CameraController.instance.GetCorrectMouseSensivity();
+                        break;
+                }
             }
         }
     }

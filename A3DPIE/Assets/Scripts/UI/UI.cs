@@ -147,12 +147,18 @@ public class UI : MonoBehaviour
     //fade camera to/from black
     public void FadeToBlack(bool fadeIn)
     {
+        StopFadeToBlack();
+        fadeToBlackCoroutine = FadeBlack(fadeIn);
+        StartCoroutine(fadeToBlackCoroutine);
+    }
+
+
+
+
+    public void StopFadeToBlack() {
         if (fadeToBlackCoroutine != null) {
             StopCoroutine(fadeToBlackCoroutine);
         }
-
-        fadeToBlackCoroutine = FadeBlack(fadeIn);
-        StartCoroutine(fadeToBlackCoroutine);
     }
 
 
@@ -189,13 +195,19 @@ public class UI : MonoBehaviour
             }
 
             //add/remove the new alpha amount
-            fadeToBlackPanel.color = MakeBlackWithAlpha(fadeToBlackPanel.color.a + newAddTime);
+            SetFadeToBlack(fadeToBlackPanel.color.a + newAddTime);
 
             //wait a bit then go again
             yield return null;
         }
 
         fadeToBlackCoroutine = null;
+    }
+
+
+
+    public void SetFadeToBlack(float newAlpha) {
+        fadeToBlackPanel.color = MakeBlackWithAlpha(newAlpha);
     }
 
 

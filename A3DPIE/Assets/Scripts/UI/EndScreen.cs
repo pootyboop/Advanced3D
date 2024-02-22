@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class EndScreen : MonoBehaviour
 {
     public GameObject[] disableOnPlay;
+    public AudioSource music;
     public float fadeThenPlayTime = 2f;
     public float fadeToBlackSpeed;
 
@@ -33,17 +34,26 @@ public class EndScreen : MonoBehaviour
         }
 
         UI.instance.fadeToBlackSpeed = fadeToBlackSpeed;
-        UI.instance.FadeToBlack(false);
+        UI.instance.StopFadeToBlack();
         StartCoroutine(FadeAndStart());
     }
 
 
 
     IEnumerator FadeAndStart() {
-        while (true) {
-            yield return new WaitForSeconds(fadeThenPlayTime);
-            SceneManager.LoadScene("Main");
+
+        float time = 0.0f;
+
+        while (time < fadeThenPlayTime) {
+            time += Time.deltaTime;
+            float alpha = time / fadeThenPlayTime;
+
+            UI.instance.SetFadeToBlack(alpha);
+            music.volume = 1.0f - alpha;
+
+            yield return null;
         }
+        SceneManager.LoadSceneAsync("Main");
     }
 
 

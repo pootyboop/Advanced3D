@@ -29,6 +29,7 @@ public class CameraController : MonoBehaviour
 
         //hide and lock mouse cursor
         SetMouseVisibility(false, true);
+        sensitivity = GetCorrectMouseSensivity();
     }
 
 
@@ -205,5 +206,18 @@ public class CameraController : MonoBehaviour
     public void SetMouseSensitivity(float newSensitivity)
     {
         sensitivity = newSensitivity;
+        PlayerPrefs.SetFloat("sensitivity", sensitivity);
+    }
+
+
+
+    public float GetCorrectMouseSensivity() {
+        float sens = PlayerPrefs.GetFloat("sensitivity");
+
+        if (sens == 0.0f) {
+            sens = 300.0f;
+        }
+
+        return sens;
     }
 }
