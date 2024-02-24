@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: d283503f5fdfa3f4b971fe0bf4fdcf24, type: 2}
+  startWithFogEnabled: 1
   exposureFadeInTime: 4
   exposureStart: 0
-  exposureTarget: 2.5
+  exposureTarget: 1
   defaultFogData:
     attenuationDistance: 450
     HDRColor: {r: 132.01285, g: 194.13654, b: 144.43759, a: 1}

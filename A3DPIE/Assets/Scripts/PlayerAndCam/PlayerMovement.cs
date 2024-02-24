@@ -123,6 +123,9 @@ public class PlayerMovement : MonoBehaviour
             case "AutoInteractHitbox":
                 other.gameObject.GetComponent<AutoInteractHitbox>().TriggerInteraction();
                 break;
+            case "AreaMusic":
+                AreaMusicManager.instance.SetAreaMusicPlaying(other.gameObject.GetComponent<AudioSource>(), true);
+                break;
         }
     }
 
@@ -139,6 +142,9 @@ public class PlayerMovement : MonoBehaviour
                 {
                     SetPlayerState(EPlayerState.MOVABLE);
                 }
+                break;
+            case "AreaMusic":
+                AreaMusicManager.instance.SetAreaMusicPlaying(other.gameObject.GetComponent<AudioSource>(), false);
                 break;
         }
     }
