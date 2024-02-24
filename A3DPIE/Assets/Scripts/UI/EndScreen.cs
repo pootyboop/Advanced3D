@@ -33,6 +33,8 @@ public class EndScreen : MonoBehaviour
             obj.SetActive(false);
         }
 
+        AudioManager.instance.PlayAudioByTag("startgame");
+
         UI.instance.fadeToBlackSpeed = fadeToBlackSpeed;
         UI.instance.StopFadeToBlack();
         StartCoroutine(FadeAndStart());
@@ -65,6 +67,7 @@ public class EndScreen : MonoBehaviour
 
     
     public void GoToItch() {
+        AudioManager.instance.PlayAudioByTag("button");
         Application.OpenURL("https://elliotgmann.itch.io/");
     }
 }

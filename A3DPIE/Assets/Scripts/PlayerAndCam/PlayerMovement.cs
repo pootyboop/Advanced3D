@@ -598,6 +598,10 @@ public class PlayerMovement : MonoBehaviour
                     SetHasDrinkableDrink(true);
                 }
             }
+
+            else if (grabbedObject.CompareTag("Card")) {
+                grabbedObject.transform.localRotation = Quaternion.Euler(180f,0f,0f);
+            }
         }
     }
 

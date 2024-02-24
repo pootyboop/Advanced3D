@@ -8,6 +8,7 @@ TagManager:
   - LoadArea
   - AutoInteractHitbox
   - AreaMusic
+  - Card
   layers:
   - Default
   - TransparentFX

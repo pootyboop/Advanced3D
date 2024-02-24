@@ -197,11 +197,23 @@ MonoBehaviour:
   - name: dialogue
     clip: {fileID: 8300000, guid: 44381d293b282b94f95efe10598d52ce, type: 3}
     volumeMultiplier: 0.5
+  - name: dialogue2
+    clip: {fileID: 8300000, guid: c3a9275f408daea4a9034af025b8f213, type: 3}
+    volumeMultiplier: 0.5
   - name: pickup
     clip: {fileID: 8300000, guid: 46c173275a1b1ad40aa2a87877761340, type: 3}
     volumeMultiplier: 0.5
   - name: buy
     clip: {fileID: 8300000, guid: bb81089675b90874a8a49f9c7503e79a, type: 3}
+    volumeMultiplier: 0.5
+  - name: sell
+    clip: {fileID: 8300000, guid: 43d8ef428a857cc49aa9bff35fa4c077, type: 3}
+    volumeMultiplier: 0.5
+  - name: button
+    clip: {fileID: 8300000, guid: ac50ee1445ff72e4d9ca897c22cc80e7, type: 3}
+    volumeMultiplier: 0.5
+  - name: startgame
+    clip: {fileID: 8300000, guid: 48eef3824370d5b468a042f239612960, type: 3}
     volumeMultiplier: 0.5
 --- !u!82 &6241300601657508098
 AudioSource:

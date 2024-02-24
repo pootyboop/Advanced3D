@@ -94,6 +94,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        /*
+        else if (showNextDialogue) {
+            AudioManager.instance.PlayAudioByTag("dialogue2");
+        }
+        */
+
         //get the current dialogue
         Dialogue dialogue = conversation.dialogues[dialogueIndex];
 

@@ -16,6 +16,7 @@ public class PauseScreen : MonoBehaviour
     public Color selectedColor, unselectedColor;
     public GameObject[] tabs;
     public TextMeshProUGUI[] buttonTexts;
+    private bool playButtonSound = true;
 
     //public Slider musicSlider, sfxSlider;
     //public Toggle fullscreenToggle;
@@ -30,6 +31,7 @@ public class PauseScreen : MonoBehaviour
     void OnEnable()
     {
         OpenTab(tabs[0]);
+        //playButtonSound = true;
     }
 
 
@@ -37,6 +39,10 @@ public class PauseScreen : MonoBehaviour
     //set a tab to active and deactivate the rest
     public void OpenTab(GameObject tab)
     {
+        if (playButtonSound) {
+            AudioManager.instance.PlayAudioByTag("button");
+        }
+
         for (int i = 0; i < tabs.Length; i++)
         {
             //hide non-selected tabs
