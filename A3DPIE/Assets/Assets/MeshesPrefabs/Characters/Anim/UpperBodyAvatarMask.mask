@@ -15,10 +15,6 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Armature/root
     m_Weight: 0
-  - m_Path: Armature/root/elbowIK.L
-    m_Weight: 1
-  - m_Path: Armature/root/elbowIK.R
-    m_Weight: 1
   - m_Path: Armature/root/handIK.L
     m_Weight: 1
   - m_Path: Armature/root/handIK.L/hand.L
@@ -97,12 +93,8 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Armature/root/heelIK.R/foot.R/toe.R
     m_Weight: 0
-  - m_Path: Armature/root/kneeIK.L
-    m_Weight: 0
-  - m_Path: Armature/root/kneeIK.R
-    m_Weight: 0
   - m_Path: Armature/root/spine1
-    m_Weight: 0
+    m_Weight: 1
   - m_Path: Armature/root/spine1/leg1.L
     m_Weight: 0
   - m_Path: Armature/root/spine1/leg1.L/leg2.L
@@ -148,18 +140,18 @@ AvatarMask:
   - m_Path: Armature/root/spine1/spine2/spine3/shoulder.R/arm1.R/arm2.R
     m_Weight: 1
   - m_Path: ArmLCollar1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: ArmRCollar1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: HairBuns1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: HandLAugment1
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: HandRDefault
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: HeadScarf
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: LegsBaggy3
     m_Weight: 0
   - m_Path: TorsoVest1
-    m_Weight: 1
+    m_Weight: 0

@@ -49,19 +49,28 @@ public class Character : MonoBehaviour
     private Vector3 defaultLookAt;          //default position for the character to look at. by default, in front of their face
     private float lookAtTime = 0.3f;        //how fast the character rotates to look at the player
 
+
+
     public ECharacterState state = ECharacterState.STANDING;    //current base animation/activity
+
+
 
     //most characters will look at the player when looked at, but some like the band or fighters will be preoccupied and don't look
     public bool looksAtPlayerBeforeInteracting = true;
+    
     [HideInInspector]
     public bool lookingAtPlayer = false;    //whether the character is looking at the player or not. DON'T DIRECT SET!
     private float timeBetweenDrinks = 9.0f;  //time between DRINKING characters taking a sip of their drink
     private float timeBetweenDrinksRandom = 3.0f;   //drink time randomly chooses somewhere between + or - this amount of time
 
+
     private float seatRadius = 0.75f;   //the size of the radius that sitting characters check in for the nearest seat to sit in. keep this low
     public Transform butt; //where to sit relative to
+    float approxButtPos = 0.95f;
+
     CharacterNavigation charNav;
     private IEnumerator fadeDialogueAnimLayerCoroutine;
+
 
     public Transform heldObjectL, heldObjectR;  //held objects in each hand
     private Transform grabL, grabR;             //where held objects snap to
@@ -206,12 +215,8 @@ public class Character : MonoBehaviour
     {
         Vector3 buttPos = butt.position;
         Vector3 seatPos = seat.transform.position;
-        //transform.position = new Vector3(seatPos.x, seatPos.y - Vector3.Distance(buttPos, transform.position), seatPos.z);
-
-        float approxButtPos = 0.6f;
 
         transform.position = new Vector3(seatPos.x, seatPos.y - transform.lossyScale.y * approxButtPos, seatPos.z);
-        //transform.position = new Vector3(seat.transform.position.x, seat.transform.position.y + seatHeightOffset, seat.transform.position.z);
 
         transform.rotation = Quaternion.Euler(seat.transform.eulerAngles);
 
