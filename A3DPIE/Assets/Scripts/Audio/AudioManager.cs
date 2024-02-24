@@ -14,8 +14,6 @@ public class AudioManager : MonoBehaviour
     public float musicVolume = 1.0f;
     public float sfxVolume = 1.0f;
 
-    public Slider musicSlider, sfxSlider;
-
     public AudioMixer audioMixer;
 
     private AudioSource audioSource;    //audioSource used to play one shot sounds
@@ -91,17 +89,5 @@ public class AudioManager : MonoBehaviour
 
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
         audioMixer.SetFloat("sfxVol", Mathf.Log10(sfxVolume) * 20f);
-    }
-
-
-
-    public void UpdateSliders() {
-        if (musicSlider != null) {
-        musicSlider.value = musicVolume;
-        }
-
-        if (sfxSlider != null) {
-        sfxSlider.value = sfxVolume;
-        }
     }
 }

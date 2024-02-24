@@ -54,29 +54,7 @@ public class PauseScreen : MonoBehaviour
                 tabs[i].SetActive(true);
                 buttonTexts[i].color = selectedColor;
                 buttonTexts[i].fontStyle = FontStyles.Underline;
-
-                switch (tabs[i].name) {
-                    case "Settings":
-                        AudioManager.instance.UpdateSliders();
-                        mouseSensitivity.value = CameraController.instance.GetCorrectMouseSensivity();
-                        break;
-                }
             }
-        }
-    }
-
-
-    //set fullscreen from slider
-    public void SetFullscreen(bool fullscreen)
-    {
-        if (fullscreen)
-        {
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        }
-
-        else
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
         }
     }
 

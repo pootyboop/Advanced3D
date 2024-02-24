@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3985752185932633402
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6530885038717528178, guid: 73c5a152774a0fd48ab748250500a967, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5700080643567655694, guid: 0b562a309688ba64192d1bdf31cc8361, type: 3}
+    - target: {fileID: 7369672874662346093, guid: 73c5a152774a0fd48ab748250500a967, type: 3}
+      propertyPath: m_Name
+      value: Tree2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858085094620456919, guid: 73c5a152774a0fd48ab748250500a967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858085094620456919, guid: 73c5a152774a0fd48ab748250500a967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858085094620456919, guid: 73c5a152774a0fd48ab748250500a967, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73c5a152774a0fd48ab748250500a967, type: 3}

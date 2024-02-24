@@ -17,6 +17,14 @@ public class AreaLoadManager : MonoBehaviour
     //auto-enables after the first few seconds so characters and other scripts have time to get set up before they get disabled
     public bool enableAreaLoader = false;
 
+    public AudioSource areaMusicAudioSource;
+
+    public float areaMusicFadeInTime = 8.0f;
+    public float areaMusicFadeOutTime = 5.0f;
+    public float areaMusicMaxVolume = 0.6f;
+
+    private IEnumerator musicCoroutine;
+
 
 
     void Start()
@@ -76,6 +84,7 @@ public class AreaLoadManager : MonoBehaviour
             if (curr.reference == newArea)
             {
                 LoadNewArea(curr.areaName);
+                return;
             }
         }
     }
@@ -92,14 +101,18 @@ public class AreaLoadManager : MonoBehaviour
         }
 
 
+        Area newAreaData = GetAreaByEnum(newArea);
 
-        //setup the correct fog data
-        GraphicsManager.instance.ChangeFogAppearance(GetAreaByEnum(newArea).fogData);
+
+
+        //setup the correct fog data and music
+        GraphicsManager.instance.ChangeFogAppearance(newAreaData.fogData);
+        SetAreaMusicPlaying(newAreaData, true);
 
 
 
         //areas to load in no matter what
-        List<ELoadArea> loadAreas = new List<ELoadArea>(GetAreaByEnum(newArea).coloadedAreas);
+        List<ELoadArea> loadAreas = new List<ELoadArea>(newAreaData.coloadedAreas);
         loadAreas.Add(newArea);
         
         //potential areas to unload. may contain areas we need to load in
@@ -183,5 +196,55 @@ public class AreaLoadManager : MonoBehaviour
         }
 
         return null;
+    }
+
+
+
+    void SetAreaMusicPlaying(Area area, bool newPlaying) {
+
+        if (area.areaMusic == areaMusicAudioSource.clip) {
+            return;
+        }
+
+        if (musicCoroutine != null) {
+            StopCoroutine(musicCoroutine);
+        }
+
+        musicCoroutine = FadeMusic(area, newPlaying);
+        StartCoroutine(musicCoroutine);
+    }
+
+
+
+    IEnumerator FadeMusic(Area area, bool fadeIn) {
+        
+        if (areaMusicAudioSource.isPlaying) {
+
+            float time = 0.0f;
+            while (time < areaMusicFadeOutTime)
+            {
+                    time += Time.deltaTime;
+                    areaMusicAudioSource.volume = (1.0f - time / areaMusicFadeOutTime) * areaMusicMaxVolume;
+                    yield return null;
+            }
+
+            areaMusicAudioSource.Stop();
+            areaMusicAudioSource.clip = null;
+        }
+
+
+
+        if (fadeIn && area.areaMusic != null) {
+            areaMusicAudioSource.clip = area.areaMusic;
+            areaMusicAudioSource.Play();
+
+            float time = 0.0f;
+            while (time < areaMusicFadeInTime)
+            {
+                    time += Time.deltaTime;
+                    areaMusicAudioSource.volume = time / areaMusicFadeInTime * areaMusicMaxVolume;
+                    yield return null;
+            }
+        }
     }
 }

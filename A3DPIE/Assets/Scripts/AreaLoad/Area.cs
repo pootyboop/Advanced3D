@@ -24,4 +24,5 @@ public class Area
     public GameObject reference;    //the actual in-game parent of all objects constituting that area
     public FogData fogData;         //fog appearance in this area
     public ELoadArea[] coloadedAreas;   //areas that must be loaded when this area is loaded (areas that are visible from this area)
+    public AudioClip areaMusic;
 }

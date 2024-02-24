@@ -25,7 +25,10 @@ public enum ECharacterState
     PLAYINGDIDGERIDOO = 4,
     PLAYINGDRUM = 5,
     BOXING1 = 6,    //boxing/fighting ring
-    BOXING2 = 7
+    BOXING2 = 7,
+    DANCING = 8,
+    ARMSCROSSED = 9,
+    DRINKING = 10
 }
 
 
@@ -48,11 +51,15 @@ public class Character : MonoBehaviour
     //most characters will look at the player when looked at, but some like the band or fighters will be preoccupied and don't look
     public bool looksAtPlayerBeforeInteracting = true;
     public bool lookingAtPlayer = false;    //whether the character is looking at the player or not. DON'T DIRECT SET!
+    private float timeBetweenDrinks = 9.0f;  //time between DRINKING characters taking a sip of their drink
+    private float timeBetweenDrinksRandom = 3.0f;   //drink time randomly chooses somewhere between + or - this amount of time
 
     private float seatRadius = 0.75f;   //the size of the radius that sitting characters check in for the nearest seat to sit in. keep this low
 
     public Transform heldObjectL, heldObjectR;  //held objects in each hand
     private Transform grabL, grabR;             //where held objects snap to
+
+    private bool startCalled = false;
 
 
 
@@ -61,6 +68,15 @@ public class Character : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         defaultLookAt = lookAtTransform.position;
+        if (startCalled) {
+            SetCharacterState(state);   //start performing whatever action this character is meant to
+        }
+    }
+
+
+
+    private void Start() {
+        startCalled = true;
         SetCharacterState(state);   //start performing whatever action this character is meant to
     }
 
@@ -104,9 +120,26 @@ public class Character : MonoBehaviour
             case ECharacterState.PLAYINGHARP:
                 TryFindSeat();
                 break;
+            case ECharacterState.DRINKING:
+                GetDrink();
+                break;
             default:
                 break;
         }
+    }
+
+
+
+    public void GetDrink() {
+        GameObject charDrink = Instantiate(CharRefsHelper.instance.charDrink);
+        GrabObject(charDrink.transform, true);
+
+        charDrink.transform.localPosition = new Vector3(0.0009f, 0.0013f, -0.00065f);
+        charDrink.transform.localEulerAngles = new Vector3(90f, 0f, 0f);
+
+        charDrink.gameObject.GetComponent<Collider>().enabled = false;
+
+        StartCoroutine(DrinkingTimer());
     }
 
 
@@ -255,6 +288,22 @@ public class Character : MonoBehaviour
         {
             lookAtTransform.position = CameraController.instance.transform.position;
             yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+
+
+    IEnumerator DrinkingTimer() {
+        while (true) {
+
+            float time = 0.0f;
+            float randomizedDrinkTime = timeBetweenDrinks + (UnityEngine.Random.Range(timeBetweenDrinksRandom * -1f, timeBetweenDrinksRandom));
+            while (time < randomizedDrinkTime) {
+                time += Time.deltaTime;
+                yield return null;
+            }
+            animator.SetTrigger("sipDrink");
+            yield return null;
         }
     }
 }

@@ -24,6 +24,10 @@ public class UI : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        if (PlayerPrefs.GetInt("windowed") == 1) {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
     }
 
 
@@ -144,6 +148,12 @@ public class UI : MonoBehaviour
 
 
 
+    public void SetDrinkActionTextVisible(bool newVis) {
+        drinkActionText.SetActive(newVis);
+    }
+
+
+
     //fade camera to/from black
     public void FadeToBlack(bool fadeIn)
     {
@@ -246,11 +256,5 @@ public class UI : MonoBehaviour
             pauseScreen.SetActive(false);
             PlayerMovement.instance.SetPlayerState(previousState);
         }
-    }
-
-
-
-    public void SetDrinkActionTextVisible(bool newVis) {
-        drinkActionText.SetActive(newVis);
     }
 }

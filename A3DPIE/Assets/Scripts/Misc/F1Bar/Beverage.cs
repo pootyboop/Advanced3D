@@ -100,6 +100,8 @@ public class Beverage : MonoBehaviour
         mat = mats[matIndex];
         meshRenderer.materials = mats;
 
+        grabbableObject.name = "Empty Glass";
+
         StartCoroutine(DrinkOverTime());
     }
 

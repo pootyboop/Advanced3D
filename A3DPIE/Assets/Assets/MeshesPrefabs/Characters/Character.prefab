@@ -112,13 +112,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491746260496897225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1764705, y: 1.1764705, z: 1.1764705}
+  m_LocalScale: {x: 0.011764705, y: 0.011764706, z: 0.011764706}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1878718142843143998}
-  m_Father: {fileID: 5512141694858778348}
+  m_Father: {fileID: 3517270594012218994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5402299588104461904
 MonoBehaviour:
@@ -713,10 +713,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7509460656999408859}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 3291471568659358354}
+    - targetCorrespondingSourceObject: {fileID: 8879528566716807029, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7509460656999408859}
     - targetCorrespondingSourceObject: {fileID: 2113823035348575145, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2515572915084081264}
@@ -874,6 +874,11 @@ Transform:
 --- !u!4 &3495627340836134633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -326721682020601874, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
+  m_PrefabInstance: {fileID: 5473481960012656903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3517270594012218994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8879528566716807029, guid: 792c8e5cc65db354cb8bcadf23c44175, type: 3}
   m_PrefabInstance: {fileID: 5473481960012656903}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &3575955509335245164 stripped
