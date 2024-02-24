@@ -57,6 +57,7 @@ public class Character : MonoBehaviour
 
     //most characters will look at the player when looked at, but some like the band or fighters will be preoccupied and don't look
     public bool looksAtPlayerBeforeInteracting = true;
+    public bool looksAtPlayerWhenTalking = true;
     
     [HideInInspector]
     public bool lookingAtPlayer = false;    //whether the character is looking at the player or not. DON'T DIRECT SET!
@@ -113,8 +114,8 @@ public class Character : MonoBehaviour
             LerpDialogueLayer(0.0f, 1.0f, 0.5f);
         }
 
-        //look at player if not already
-        if (!looksAtPlayerBeforeInteracting && !lookingAtPlayer)
+        //look at player
+        if (!looksAtPlayerBeforeInteracting && !lookingAtPlayer && looksAtPlayerWhenTalking)
         {
             LookAtPlayer(true);
         }
@@ -286,11 +287,13 @@ public class Character : MonoBehaviour
         else
         {
             //stop rotating to the player
-            StopCoroutine(lookAtCoroutine);
+            if (lookAtCoroutine != null) {
+                StopCoroutine(lookAtCoroutine);
 
-            //start lerping back to default rotation
-            lookAtCoroutine = LookLerp(lookAtTransform.localPosition, defaultLookAt, false);
-            StartCoroutine(lookAtCoroutine);
+                //start lerping back to default rotation
+                lookAtCoroutine = LookLerp(lookAtTransform.localPosition, defaultLookAt, false);
+                StartCoroutine(lookAtCoroutine);
+            }
         }
     }
 
