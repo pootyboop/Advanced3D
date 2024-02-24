@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
 
 
@@ -28,7 +30,8 @@ public enum ECharacterState
     BOXING2 = 7,
     DANCING = 8,
     ARMSCROSSED = 9,
-    DRINKING = 10
+    DRINKING = 10,
+    WALKING = 11
 }
 
 
@@ -50,11 +53,15 @@ public class Character : MonoBehaviour
 
     //most characters will look at the player when looked at, but some like the band or fighters will be preoccupied and don't look
     public bool looksAtPlayerBeforeInteracting = true;
+    [HideInInspector]
     public bool lookingAtPlayer = false;    //whether the character is looking at the player or not. DON'T DIRECT SET!
     private float timeBetweenDrinks = 9.0f;  //time between DRINKING characters taking a sip of their drink
     private float timeBetweenDrinksRandom = 3.0f;   //drink time randomly chooses somewhere between + or - this amount of time
 
     private float seatRadius = 0.75f;   //the size of the radius that sitting characters check in for the nearest seat to sit in. keep this low
+    public Transform butt; //where to sit relative to
+    CharacterNavigation charNav;
+    private IEnumerator fadeDialogueAnimLayerCoroutine;
 
     public Transform heldObjectL, heldObjectR;  //held objects in each hand
     private Transform grabL, grabR;             //where held objects snap to
@@ -67,7 +74,7 @@ public class Character : MonoBehaviour
     void OnEnable()
     {
         animator = GetComponent<Animator>();
-        defaultLookAt = lookAtTransform.position;
+        defaultLookAt = lookAtTransform.localPosition;
         if (startCalled) {
             SetCharacterState(state);   //start performing whatever action this character is meant to
         }
@@ -87,11 +94,28 @@ public class Character : MonoBehaviour
     {
         //start dialogue animations
         animator.SetBool("inDialogue", inDialogue);
+        
+
+        if (inDialogue) {
+            LerpDialogueLayer(1.0f, 0.0f, 0.5f);
+        }
+
+        else {
+            LerpDialogueLayer(0.0f, 1.0f, 0.5f);
+        }
 
         //look at player if not already
         if (!looksAtPlayerBeforeInteracting && !lookingAtPlayer)
         {
             LookAtPlayer(true);
+        }
+
+        if (state == ECharacterState.WALKING) {
+            if (charNav == null) {
+                charNav = GetComponent<CharacterNavigation>();
+            }
+
+            charNav.SetInDialogue(inDialogue);
         }
     }
 
@@ -123,9 +147,22 @@ public class Character : MonoBehaviour
             case ECharacterState.DRINKING:
                 GetDrink();
                 break;
+            case ECharacterState.WALKING:
+                SetupWalking();
+                break;
             default:
                 break;
         }
+    }
+
+
+
+    void SetupWalking() {
+        looksAtPlayerBeforeInteracting = false; //this is super buggy with movement, just disable on all walking characters
+
+        charNav = GetComponent<CharacterNavigation>();
+        charNav.enabled = true;
+        charNav.StartWalking();
     }
 
 
@@ -167,10 +204,16 @@ public class Character : MonoBehaviour
     //align the character with the seat
     void Sit(Seat seat)
     {
-        transform.position = seat.transform.position;
-        Vector3 eulerAngles = seat.transform.eulerAngles;
-        eulerAngles = new Vector3(eulerAngles.x, eulerAngles.y, eulerAngles.z);
-        transform.rotation = Quaternion.Euler(eulerAngles);
+        Vector3 buttPos = butt.position;
+        Vector3 seatPos = seat.transform.position;
+        //transform.position = new Vector3(seatPos.x, seatPos.y - Vector3.Distance(buttPos, transform.position), seatPos.z);
+
+        float approxButtPos = 0.6f;
+
+        transform.position = new Vector3(seatPos.x, seatPos.y - transform.lossyScale.y * approxButtPos, seatPos.z);
+        //transform.position = new Vector3(seat.transform.position.x, seat.transform.position.y + seatHeightOffset, seat.transform.position.z);
+
+        transform.rotation = Quaternion.Euler(seat.transform.eulerAngles);
 
         seat.occupied = true;
     }
@@ -231,7 +274,7 @@ public class Character : MonoBehaviour
             }
 
             //start lerping to the player
-            lookAtCoroutine = LookLerp(lookAtTransform.position, CameraController.instance.transform.position, true);
+            lookAtCoroutine = LookLerp(lookAtTransform.localPosition, transform.InverseTransformPoint(CameraController.instance.transform.position), true);
             StartCoroutine(lookAtCoroutine);
         }
 
@@ -241,7 +284,7 @@ public class Character : MonoBehaviour
             StopCoroutine(lookAtCoroutine);
 
             //start lerping back to default rotation
-            lookAtCoroutine = LookLerp(lookAtTransform.position, defaultLookAt, false);
+            lookAtCoroutine = LookLerp(lookAtTransform.localPosition, defaultLookAt, false);
             StartCoroutine(lookAtCoroutine);
         }
     }
@@ -262,11 +305,11 @@ public class Character : MonoBehaviour
         float startTime = Time.time;
         while (Time.time < startTime + lookAtTime)
         {
-            lookAtTransform.position = Vector3.Lerp(start, end, (Time.time - startTime) / lookAtTime);
+            lookAtTransform.localPosition = Vector3.Lerp(start, end, (Time.time - startTime) / lookAtTime);
             yield return null;
         }
 
-        lookAtTransform.position = end;
+        lookAtTransform.localPosition = end;
         //CODE BASED ON SUPERPIG'S SOLUTION ENDS HERE.
 
         //parent to cam if the target reached the cam
@@ -286,8 +329,8 @@ public class Character : MonoBehaviour
     {
         while (lookingAtPlayer)
         {
-            lookAtTransform.position = CameraController.instance.transform.position;
-            yield return new WaitForSeconds(0.1f);
+            lookAtTransform.localPosition = transform.InverseTransformPoint(CameraController.instance.transform.position);
+            yield return null;
         }
     }
 
@@ -305,5 +348,30 @@ public class Character : MonoBehaviour
             animator.SetTrigger("sipDrink");
             yield return null;
         }
+    }
+
+
+
+    void LerpDialogueLayer(float to, float from, float lerpTime) {
+        if (fadeDialogueAnimLayerCoroutine != null) {
+            StopCoroutine(fadeDialogueAnimLayerCoroutine);
+        }
+
+        fadeDialogueAnimLayerCoroutine = LerpDialogueAnimLayer(to, from, lerpTime);
+        StartCoroutine(fadeDialogueAnimLayerCoroutine);
+    }
+
+
+
+    IEnumerator LerpDialogueAnimLayer(float to, float from, float lerpTime) {
+        float time = 0.0f;
+        while (time < lerpTime) {
+            time += Time.deltaTime;
+            
+            animator.SetLayerWeight(1, Mathf.Lerp(from, to, time / lerpTime));
+            yield return null;
+        }
+
+        animator.SetLayerWeight(1, to);
     }
 }

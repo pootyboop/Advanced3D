@@ -69,6 +69,10 @@ PrefabInstance:
       value: Floating Island
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e000f34d56c09584cbe125f8d49ee5d9, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e000f34d56c09584cbe125f8d49ee5d9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
       objectReference: {fileID: 0}

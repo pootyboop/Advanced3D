@@ -10,9 +10,15 @@ using UnityEngine;
 //...so this bypasses that
 public class CameraFollow : MonoBehaviour
 {
+    public static CameraFollow instance;
+
     //where the camera will stay attached to
     //called an "offset" because this will reference a transform that is offset from the player's root transform
     public Transform cameraOffset;
+
+    private void Start() {
+        instance = this;
+    }
 
     void Update()
     {
