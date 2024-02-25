@@ -215,6 +215,9 @@ MonoBehaviour:
   - name: startgame
     clip: {fileID: 8300000, guid: 48eef3824370d5b468a042f239612960, type: 3}
     volumeMultiplier: 0.5
+  - name: drink
+    clip: {fileID: 8300000, guid: c9ef6730e9640f342a79cf9fb190a201, type: 3}
+    volumeMultiplier: 0.5
 --- !u!82 &6241300601657508098
 AudioSource:
   m_ObjectHideFlags: 0

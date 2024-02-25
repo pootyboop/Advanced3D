@@ -94,6 +94,7 @@ public class Beverage : MonoBehaviour
 
     public void Drink() {
         drank = true;
+        AudioManager.instance.PlayAudioByTag("drink");
 
         Material[] mats = meshRenderer.materials;
         mats[matIndex] = new Material(drinkMaterials[drinkID]);

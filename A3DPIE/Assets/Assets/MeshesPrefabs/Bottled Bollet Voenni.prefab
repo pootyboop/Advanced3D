@@ -110,6 +110,8 @@ MonoBehaviour:
   spokenLanguage: 1
   conversations:
   - conversationID: 
+    ielsekBought: 0
+    ielsekBuyRate: 2400
     dialogues:
     - speaker: 0
       phrases:
@@ -124,7 +126,8 @@ MonoBehaviour:
     - speaker: 2
       phrases:
       - overrideLanguage: 4
-        phrase: Even though this is Voenn's signature drink, none of the locals can
-          afford it. It's supposed to be really good though.
+        phrase: Kallay Tirridor's internationally-acclaimed creation. Even though
+          this is Voenn's signature spirit, very few locals can afford it. It's supposed
+          to be really good though.
         translation: 
         context: 

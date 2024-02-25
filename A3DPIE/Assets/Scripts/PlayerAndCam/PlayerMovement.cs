@@ -600,7 +600,7 @@ public class PlayerMovement : MonoBehaviour
             }
 
             else if (grabbedObject.CompareTag("Card")) {
-                grabbedObject.transform.localRotation = Quaternion.Euler(180f,0f,0f);
+                grabbedObject.transform.localRotation = Quaternion.Euler(180f,0f,180f);
             }
         }
     }
