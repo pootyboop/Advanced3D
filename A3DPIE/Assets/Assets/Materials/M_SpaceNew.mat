@@ -113,7 +113,7 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 0
     - _Emission_Sine_Strength: 700
-    - _Emission_Strength: 200
+    - _Emission_Strength: 900
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _Invert_Metallic_for_Roughness: 0

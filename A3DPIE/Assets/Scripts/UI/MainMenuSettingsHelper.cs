@@ -16,7 +16,10 @@ public class MainMenuSettingsHelper : MonoBehaviour
 
 
     public void SetActiveGroup(bool isGroup2) {
-        AudioManager.instance.PlayAudioByTag("button");
+        if (AudioManager.instance != null) {
+            AudioManager.instance.PlayAudioByTag("button");
+        }
+        
         foreach (GameObject obj in group1) {
             obj.SetActive(!isGroup2);
         }
