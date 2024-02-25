@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7798572981378667361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: name
+      value: Lunscu Poster
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: 'Naiteh Ban '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].phrase
+      value: Lunscu!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: Tag hioh parih pa reh rey naitedor pa scah briedor? REH AN HOCAL!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].phrase
+      value: 'Tag gairduh '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].phrase
+      value: '"usciecu" '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].phrase
+      value: ga notih pa Sciarrei, wue talah anponat sci vienetedor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].phrase
+      value: 'Talah bolleteh hocal '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].phrase
+      value: 'Ecas Cisc Asca. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[2].phrase
+      value: 'Naiteh ban '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[3].phrase
+      value: 'Lunscu '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[4].phrase
+      value: riun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].context
+      value: bubbling planet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].context
+      value: Lunsci tattoos have cultural significance
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].context
+      value: Lunsci cocktail
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].translation
+      value: 'Fly To '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].translation
+      value: Lunscu!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].translation
+      value: Do you want to find a new planet to call home? LOOK NO FURTHER!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].translation
+      value: 'Get a '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].translation
+      value: 'tattoo '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].translation
+      value: and visit Sciarrei, or try a relaxing sci pool.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].translation
+      value: 'Try drinking lots of '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].translation
+      value: 'Bottle of Joy. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[2].translation
+      value: 'Fly to '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[3].translation
+      value: 'Lunscu '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[4].translation
+      value: today!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[1].overrideLanguage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].overrideLanguage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].overrideLanguage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[3].overrideLanguage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.607994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.281
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770019921392517269, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_Name
+      value: Poster Lunscu Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
