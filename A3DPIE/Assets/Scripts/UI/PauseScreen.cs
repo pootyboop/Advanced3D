@@ -9,19 +9,29 @@ using TMPro;
 //manages settings (other than audio, handled by AudioManager) and opens tabs on the pause screen
 public class PauseScreen : MonoBehaviour
 {
+    public static PauseScreen instance;
+
+    public Slider mouseSensitivity;
+
     public Color selectedColor, unselectedColor;
     public GameObject[] tabs;
     public TextMeshProUGUI[] buttonTexts;
+    private bool playButtonSound = true;
 
     //public Slider musicSlider, sfxSlider;
     //public Toggle fullscreenToggle;
 
+
+    private void Start() {
+        instance = this;
+    }
 
 
     //auto-open How To Play (the first tab)
     void OnEnable()
     {
         OpenTab(tabs[0]);
+        //playButtonSound = true;
     }
 
 
@@ -29,6 +39,10 @@ public class PauseScreen : MonoBehaviour
     //set a tab to active and deactivate the rest
     public void OpenTab(GameObject tab)
     {
+        if (playButtonSound) {
+            AudioManager.instance.PlayAudioByTag("button");
+        }
+
         for (int i = 0; i < tabs.Length; i++)
         {
             //hide non-selected tabs
@@ -47,21 +61,6 @@ public class PauseScreen : MonoBehaviour
                 buttonTexts[i].color = selectedColor;
                 buttonTexts[i].fontStyle = FontStyles.Underline;
             }
-        }
-    }
-
-
-    //set fullscreen from slider
-    public void SetFullscreen(bool fullscreen)
-    {
-        if (fullscreen)
-        {
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-        }
-
-        else
-        {
-            Screen.fullScreenMode = FullScreenMode.Windowed;
         }
     }
 

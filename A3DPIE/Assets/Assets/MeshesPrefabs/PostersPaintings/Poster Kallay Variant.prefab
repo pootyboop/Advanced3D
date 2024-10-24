@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5199097942474111414
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: name
+      value: Kallay Hiring Advert
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].phrase
+      value: Bah Gii Viateli
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].phrase
+      value: Tag reh viatel? Gii parih viateli!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].phrase
+      value: 'Kallay '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].phrase
+      value: Tirridor ga viateleh ban gii jenut bolletidori
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].phrase
+      value: 'Bah gii pa '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].phrase
+      value: 'Kallay '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].phrase
+      value: Tirridor ga viateleh ban gii jenut bolletidori...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].phrase
+      value: '...tih Hierre''s hocal gathal bolleti ga gii hotat Bollet '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].phrase
+      value: 'Voenni. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[2].phrase
+      value: Bah gii riun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].phrase
+      value: 'Kallay '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].phrase
+      value: Tirridor - Bollet, Ayet, Tih
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[2].phrase
+      value: Bah gii riun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[0].phrases.Array.data[0].translation
+      value: Join Our Team
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[0].translation
+      value: 'Looking for work? We need workers! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].translation
+      value: 'Pinnacle '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[2].translation
+      value: Trade Port and work at our beautiful bars
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[0].translation
+      value: 'Join us at '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].translation
+      value: 'Pinnacle '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[2].translation
+      value: Trade Port and work at our beautiful bars...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[0].translation
+      value: '...serving Hierre''s best drinks and our famous Drink '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].translation
+      value: 'Voenni. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[2].translation
+      value: Join us today!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].translation
+      value: 'Pinnacle '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].translation
+      value: Trade Port - Drink, Music, Trade
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[2].translation
+      value: Join us today!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[1].phrases.Array.data[1].overrideLanguage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[2].phrases.Array.data[1].overrideLanguage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[3].phrases.Array.data[1].overrideLanguage
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[0].overrideLanguage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4867448480478496335, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: conversations.Array.data[0].dialogues.Array.data[4].phrases.Array.data[1].overrideLanguage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112444638946713920, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94f513e24d778a142b0461ba87842e97, type: 2}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.889
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 18.611
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6248781399333739055, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770019921392517269, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}
+      propertyPath: m_Name
+      value: Poster Kallay Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11d923be6d349df43b2204a0ad3a3f6f, type: 3}

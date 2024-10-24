@@ -8,19 +8,30 @@ using UnityEngine;
 //manages effects on the player's spaceship like speed trails and engine noise
 public class KitOrel : MonoBehaviour
 {
+    public static KitOrel instance;
+
     Vector3 lastPosition;   //where the spaceship was last frame
     public TrailRenderer[] trailRenderers;  //the trail renderers on the spaceship's blasters? boosters? whatever they're called
     public AudioSource engineRumble;    //constant engine noise around the ship
 
     public ParticleSystem shipLanding;  //particles to play on ship landing/takeoff
 
-    private float trailRendererStrength = 0.06f;    //length of the trail renderers
+    public float trailRendererStrength = 0.06f;    //length of the trail renderers
     private bool freezeDist = false; //whether or not to freeze the "distance" the ship traveled, simulating flight when the object stays in place
     private float dist = 0.0f;  //distance tracked across frames
+
+    public bool playEngineNoise = true;
 
     private IEnumerator updateTrailRenderers;
 
 
+    private void Start() {
+        instance = this;
+
+        if (playEngineNoise) {
+            engineRumble.Play();
+        }
+    }
 
     //starts spaceship flight effects
     public void StartTrailRenderers()
@@ -35,14 +46,22 @@ public class KitOrel : MonoBehaviour
     //stops trail renderers
     public void StopTrailRenderers()
     {
+
+        foreach (TrailRenderer trail in trailRenderers)
+        {
+                trail.time = 0f;
+        }
+
         if (updateTrailRenderers != null)
         {
             StopCoroutine(updateTrailRenderers);
+        }
 
-            //low rumble as if the engine's still on
-            engineRumble.volume = 0.1f;
-            engineRumble.pitch = 0.3f;
-            engineRumble.maxDistance = 7f;
+        if (playEngineNoise) {
+        //low rumble as if the engine's still on
+        engineRumble.volume = 0.1f;
+        engineRumble.pitch = 0.3f;
+        engineRumble.maxDistance = 7f;
         }
     }
 
@@ -60,8 +79,10 @@ public class KitOrel : MonoBehaviour
                 dist = Vector3.Distance(lastPosition, transform.position);
             }
 
-            //hardcoding bad i know. these values give about the pitch range i want when the ship is flying
-            engineRumble.pitch = Mathf.Clamp (.8f + .5f * dist, 0.8f, 1.5f);
+            if (playEngineNoise) {
+                //hardcoding bad i know. these values give about the pitch range i want when the ship is flying
+                engineRumble.pitch = Mathf.Clamp (.8f + .5f * dist, 0.8f, 1.5f);
+            }
 
             //update the trail renderers when there's substantial movement
             if (dist > 0.1f)

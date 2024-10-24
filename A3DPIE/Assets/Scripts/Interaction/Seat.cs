@@ -92,8 +92,8 @@ public class Seat : MonoBehaviour, IInteractable
         //PlayerMovement and CameraController handle the movement and camera for sitting
         PlayerMovement.instance.SetPlayerState(EPlayerState.SEATED);
         PlayerMovement.instance.currentSeat = this;
-        PlayerMovement.instance.transform.SetParent(seatPosition);
-        PlayerMovement.instance.transform.localPosition = new Vector3(0f, 0f, 0f);
+        CameraController.instance.transform.SetParent(seatPosition);
+        CameraController.instance.transform.localPosition = new Vector3(0f, 0f, 0f);
     }
 
 
@@ -104,7 +104,8 @@ public class Seat : MonoBehaviour, IInteractable
         occupied = false;
 
         //return to MOVABLE, which we assume the player was prior to sitting
-        PlayerMovement.instance.transform.SetParent(null);
+        CameraController.instance.transform.SetParent(CameraFollow.instance.transform);
+        CameraController.instance.transform.localPosition = new Vector3(0f, 0f, 0f);
         PlayerMovement.instance.SetPlayerState(EPlayerState.MOVABLE);
     }
 }

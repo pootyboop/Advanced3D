@@ -55,6 +55,7 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     //these are used for updating character animations if necessary
     private Character character;
     private bool isCharacter = false;
+    private bool inConversation = false;
 
 
 
@@ -97,7 +98,11 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
         if (isCharacter)
         {
             character.SetDialogueState(speaker);
-            character.SetInDialogue(true);
+
+            if (inConversation == false) {
+                inConversation = true;
+                character.SetInDialogue(true);
+            }
         }
     }
 
@@ -106,6 +111,8 @@ public class DialogueCharacter : MonoBehaviour, IInteractable
     //finish the conversation
     public void OnConversationEnded()
     {
+        inConversation = false;
+
         //increment the conversation index if this isn't the final conversation with this character
         //otherwise, leave it alone. the player will always be able to repeat the final conversation they had.
         //this allows for a quip from the character after the main conversation is over to indicate they don't have anything else interesting to say

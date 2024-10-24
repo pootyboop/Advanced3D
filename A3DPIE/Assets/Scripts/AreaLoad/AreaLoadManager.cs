@@ -18,7 +18,6 @@ public class AreaLoadManager : MonoBehaviour
     public bool enableAreaLoader = false;
 
 
-
     void Start()
     {
         instance = this;
@@ -76,6 +75,7 @@ public class AreaLoadManager : MonoBehaviour
             if (curr.reference == newArea)
             {
                 LoadNewArea(curr.areaName);
+                return;
             }
         }
     }
@@ -92,9 +92,17 @@ public class AreaLoadManager : MonoBehaviour
         }
 
 
+        Area newAreaData = GetAreaByEnum(newArea);
+
+
+
+        //setup the correct fog data and music
+        GraphicsManager.instance.ChangeFogAppearance(newAreaData.fogData);
+
+
 
         //areas to load in no matter what
-        List<ELoadArea> loadAreas = new List<ELoadArea>(GetAreaByEnum(newArea).coloadedAreas);
+        List<ELoadArea> loadAreas = new List<ELoadArea>(newAreaData.coloadedAreas);
         loadAreas.Add(newArea);
         
         //potential areas to unload. may contain areas we need to load in

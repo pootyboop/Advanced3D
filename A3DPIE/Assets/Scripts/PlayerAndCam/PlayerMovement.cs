@@ -57,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
     public Seat currentSeat;
     private Vector3 preSeatedPosition;  //player's previous standing position from before they sat
     private GrabbableObject grabbedObject;  //currently held grabbableobject
+    private bool hasGrabbedDrink = false;
 
 
 
@@ -122,6 +123,9 @@ public class PlayerMovement : MonoBehaviour
             case "AutoInteractHitbox":
                 other.gameObject.GetComponent<AutoInteractHitbox>().TriggerInteraction();
                 break;
+            case "AreaMusic":
+                AreaMusicManager.instance.SetAreaMusicPlaying(other.gameObject.GetComponent<AudioSource>(), true);
+                break;
         }
     }
 
@@ -138,6 +142,9 @@ public class PlayerMovement : MonoBehaviour
                 {
                     SetPlayerState(EPlayerState.MOVABLE);
                 }
+                break;
+            case "AreaMusic":
+                AreaMusicManager.instance.SetAreaMusicPlaying(other.gameObject.GetComponent<AudioSource>(), false);
                 break;
         }
     }
@@ -220,6 +227,11 @@ public class PlayerMovement : MonoBehaviour
 
             //finally, update the cancel interaction prompt on screen to be the most fitting prompt
             SolveCancelText();
+        }
+
+        else if (Input.GetButtonDown("Drink") && hasGrabbedDrink) {
+            grabbedObject.GetComponent<Beverage>().Drink();
+            SetHasDrinkableDrink(false);
         }
 
         //pausing
@@ -574,7 +586,30 @@ public class PlayerMovement : MonoBehaviour
     //most GrabbableObject code for player grabbing is handled on CameraController
     public void GrabObject(GrabbableObject grabbableObject)
     {
+        if (hasGrabbedDrink) {
+            SetHasDrinkableDrink(false);
+        }
+
         grabbedObject = grabbableObject;
+
+        if (grabbedObject != null) {
+            if (grabbedObject.GetComponent<Beverage>() != null) {
+                if (grabbedObject.GetComponent<Beverage>().CanDrink()) {
+                    SetHasDrinkableDrink(true);
+                }
+            }
+
+            else if (grabbedObject.CompareTag("Card")) {
+                grabbedObject.transform.localRotation = Quaternion.Euler(180f,0f,180f);
+            }
+        }
+    }
+
+
+
+    public void SetHasDrinkableDrink(bool hasDrink) {
+        hasGrabbedDrink = hasDrink;
+        UI.instance.SetDrinkActionTextVisible(hasGrabbedDrink);
     }
 
 

@@ -10,18 +10,24 @@ public class UI : MonoBehaviour
 {
     public static UI instance;
 
-    public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen;    //interaction prompt references
+    public GameObject interactionBG, interactionName, interactionAction, cancelActionText, pauseScreen, drinkActionText;    //interaction prompt references
 
     public Image fadeToBlackPanel;  //a huge black image that covers the screen used for fading to-from black
-    private float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
+    public float fadeToBlackSpeed = 0.45f; //how fast to fade to/from black
 
     private bool paused;    //currently paused?
     private EPlayerState previousState = EPlayerState.MOVABLE;  //state to return player to after pausing
+
+    private IEnumerator fadeToBlackCoroutine;
 
 
     void Start()
     {
         instance = this;
+
+        if (PlayerPrefs.GetInt("windowed") == 1) {
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+        }
     }
 
 
@@ -142,10 +148,27 @@ public class UI : MonoBehaviour
 
 
 
+    public void SetDrinkActionTextVisible(bool newVis) {
+        drinkActionText.SetActive(newVis);
+    }
+
+
+
     //fade camera to/from black
     public void FadeToBlack(bool fadeIn)
     {
-        StartCoroutine(FadeBlack(fadeIn));
+        StopFadeToBlack();
+        fadeToBlackCoroutine = FadeBlack(fadeIn);
+        StartCoroutine(fadeToBlackCoroutine);
+    }
+
+
+
+
+    public void StopFadeToBlack() {
+        if (fadeToBlackCoroutine != null) {
+            StopCoroutine(fadeToBlackCoroutine);
+        }
     }
 
 
@@ -182,11 +205,19 @@ public class UI : MonoBehaviour
             }
 
             //add/remove the new alpha amount
-            fadeToBlackPanel.color = MakeBlackWithAlpha(fadeToBlackPanel.color.a + newAddTime);
+            SetFadeToBlack(fadeToBlackPanel.color.a + newAddTime);
 
             //wait a bit then go again
-            yield return new WaitForSeconds(0.01f);
+            yield return null;
         }
+
+        fadeToBlackCoroutine = null;
+    }
+
+
+
+    public void SetFadeToBlack(float newAlpha) {
+        fadeToBlackPanel.color = MakeBlackWithAlpha(newAlpha);
     }
 
 

@@ -99,6 +99,9 @@ public class PhraseText : MonoBehaviour
     //this function is bound to the invisible button on the PhraseText prefab
     public void SetTranslatorLanguageToMatch()
     {
+        if (trueLanguage != Translator.instance.language) {
+            AudioManager.instance.PlayAudioByTag("button");
         Translator.instance.SetTranslatorLanguage(trueLanguage);
+        }
     }
 }

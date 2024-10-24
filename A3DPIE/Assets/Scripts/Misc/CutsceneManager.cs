@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 
 
 
@@ -42,6 +43,19 @@ public class CutsceneManager : MonoBehaviour
     public GameObject quuvol;   //character representing Quuvol (the protagonist) in cutscenes
 
 
+
+    private void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+
+    }
+
+
+
     void Start()
     {
         instance = this;
@@ -57,6 +71,7 @@ public class CutsceneManager : MonoBehaviour
         //Unity's code ends here.
 
         //automatically plays the intro cutscene on start unless turned off (bool playIntroCutscene)
+        //StartCoroutine(IntroCutsceneTimer());
         PlayIntroCutscene();
     }
 
@@ -65,7 +80,9 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene begins
     private void Director_Played(PlayableDirector obj)
     {
-        quuvol.SetActive(true);
+        if (quuvol != null) {
+            quuvol.SetActive(true);
+        }
 
         PlayerMovement.instance.SetPlayerState(EPlayerState.CUTSCENE);
         cutsceneCam.gameObject.SetActive(true);
@@ -77,7 +94,9 @@ public class CutsceneManager : MonoBehaviour
     //called when a cutscene ends
     private void Director_Stopped(PlayableDirector obj)
     {
-        quuvol.SetActive(false);
+        if (quuvol != null) {
+            quuvol.SetActive(false);
+        }
 
         skipText.SetAlpha(0.0f);
         cutsceneCam.gameObject.SetActive(false);
@@ -90,6 +109,14 @@ public class CutsceneManager : MonoBehaviour
         }
 
         currCutscene = ECutsceneState.GAME; //set this last so intro cutscene can be recognized first (and after player has left CUTSCENE state)
+    }
+
+
+
+    private IEnumerator IntroCutsceneTimer()
+    {
+        yield return new WaitForSeconds(2);
+        PlayIntroCutscene();
     }
 
 
@@ -138,5 +165,7 @@ public class CutsceneManager : MonoBehaviour
 
         currentCutscene.time = currentCutscene.duration;
         currentCutscene.Evaluate();
+
+        KitOrel.instance.StopTrailRenderers();
     }
 }

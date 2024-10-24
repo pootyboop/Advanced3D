@@ -49,6 +49,10 @@ public class Inventory : MonoBehaviour
         UpdateInvUI();
         InvUIChange(-1 * amountSold, totalPay);
 
+        if (amountSold > 0) {
+        AudioManager.instance.PlayAudioByTag("sell");
+        }
+
         //if sold all ielsek, prompt player to return to ship and end game
         if (ielsek == 0 && !soldAllIelsek)
         {
@@ -68,6 +72,9 @@ public class Inventory : MonoBehaviour
         //update the UI to match
         UpdateInvUI();
         InvUIChange(0, -1 * amount);
+
+        if (amount > 0)
+            AudioManager.instance.PlayAudioByTag("buy");
     }
 
 

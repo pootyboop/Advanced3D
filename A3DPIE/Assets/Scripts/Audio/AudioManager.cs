@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
 
 
 
@@ -12,7 +14,7 @@ public class AudioManager : MonoBehaviour
     public float musicVolume = 1.0f;
     public float sfxVolume = 1.0f;
 
-    public AudioSource[] musics;
+    public AudioMixer audioMixer;
 
     private AudioSource audioSource;    //audioSource used to play one shot sounds
 
@@ -27,6 +29,9 @@ public class AudioManager : MonoBehaviour
     {
         instance = this;
         audioSource = GetComponent<AudioSource>();
+
+        SetMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
+        SetSFXVolume(PlayerPrefs.GetFloat("sfxVolume"));
     }
 
 
@@ -53,7 +58,7 @@ public class AudioManager : MonoBehaviour
         //audioSource.volume = sfxVolume;
         //audioSource.Play();
 
-        audioSource.PlayOneShot(clip, sfxVolume);
+        audioSource.PlayOneShot(clip);
     }
 
 
@@ -63,11 +68,12 @@ public class AudioManager : MonoBehaviour
     {
         musicVolume = volume;
 
-        //update all musics' volume
-        foreach (AudioSource music in musics)
-        {
-            music.volume = musicVolume;
+        if (volume == 0.0f) {
+            musicVolume = 1.0f;
         }
+
+        PlayerPrefs.SetFloat("musicVolume", musicVolume);
+        audioMixer.SetFloat("musicVol", Mathf.Log10(musicVolume) * 20f);
     }
 
 
@@ -76,5 +82,12 @@ public class AudioManager : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         sfxVolume = volume;
+
+        if (volume == 0.0f) {
+            sfxVolume = 1.0f;
+        }
+
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        audioMixer.SetFloat("sfxVol", Mathf.Log10(sfxVolume) * 20f);
     }
 }

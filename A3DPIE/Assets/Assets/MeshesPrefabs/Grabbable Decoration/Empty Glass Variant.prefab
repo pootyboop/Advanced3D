@@ -9,9 +9,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 811385012824593181, guid: 8961d4edbfbcbc1478950bce2040f784, type: 3}
-      propertyPath: m_Materials.Array.data[1]
+      propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 5a527adf565162948a28325d10955779, type: 2}
+      objectReference: {fileID: 2100000, guid: 722b0ace252c14a4aa2c112e24d5c263, type: 2}
     - target: {fileID: 1171606807069848264, guid: 8961d4edbfbcbc1478950bce2040f784, type: 3}
       propertyPath: m_Name
       value: Empty Glass Variant

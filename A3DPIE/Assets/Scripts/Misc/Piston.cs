@@ -45,7 +45,9 @@ public class Piston : MonoBehaviour
     //called from animation when the piston hits the ground
     public void PistonSlam()
     {
+        if (audio.isActiveAndEnabled) {
         audio.Play();
+        }
         particles.Play();
     }
 }

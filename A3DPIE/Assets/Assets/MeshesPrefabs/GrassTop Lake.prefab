@@ -69,6 +69,10 @@ PrefabInstance:
       value: GrassTop Lake
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 42b8311b23eff734d8fd9622a626f19c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 42b8311b23eff734d8fd9622a626f19c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -148,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 598bc56a3925643c3be964c1098e61a8, type: 3}
       propertyPath: m_Name
       value: Water Pane Feature Pool
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 598bc56a3925643c3be964c1098e61a8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 598bc56a3925643c3be964c1098e61a8, type: 3}
       propertyPath: m_StaticEditorFlags

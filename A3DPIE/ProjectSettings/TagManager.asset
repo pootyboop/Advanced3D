@@ -7,15 +7,17 @@ TagManager:
   - Ladder
   - LoadArea
   - AutoInteractHitbox
+  - AreaMusic
+  - Card
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - LoadArea
-  - 
+  - Terrain
   - 
   - 
   - 
