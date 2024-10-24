@@ -68,6 +68,6 @@ public class EndScreen : MonoBehaviour
     
     public void GoToItch() {
         AudioManager.instance.PlayAudioByTag("button");
-        Application.OpenURL("https://elliotgmann.itch.io/");
+        Application.OpenURL("https://elliotgmann.com/");
     }
 }
